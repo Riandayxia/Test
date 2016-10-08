@@ -15,7 +15,6 @@ namespace Quest.Mobile.Controllers
         }
         public ActionResult Index()
         {
-            //Response.Redirect("scripts");  
             return View();
         }
     }
