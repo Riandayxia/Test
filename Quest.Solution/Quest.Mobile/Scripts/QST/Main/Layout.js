@@ -113,11 +113,13 @@ Ext.define('QST.Main.Layout', {
     },
     // 是否登录操作
     isLogin: function (onSuccess) {
+        
         //if (QSTUtil.IsLogin()) {
         //    onSuccess();
         //} else {
         //    util.redirectTo("QST.Main.Login", "", { parentUrl: "QST.Main.Layout", onSuccess: onSuccess });
         //}
+
     },
     //安卓 返回按钮
     onBackTap: function () {

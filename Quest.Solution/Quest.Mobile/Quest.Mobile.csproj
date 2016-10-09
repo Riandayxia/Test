@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Base_AR.cs" />
+    <Compile Include="App_Start\Property_AR.cs" />
     <Compile Include="App_Start\BPM_AR.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SuHuiRazorViewEngine.cs" />
@@ -205,6 +206,10 @@
     <Content Include="Scripts\QST\Main\Layout.js" />
     <Content Include="Scripts\QST\Main\Menu.js" />
     <Content Include="Scripts\QST\Main\SetList.js" />
+    <Content Include="Scripts\QST\Property\Complaints\Edit.js" />
+    <Content Include="Scripts\QST\Property\Complaints\List.js" />
+    <Content Include="Scripts\QST\Property\NewsPaper\Edit.js" />
+    <Content Include="Scripts\QST\Property\NewsPaper\List.js" />
     <Content Include="Scripts\QST\Util.js" />
     <Content Include="Scripts\resources\css\app.css" />
     <Content Include="Scripts\resources\css\main.css" />
