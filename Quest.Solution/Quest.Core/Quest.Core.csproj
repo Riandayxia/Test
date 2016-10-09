@@ -102,6 +102,10 @@
     </Compile>
     <Compile Include="Process\WorkflowApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Property\IComplaintsService.cs" />
+    <Compile Include="Property\Impl\ComplaintsService.cs" />
+    <Compile Include="Property\Impl\NewsPaperService.cs" />
+    <Compile Include="Property\INewsPaperService.cs" />
     <Compile Include="SourceOperating.cs" />
     <Compile Include="T4\EntityCodeScript1.cs">
       <DependentUpon>EntityCodeScript.tt</DependentUpon>
@@ -142,6 +146,10 @@
 ..\BPM\IWFRunInstanceService.cs
 ..\BPM\IWFRunStepService.cs
 ..\BPM\IWFTaskService.cs
+..\Property\IComplaintsService.cs
+..\Property\Impl\ComplaintsService.cs
+..\Property\Impl\NewsPaperService.cs
+..\Property\INewsPaperService.cs
 .\EntityCodeScript1.cs
 </LastOutputs>
     </None>

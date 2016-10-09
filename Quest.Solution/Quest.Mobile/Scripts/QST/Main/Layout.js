@@ -8,7 +8,7 @@ Ext.define('QST.Main.Layout', {
     extend: 'Ext.TabPanel',
     xtype: 'main_layout',
     id: 'QST_Main_Layout',
-    requires: ['QST.Util'],
+    requires: ['QST.Util', 'QST.Main.Home'],
     config: {
         fullscreen: true,
         cls: 'navToolbarHone',
@@ -36,7 +36,7 @@ Ext.define('QST.Main.Layout', {
             layout: 'card',
             id: 'c_main_home',
             items: [{
-                xtype: 'panel',
+                xtype: 'main_home',
             }]
         }, {
             xtype: 'container',
