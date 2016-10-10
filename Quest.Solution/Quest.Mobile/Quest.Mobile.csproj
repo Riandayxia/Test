@@ -300,6 +300,7 @@
     <Content Include="Scripts\resources\images\set\Labour.png" />
     <Content Include="Scripts\resources\images\set\login.png" />
     <Content Include="Scripts\resources\images\set\Material.png" />
+    <Content Include="Scripts\resources\images\middle_img.png" />
     <Content Include="Scripts\resources\images\set\password.png" />
     <Content Include="Scripts\resources\images\set\personal.png" />
     <Content Include="Scripts\resources\images\set\question.png" />
