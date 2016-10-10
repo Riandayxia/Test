@@ -5,11 +5,35 @@
 * @modified history: //修改历史
 /-------------------------------------------------------------------*/
 Ext.define('QST.Main.Home', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.Container',
     xtype: 'main_home',
+    requires: ['QST.Main.HomeTopImg','QST.Main.Menu'],
     config: {
         title: '城南花园',
+        layout: 'vbox',
+        items: [
+            {
+                xtype: 'home_topImg',
+                height:160
+            }, {
+                xtype: 'main_menu',
+                //height: 160
+            }, {
+                xtype: 'panel',
+                height: 60,
+                html:'贴心服务'
+            }, {
+                xtype: 'panel',
+                height: 100,
+                html: '物业管家'
+            }, {
+                xtype: 'panel',
+                height: 60,
+                html: '其他'
+            }
+        ]
     },
+    //layout: 'vbox',
     //初始化
     constructor: function (cfg) {
         var me = this;

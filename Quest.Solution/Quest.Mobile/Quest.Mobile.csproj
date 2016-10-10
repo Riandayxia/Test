@@ -201,6 +201,7 @@
     <Content Include="Scripts\cordova_plugins.js" />
     <Content Include="Scripts\index.html" />
     <Content Include="Scripts\QST\Main\Home.js" />
+    <Content Include="Scripts\QST\Main\HomeTopImg.js" />
     <Content Include="Scripts\QST\Main\InfoTab.js" />
     <Content Include="Scripts\QST\Main\Layout.js" />
     <Content Include="Scripts\QST\Main\Menu.js" />
