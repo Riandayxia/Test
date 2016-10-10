@@ -66,34 +66,8 @@
   <ItemGroup>
     <Compile Include="Base\Extensions\IMenuService.cs" />
     <Compile Include="Base\Extensions\Impl\MenuService.cs" />
-    <Compile Include="Base\IDictionaryService.cs" />
-    <Compile Include="Base\IMenuService.cs" />
-    <Compile Include="Base\Impl\DictionaryService.cs" />
-    <Compile Include="Base\Impl\MenuService.cs" />
-    <Compile Include="Base\Impl\RoleService.cs" />
-    <Compile Include="Base\Impl\UserService.cs" />
-    <Compile Include="Base\IRoleService.cs" />
-    <Compile Include="Base\IUserService.cs" />
     <Compile Include="BPM\Extensions\Impl\WFRunInstanceService.cs" />
     <Compile Include="BPM\Extensions\IWFRunInstanceService.cs" />
-    <Compile Include="BPM\ICDColumnService.cs" />
-    <Compile Include="BPM\ICDListService.cs" />
-    <Compile Include="BPM\ICDTableService.cs" />
-    <Compile Include="BPM\Impl\CDColumnService.cs" />
-    <Compile Include="BPM\Impl\CDListService.cs" />
-    <Compile Include="BPM\Impl\CDTableService.cs" />
-    <Compile Include="BPM\Impl\CDControllerService.cs" />
-    <Compile Include="BPM\Impl\WFFormService.cs" />
-    <Compile Include="BPM\Impl\WFModelService.cs" />
-    <Compile Include="BPM\Impl\WFRunInstanceService.cs" />
-    <Compile Include="BPM\Impl\WFRunStepService.cs" />
-    <Compile Include="BPM\Impl\WFTaskService.cs" />
-    <Compile Include="BPM\ICDControllerService.cs" />
-    <Compile Include="BPM\IWFFormService.cs" />
-    <Compile Include="BPM\IWFModelService.cs" />
-    <Compile Include="BPM\IWFRunInstanceService.cs" />
-    <Compile Include="BPM\IWFRunStepService.cs" />
-    <Compile Include="BPM\IWFTaskService.cs" />
     <Compile Include="CoreInitializer.cs" />
     <Compile Include="Impl\MsSqlProvider.cs" />
     <Compile Include="Initialize\BasicDataInitializer.cs" />
@@ -102,11 +76,25 @@
     </Compile>
     <Compile Include="Process\WorkflowApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Property\IComplaintsService.cs" />
+    <Compile Include="Property\Impl\ComplaintsService.cs" />
+    <Compile Include="Property\Impl\NewsPaperService.cs" />
+    <Compile Include="Property\INewsPaperService.cs" />
     <Compile Include="SourceOperating.cs" />
     <Compile Include="T4\EntityCodeScript1.cs">
       <DependentUpon>EntityCodeScript.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="T4\Include\EntityServiceTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityServiceTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4\Include\IEntityServiceTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IEntityServiceTemplate.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -115,38 +103,16 @@
     <None Include="T4\EntityCodeScript.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EntityCodeScript1.cs</LastGenOutput>
-      <LastOutputs>
-..\Base\IDictionaryService.cs
-..\Base\IMenuService.cs
-..\Base\Impl\DictionaryService.cs
-..\Base\Impl\MenuService.cs
-..\Base\Impl\RoleService.cs
-..\Base\Impl\UserService.cs
-..\Base\IRoleService.cs
-..\Base\IUserService.cs
-..\BPM\ICDColumnService.cs
-..\BPM\ICDControllerService.cs
-..\BPM\ICDListService.cs
-..\BPM\ICDTableService.cs
-..\BPM\Impl\CDColumnService.cs
-..\BPM\Impl\CDControllerService.cs
-..\BPM\Impl\CDListService.cs
-..\BPM\Impl\CDTableService.cs
-..\BPM\Impl\WFFormService.cs
-..\BPM\Impl\WFModelService.cs
-..\BPM\Impl\WFRunInstanceService.cs
-..\BPM\Impl\WFRunStepService.cs
-..\BPM\Impl\WFTaskService.cs
-..\BPM\IWFFormService.cs
-..\BPM\IWFModelService.cs
-..\BPM\IWFRunInstanceService.cs
-..\BPM\IWFRunStepService.cs
-..\BPM\IWFTaskService.cs
-.\EntityCodeScript1.cs
-</LastOutputs>
+      <LastOutputs>.\EntityCodeScript1.cs</LastOutputs>
     </None>
-    <None Include="T4\Include\EntityServiceTemplate.tt" />
-    <None Include="T4\Include\IEntityServiceTemplate.tt" />
+    <None Include="T4\Include\EntityServiceTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EntityServiceTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="T4\Include\IEntityServiceTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IEntityServiceTemplate.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
