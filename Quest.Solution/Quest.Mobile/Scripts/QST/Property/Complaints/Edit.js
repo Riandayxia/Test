@@ -17,9 +17,15 @@ Ext.define('QST.Property.Complaints.Edit', {
             xtype: 'fieldset',
             items: [{
                 label: '类型',
-                xtype: 'textfield',
+                xtype: 'selectfield',
                 name: 'CType',
-                readOnly: true,
+                options: [
+                       { text: '安保', value: '安保' },
+                       { text: '环境', value: '环境' },
+                       { text: '客服', value: '客服' },
+                       { text: '维修', value: '维修' },
+                       { text: '其他', value: '其他' }
+                ]
             },
             {
                 label: '投诉内容',
@@ -47,7 +53,7 @@ Ext.define('QST.Property.Complaints.Edit', {
             }, {
                 label: '详细地址',
                 xtype: 'textareafield',
-                name: 'Phone',
+                name: 'Address',
                 allowBlank: true,
                 placeHolder: '请输入详细地址'
             }, {

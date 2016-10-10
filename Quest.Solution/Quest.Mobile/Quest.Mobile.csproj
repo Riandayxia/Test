@@ -133,6 +133,10 @@
     <Compile Include="CommonSupport\FormatJsonExtension.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InitDataController.cs" />
+    <Compile Include="Controllers\Property\Auto\NewsPaperController.cs" />
+    <Compile Include="Controllers\Property\Auto\ComplaintsController.cs" />
+    <Compile Include="Controllers\Property\NewsPaperController.cs" />
+    <Compile Include="Controllers\Property\ComplaintsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -202,13 +206,19 @@
     <Content Include="Scripts\cordova_plugins.js" />
     <Content Include="Scripts\index.html" />
     <Content Include="Scripts\QST\Main\Home.js" />
+    <Content Include="Scripts\QST\Main\HomeTopImg.js" />
     <Content Include="Scripts\QST\Main\InfoTab.js" />
     <Content Include="Scripts\QST\Main\Layout.js" />
     <Content Include="Scripts\QST\Main\Menu.js" />
     <Content Include="Scripts\QST\Main\SetList.js" />
+    <Content Include="Scripts\QST\Property\Complaints\Details.js" />
     <Content Include="Scripts\QST\Property\Complaints\Edit.js" />
     <Content Include="Scripts\QST\Property\Complaints\List.js" />
+    <Content Include="Scripts\QST\Property\NewsPaper\Details.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\Edit.js" />
+    <Content Include="Scripts\QST\Property\NewsPaper\Layout.js" />
+    <Content Include="Scripts\QST\Property\NewsPaper\HList.js" />
+    <Content Include="Scripts\QST\Property\NewsPaper\SList.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\List.js" />
     <Content Include="Scripts\QST\Util.js" />
     <Content Include="Scripts\resources\css\app.css" />

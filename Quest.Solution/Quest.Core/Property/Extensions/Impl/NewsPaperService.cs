@@ -19,21 +19,32 @@ using System;
 using System.ComponentModel.Composition;
 using Quest.Core.Data;
 using Quest.Core.Models.Property;
+using Quest.Framework;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Quest.Core.Property.Impl
 {
 	/// <summary>
     /// 报事管理 核心业务契约
     /// </summary>
-    [Export(typeof(INewsPaperService))]
-    internal partial class NewsPaperService :RepositoryBase<NewsPaper,Guid>, INewsPaperService
+    internal partial class NewsPaperService 
     {
         #region 公共属性
 
         #endregion
 
         #region 公共方法
-
+       /// <summary>
+       /// 处理状态查询数据
+       /// </summary>
+       /// <param name="Status">状态</param>
+       /// <returns>操作结果</returns>
+        public OperationResult GetStare(int Status)
+        {
+            List<NewsPaper> items = this.Entities.Where(c => c.Status == Status).ToList();
+            return new OperationResult(OperationResultType.Success, "", items);;
+        }
         #endregion
 
         #region 私有方法

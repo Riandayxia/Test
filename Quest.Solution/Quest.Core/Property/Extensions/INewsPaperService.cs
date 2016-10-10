@@ -14,19 +14,18 @@
 // </copyright>
 //------------------------------------------------------------------------------
 
-
 using System;
 using System.ComponentModel.Composition;
 using Quest.Core.Data;
 using Quest.Core.Models.Property;
+using Quest.Framework;
 
-namespace Quest.Core.Property.Impl
+namespace Quest.Core.Property
 {
 	/// <summary>
     /// 报事管理 核心业务契约
     /// </summary>
-    [Export(typeof(INewsPaperService))]
-    internal partial class NewsPaperService :RepositoryBase<NewsPaper,Guid>, INewsPaperService
+    public partial interface INewsPaperService 
     {
         #region 公共属性
 
@@ -34,6 +33,12 @@ namespace Quest.Core.Property.Impl
 
         #region 公共方法
 
+      /// <summary>
+       /// 处理状态查询数据
+       /// </summary>
+       /// <param name="Status">状态</param>
+       /// <returns>操作结果</returns>
+        OperationResult GetStare(int Status);
         #endregion
 
         #region 私有方法

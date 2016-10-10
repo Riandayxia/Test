@@ -8,7 +8,7 @@ Ext.define('QST.Main.Layout', {
     extend: 'Ext.TabPanel',
     xtype: 'main_layout',
     id: 'QST_Main_Layout',
-    requires: ['QST.Util', 'QST.Main.Home'],
+    requires: ['QST.Util', 'QST.Main.Home', 'QST.Property.NewsPaper.Layout'],
     config: {
         fullscreen: true,
         cls: 'navToolbarHone',
@@ -54,7 +54,7 @@ Ext.define('QST.Main.Layout', {
             layout: 'card',
             id: 'c_main_infotab',
             items: [{
-                xtype: 'panel',
+                xtype: 'property_newspaper_layout',
             }]
         }, {
             xtype: 'container',
@@ -80,7 +80,6 @@ Ext.define('QST.Main.Layout', {
                 newTab.badgeText = 18;
                 var view = newTab.getActiveItem();
                 this.tabIndex = 0;
-
                 switch (tab._title) {
                     case config.str.WorkArea:
                         this.tabIndex = 1;

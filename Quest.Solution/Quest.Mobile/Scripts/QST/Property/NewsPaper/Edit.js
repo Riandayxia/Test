@@ -16,10 +16,14 @@ Ext.define('QST.Property.NewsPaper.Edit', {
         items: [{
             xtype: 'fieldset',
             items: [{
-                label: '报事类型',
-                xtype: 'textfield',
+                label: '报事分类',
+                xtype: 'selectfield',
                 name: 'NType',
-                readOnly: true,
+                options: [
+                        { text: '类型一', value: '类型一' },
+                        { text: '类型二', value: '类型二' },
+                        { text: '类型三', value: '类型三' }
+                ]
             },
             {
                 label: '报事地址',
@@ -56,7 +60,8 @@ Ext.define('QST.Property.NewsPaper.Edit', {
             }, {
                 label: '处理状态',
                 xtype: 'hiddenfield',
-                name: 'Status'
+                name: 'Status',
+                value:1
             }, {
                 label: '附件',
                 xtype: 'hiddenfield',
