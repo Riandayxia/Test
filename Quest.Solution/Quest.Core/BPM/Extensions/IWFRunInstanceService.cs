@@ -12,7 +12,7 @@ namespace Quest.Core.BPM
     /// <summary>
     /// 流程运行 核心业务契约
     /// </summary>
-    public partial interface IWFRunInstanceService
+    public partial interface IWFRunInstanceService 
     {
         #region 属性
 
