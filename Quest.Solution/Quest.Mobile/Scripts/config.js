@@ -4,10 +4,20 @@ Ext.define('config', {
     alternateClassName: 'config',
     statics: {
         str: {
+            //登录注册
+            Registered: '注册帐号',
+            Register: '注册',
+            Retrieve: '忘记密码',
+            loginTitle: '登录',
+            loginNameTip: '昵称/手机号',
+            loginPwdTip: '请输入密码',
+            LoginStatus: '登录中....',
+            Reset: '重置密码',
+
             HomeArea: '首页',
             WorkArea: '工作区',
-            Wares:'',// '商城',
-            Finance:'',//'金融',
+            Wares: '商城',
+            Finance: '金融',
             InfoAre: '信息栏',
             MiArea: '我的',
             PressExitApp: '再按一次退出程序',
@@ -25,7 +35,7 @@ Ext.define('config', {
         LoginUser: {
             Name: '',
             LoginName: '',
-            Id:''
+            Id: ''
         },
         // 系统启动页面
         MainPage: 'QST.Main.Layout',
@@ -44,7 +54,7 @@ Ext.define('config', {
             return true;
         },
         url: 'http://localhost:6206',
-       // url: 'http://mobile.cnsuhui.com',
+        // url: 'http://mobile.cnsuhui.com',
         javaScriptUrl: ''//js远程加载地址 为空默认加载本域js
     }
 })

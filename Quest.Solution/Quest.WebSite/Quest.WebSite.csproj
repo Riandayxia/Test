@@ -144,6 +144,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controllers\Base\MenuController.cs" />
+    <Compile Include="Controllers\Base\UserController.cs" />
     <Compile Include="Controllers\BPM\Auto\CDColumnController.cs" />
     <Compile Include="Controllers\BPM\Auto\CDControllerController.cs" />
     <Compile Include="Controllers\BPM\Auto\CDListController.cs" />

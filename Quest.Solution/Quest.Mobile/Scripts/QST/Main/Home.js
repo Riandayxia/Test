@@ -7,31 +7,34 @@
 Ext.define('QST.Main.Home', {
     extend: 'Ext.Container',
     xtype: 'main_home',
-    requires: ['QST.Main.HomeTopImg', 'QST.Main.Menu'],
+    requires: ['QST.Main.HomeTopImg', 'QST.Main.Menu', 'QST.Main.MiddleImg'],
+    fullscreen: true,
     config: {
         title: '城南花园',
         layout: 'vbox',
-        //items: [
-        //    {
-        //        //xtype: 'home_topImg',
-        //        xtype:'panel',
-        //        height:160
-        //    }, {
-        //        xtype: 'main_menu',
-        //    }, {
-        //        xtype: 'panel',
-        //        height: 60,
-        //        html:'贴心服务'
-        //    }, {
-        //        xtype: 'panel',
-        //        height: 100,
-        //        html: '物业管家'
-        //    }, {
-        //        xtype: 'panel',
-        //        height: 60,
-        //        html: '其他'
-        //    }
-        //]
+        scrollable: {
+            directionLock: true
+        },
+        items: [
+            {
+                xtype: 'home_topImg',
+                height: 160
+            }, {
+                xtype: 'main_menu',
+            }, {
+                xtype: 'middleimg'
+            }, {
+                xtype: 'panel',
+                cls: 'home_msg',
+                height: 60,
+                html: '限时抢购推荐'
+            }, {
+                xtype: 'panel',
+                cls: 'home_msg',
+                height: 60,
+                html: '限时抢购推荐'
+            }
+        ]
     },
     //layout: 'vbox',
     //初始化
@@ -52,7 +55,7 @@ Ext.define('QST.Main.Home', {
                     action: 'Back',
                     cls: 'nbutton',
                     align: 'left',
-                    text:'地区',
+                    text: '地区',
                     handler: function (but) {
                         me.fireEvent('Back', but, me);
                     }
