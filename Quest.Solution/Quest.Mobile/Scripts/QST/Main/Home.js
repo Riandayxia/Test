@@ -7,10 +7,14 @@
 Ext.define('QST.Main.Home', {
     extend: 'Ext.Container',
     xtype: 'main_home',
-    requires: ['QST.Main.HomeTopImg', 'QST.Main.Menu'],
+    requires: ['QST.Main.HomeTopImg', 'QST.Main.Menu', 'QST.Main.MiddleImg'],
+    fullscreen: true,
     config: {
         title: '城南花园',
         layout: 'vbox',
+        scrollable: {
+            directionLock: true
+        },
         items: [
             {
                 xtype: 'home_topImg',
@@ -18,33 +22,15 @@ Ext.define('QST.Main.Home', {
             }, {
                 xtype: 'main_menu',
             }, {
-                xtype: 'panel',
-                height: 30,
-                style: 'border: 1px solid #ECEAE9;padding: 5px;',
-                html: '停电通知：2016-10-10 8：00至12：00'
+                xtype: 'middleimg'
             }, {
                 xtype: 'panel',
-                height: 50,
-                html: '<img  class="middle_img" fire="onDelete" src="resources/images/middle_img.png">'
+                cls: 'home_msg',
+                height: 60,
+                html: '限时抢购推荐'
             }, {
                 xtype: 'panel',
-                layout: 'hbox',
-                height: 100,
-                margin: '5px 0px',
-                items: [{
-                    xtype: 'panel',
-                    flex: 1,
-                    html: '<img  class="middle_img_button" fire="onDelete" src="resources/images/middle_img_2.png">'
-                }, {
-                    html: '',
-                    width: 5
-                }, {
-                    xtype: 'panel',
-                    flex: 1,
-                    html: '<img  class="middle_img_button" fire="onDelete" src="resources/images/middle_img_3.png">'
-                }]
-            }, {
-                xtype: 'panel',
+                cls: 'home_msg',
                 height: 60,
                 html: '限时抢购推荐'
             }

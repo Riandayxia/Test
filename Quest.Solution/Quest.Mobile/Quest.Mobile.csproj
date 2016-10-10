@@ -203,6 +203,7 @@
     <Content Include="Scripts\index.html" />
     <Content Include="Scripts\QST\App\HRManagement\User\Registered.js" />
     <Content Include="Scripts\QST\Main\Home.js" />
+    <Content Include="Scripts\QST\Main\MiddleImg.js" />
     <Content Include="Scripts\QST\Main\HomeTopImg.js" />
     <Content Include="Scripts\QST\Main\InfoTab.js" />
     <Content Include="Scripts\QST\Main\Layout.js" />
