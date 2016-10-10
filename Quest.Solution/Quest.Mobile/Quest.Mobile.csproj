@@ -231,13 +231,9 @@
     <Content Include="Scripts\resources\icons\Icon~ipad.png" />
     <Content Include="Scripts\resources\icons\iTunesArtwork.png" />
     <Content Include="Scripts\resources\images\1.jpg" />
-    <Content Include="Scripts\resources\images\2.png" />
     <Content Include="Scripts\resources\images\3.jpg" />
-    <Content Include="Scripts\resources\images\3.png" />
     <Content Include="Scripts\resources\images\4.jpg" />
-    <Content Include="Scripts\resources\images\4.PNG" />
     <Content Include="Scripts\resources\images\5.jpg" />
-    <Content Include="Scripts\resources\images\5.png" />
     <Content Include="Scripts\resources\images\6.jpg" />
     <Content Include="Scripts\resources\images\Add.png" />
     <Content Include="Scripts\resources\images\Add2.png" />
@@ -300,6 +296,9 @@
     <Content Include="Scripts\resources\images\LedgerManage.jpg" />
     <Content Include="Scripts\resources\images\LogManage.jpg" />
     <Content Include="Scripts\resources\images\Material.jpg" />
+    <Content Include="Scripts\resources\images\middle_img.png" />
+    <Content Include="Scripts\resources\images\middle_img_2.png" />
+    <Content Include="Scripts\resources\images\middle_img_3.png" />
     <Content Include="Scripts\resources\images\no.png" />
     <Content Include="Scripts\resources\images\ok.png" />
     <Content Include="Scripts\resources\images\pdf.png" />
@@ -318,6 +317,7 @@
     <Content Include="Scripts\resources\images\set\Supplied.png" />
     <Content Include="Scripts\resources\images\set\Turnover.png" />
     <Content Include="Scripts\resources\images\set\version.png" />
+    <Content Include="Scripts\resources\images\top-1.png" />
     <Content Include="Scripts\resources\images\upfolder.png" />
     <Content Include="Scripts\resources\images\weather\d0.gif" />
     <Content Include="Scripts\resources\images\weather\d1.gif" />

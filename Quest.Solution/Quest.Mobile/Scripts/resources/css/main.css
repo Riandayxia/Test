@@ -262,6 +262,21 @@ body.x-desktop {
     border-bottom: 1px solid #ECEAE9;
 }
 
+.middle_img {
+    border-bottom: 1px solid #ECEAE9;
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+}
+
+.middle_img_button {
+    border-bottom: 1px solid #ECEAE9;
+    max-height: 100px;
+    max-width: 100%;
+    width: 100%;
+    border: 1px solid #efefef;
+}
+
 .details {
     border-collapse: collapse;
     width: 100%;
