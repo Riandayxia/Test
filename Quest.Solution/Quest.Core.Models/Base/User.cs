@@ -30,7 +30,7 @@ namespace Quest.Core.Models.Base
         /// 获取或设置 手机
         /// </summary>
         [DataMember]
-        [StringLength(16)]
+        [StringLength(64)]
         [DBColumn("手机")]
         public String Mobile { get; set; }
 

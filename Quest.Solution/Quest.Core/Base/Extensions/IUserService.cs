@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Quest.Core.Models.Base;
+using Quest.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +15,7 @@ namespace Quest.Core.Base
         #endregion
 
         #region 公共方法
-
+        OperationResult InsertRegistered(User entity, Boolean isSave = true);
         #endregion
 
         #region 私有方法

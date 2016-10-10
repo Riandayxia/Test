@@ -38,7 +38,7 @@ Ext.define("QST.App.HRManagement.User.Registered", {
             },
             //自定义提交
             formSubmit: function (but, view) {
-                if (this.verification()) {
+                //if (this.verification()) {
                     //验证手机
                     var phone = view.down('numberfield[name=Mobile]').getValue();
                     if (phone == "" || phone == null) {
@@ -66,7 +66,7 @@ Ext.define("QST.App.HRManagement.User.Registered", {
                         return;
                     }
                     view.submit({
-                        url: config.url + '/User/Registered',
+                        url: config.url + '/User/Add',
                         method: 'POST',
                         //提交成功
                         success: function (action, response) {
@@ -89,7 +89,7 @@ Ext.define("QST.App.HRManagement.User.Registered", {
                             }
                         }
                     });
-                }
+                //}
             }
         }
     },

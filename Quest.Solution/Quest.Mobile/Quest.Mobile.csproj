@@ -133,6 +133,7 @@
     <Compile Include="CommonSupport\FormatJsonExtension.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InitDataController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

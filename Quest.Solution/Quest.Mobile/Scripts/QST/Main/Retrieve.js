@@ -30,7 +30,7 @@ Ext.define("QST.Main.Retrieve", {
                     {
                         name: 'Mobile',
                         placeHolder: '注册时使用的手机号（必填）',
-                        xtype: 'numberfield', regex: /^1[3|4|5|8][0-9]{9}$/,
+                        xtype: 'textfield', regex: /^1[3|4|5|8][0-9]{9}$/,
                         regexText: '手机号码格式错误！',
                         anchor: '90%',
                         allowBlank: true
@@ -46,7 +46,7 @@ Ext.define("QST.Main.Retrieve", {
                           cls: 'selectFile',
                           items: [
                               {
-                                  xtype: 'numberfield',
+                                  xtype: 'textfield',
                                   name: 'VerificationCode',
                                   placeHolder: '验证码（必填）',
                                   allowBlank: true,
@@ -66,7 +66,7 @@ Ext.define("QST.Main.Retrieve", {
                           ]
                       },
                       {
-                           name: 'LoginPwd',
+                          name: 'Password',
                            placeHolder: '新密码,6-12位的数字或字母（必填）',
                            xtype: 'passwordfield',
                            regex: /^[\da-zA-z]{6,12}$/,
@@ -76,11 +76,11 @@ Ext.define("QST.Main.Retrieve", {
                        },
                      {
                          label: '密码是否验证',
-                         name: 'IsValidLoginPwd',
+                         name: 'IsValidPassword',
                          xtype: 'hiddenfield'
                      },
                      {
-                         name: 'LoginPwds',
+                         name: 'Passwords',
                          xtype: 'passwordfield',
                          placeHolder: '再次输入密码（必填）',
                          allowBlank: true
@@ -96,13 +96,76 @@ Ext.define("QST.Main.Retrieve", {
             height: '40px',
             margin: '30 20 0 20',
             handler: function (but) {
-                this.up('userLogin').fireEvent('login', but);
+                var me = this.up('main_retrieve');
+                me.fireEvent('formSubmit', but, me);
             }
         }],
         listeners: {
             //返回上一级
             Back: function (but, list) {
                 util.redirectTo(this.backUrl, "back", { fType: 'Login' });
+            },
+            //自定义提交
+            formSubmit: function (but, view) {
+                //验证手机
+                var phone = view.down('textfield[name=Mobile]').getValue();
+                if (phone == "" || phone == null) {
+                    Ext.Msg.alert('提示', '电话号码不能为空！');
+                    return;
+                }
+                //验证手机格式
+                var phoneErrors = view.down('textfield[name=Mobile]').config
+                if (!phoneErrors.regex.test(phone)) {
+                    Ext.Msg.alert('提示', phoneErrors.regexText);
+                    return;
+                }
+                //验证码
+                var vcod = view.down('textfield[name=VerificationCode]').getValue();
+                if (vcod == "" || vcod == null) {
+                    Ext.Msg.alert('提示', '验证码不能为空！');
+                    return;
+                }
+                //验证密码
+                var pwd = view.down('passwordfield[name=Password]').getValue();
+                if (pwd == "" || pwd == null) {
+                    Ext.Msg.alert('提示', '密码不能为空！');
+                    return;
+                }
+                //验证密码格式
+                var passwordErrors = view.down('passwordfield[name=Password]').config
+                if (!passwordErrors.regex.test(pwd)) {
+                    Ext.Msg.alert('提示', passwordErrors.regexText);
+                    return;
+                }
+                var pwds = view.down('passwordfield[name=Passwords]').getValue();
+                if (pwd != pwds) {
+                    Ext.Msg.alert('提示', '两次输入的密码不一致');
+                    return;
+                }
+                view.submit({
+                    url: config.url + '/User/Registered',
+                    method: 'POST',
+                    //提交成功
+                    success: function (action, response) {
+                        //存储用户信息
+                        util.storeSet("logininfor", Ext.JSON.encode(response.data));
+                        util.showMessage(response.msg, true);
+                        //初始化用户数据
+                        view.loadInit();
+                        //更新当前用户设备信息[5秒后执行 不占用菜单请求时间]
+                        setTimeout(SHUtil.UpdateEquipment, 5000);
+                    },
+                    //提交失败
+                    failure: function (action, response) {
+                        util.hideMessage();
+                        if (response.status == 500) {
+                            Ext.Msg.alert('提示', '注册失败！');
+                        }
+                        else {
+                            util.showMessage(response.msg, true);
+                        }
+                    }
+                });
             }
         }
     },

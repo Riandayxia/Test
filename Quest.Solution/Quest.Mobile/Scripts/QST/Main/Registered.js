@@ -25,7 +25,7 @@ Ext.define("QST.Main.Registered", {
                     {
                         name: 'Mobile',
                         placeHolder: '请输入手机号（必填）',
-                        xtype: 'numberfield', regex: /^1[3|4|5|8][0-9]{9}$/,
+                        xtype: 'textfield', regex: /^1[3|4|5|8][0-9]{9}$/,
                         regexText: '手机号码格式错误！',
                         anchor: '90%',
                         allowBlank: true
@@ -41,7 +41,7 @@ Ext.define("QST.Main.Registered", {
                          cls: 'selectFile',
                          items: [
                              {
-                                 xtype: 'numberfield',
+                                 xtype: 'textfield',
                                  name: 'VerificationCode',
                                  placeHolder: '验证码（必填）',
                                  allowBlank: true,
@@ -61,7 +61,7 @@ Ext.define("QST.Main.Registered", {
                          ]
                      },
                      {
-                         name: 'LoginPwd',
+                         name: 'Password',
                          placeHolder: '请输入密码,6-12位的数字或字母（必填）',
                          xtype: 'passwordfield',
                          regex: /^[\da-zA-z]{6,12}$/,
@@ -153,8 +153,38 @@ Ext.define("QST.Main.Registered", {
             },
             //自定义提交
             formSubmit: function (but, view) {
+                //验证手机
+                var phone = view.down('textfield[name=Mobile]').getValue();
+                if (phone == "" || phone == null) {
+                    Ext.Msg.alert('提示', '电话号码不能为空！');
+                    return;
+                }
+                //验证手机格式
+                var phoneErrors = view.down('textfield[name=Mobile]').config
+                if (!phoneErrors.regex.test(phone)) {
+                    Ext.Msg.alert('提示', phoneErrors.regexText);
+                    return;
+                }
+                //验证码
+                var vcod = view.down('textfield[name=VerificationCode]').getValue();
+                if (vcod == "" || vcod == null) {
+                    Ext.Msg.alert('提示', '验证码不能为空！');
+                    return;
+                }
+                //验证密码
+                var pwd = view.down('passwordfield[name=Password]').getValue();
+                if (pwd == "" || pwd == null) {
+                    Ext.Msg.alert('提示', '密码不能为空！');
+                    return;
+                }
+                //验证密码格式
+                var passwordErrors = view.down('passwordfield[name=Password]').config
+                if (!passwordErrors.regex.test(pwd)) {
+                    Ext.Msg.alert('提示', passwordErrors.regexText);
+                    return;
+                }
                 view.submit({
-                    url: config.url + '/User/Add',
+                    url: config.url + '/User/Registered',
                     method: 'POST',
                     //提交成功
                     success: function (action, response) {

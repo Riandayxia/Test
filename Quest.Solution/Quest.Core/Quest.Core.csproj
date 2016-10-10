@@ -66,6 +66,8 @@
   <ItemGroup>
     <Compile Include="Base\Extensions\IMenuService.cs" />
     <Compile Include="Base\Extensions\Impl\MenuService.cs" />
+    <Compile Include="Base\Extensions\Impl\UserService.cs" />
+    <Compile Include="Base\Extensions\IUserService.cs" />
     <Compile Include="Base\IDictionaryService.cs" />
     <Compile Include="Base\IMenuService.cs" />
     <Compile Include="Base\Impl\DictionaryService.cs" />
