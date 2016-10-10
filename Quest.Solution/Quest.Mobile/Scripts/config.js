@@ -4,6 +4,16 @@ Ext.define('config', {
     alternateClassName: 'config',
     statics: {
         str: {
+            //登录注册
+            Registered: '注册帐号',
+            Register: '注册',
+            Retrieve: '忘记密码',
+            loginTitle: '登录',
+            loginNameTip: '昵称/手机号',
+            loginPwdTip: '请输入密码',
+            LoginStatus: '登录中....',
+            Reset: '重置密码',
+
             HomeArea: '首页',
             WorkArea: '工作区',
             Wares: '家电',

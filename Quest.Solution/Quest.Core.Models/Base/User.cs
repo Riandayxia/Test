@@ -15,6 +15,7 @@ namespace Quest.Core.Models.Base
     {
         public User()
         {
+            Id = CombHelper.NewComb();
         }
 
         /// <summary>
@@ -24,6 +25,22 @@ namespace Quest.Core.Models.Base
         [StringLength(64)]
         [DBColumn("用户名")]
         public String Name { get; set; }
+
+        /// <summary>
+        /// 获取或设置 手机
+        /// </summary>
+        [DataMember]
+        [StringLength(16)]
+        [DBColumn("手机")]
+        public String Mobile { get; set; }
+
+        /// <summary>
+        /// 获取或设置 手机是否验证
+        /// </summary>
+        [DataMember]
+        [DBColumn("手机是否验证")]
+        public Boolean IsValidMobile { get; set; }
+
         /// <summary>
         /// 获取或设置 用户密码
         /// </summary>
@@ -31,6 +48,28 @@ namespace Quest.Core.Models.Base
         [StringLength(64)]
         [DBColumn("用户密码")]
         public String Password { get; set; }
+
+        /// <summary>
+        /// 获取或设置 密码是否验证
+        /// </summary>
+        [DataMember]
+        [DBColumn("密码是否验证")]
+        public Boolean IsValidPassword { get; set; }
+
+        /// <summary>
+        /// 获取或设置 验证码
+        /// </summary>
+        [DataMember]
+        [StringLength(64)]
+        [DBColumn("验证码")]
+        public String VerificationCode { get; set; }
+
+        /// <summary>
+        /// 获取或设置 是否同意协议
+        /// </summary>
+        [DataMember]
+        [DBColumn("是否同意协议")]
+        public Boolean Protocol { get; set; }
 
     }
 }

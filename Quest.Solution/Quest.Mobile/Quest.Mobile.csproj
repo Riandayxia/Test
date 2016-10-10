@@ -200,10 +200,14 @@
     <Content Include="Scripts\cordova.js" />
     <Content Include="Scripts\cordova_plugins.js" />
     <Content Include="Scripts\index.html" />
+    <Content Include="Scripts\QST\App\HRManagement\User\Registered.js" />
     <Content Include="Scripts\QST\Main\Home.js" />
     <Content Include="Scripts\QST\Main\InfoTab.js" />
     <Content Include="Scripts\QST\Main\Layout.js" />
+    <Content Include="Scripts\QST\Main\Login.js" />
     <Content Include="Scripts\QST\Main\Menu.js" />
+    <Content Include="Scripts\QST\Main\Registered.js" />
+    <Content Include="Scripts\QST\Main\Retrieve.js" />
     <Content Include="Scripts\QST\Main\SetList.js" />
     <Content Include="Scripts\QST\Util.js" />
     <Content Include="Scripts\resources\css\app.css" />
