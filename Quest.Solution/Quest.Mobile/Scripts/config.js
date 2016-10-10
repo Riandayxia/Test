@@ -16,8 +16,8 @@ Ext.define('config', {
 
             HomeArea: '首页',
             WorkArea: '工作区',
-            Wares: '商城',
-            Finance:'金融',
+            Wares:'',// '商城',
+            Finance:'',//'金融',
             InfoAre: '信息栏',
             MiArea: '我的',
             PressExitApp: '再按一次退出程序',
