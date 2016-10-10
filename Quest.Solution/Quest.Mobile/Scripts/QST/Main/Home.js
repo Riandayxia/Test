@@ -11,27 +11,27 @@ Ext.define('QST.Main.Home', {
     config: {
         title: '城南花园',
         layout: 'vbox',
-        items: [
-            {
-                xtype: 'home_topImg',
-                height:160
-            }, {
-                xtype: 'main_menu',
-                //height: 160
-            }, {
-                xtype: 'panel',
-                height: 60,
-                html:'贴心服务'
-            }, {
-                xtype: 'panel',
-                height: 100,
-                html: '物业管家'
-            }, {
-                xtype: 'panel',
-                height: 60,
-                html: '其他'
-            }
-        ]
+        //items: [
+        //    {
+        //        //xtype: 'home_topImg',
+        //        xtype:'panel',
+        //        height:160
+        //    }, {
+        //        xtype: 'main_menu',
+        //    }, {
+        //        xtype: 'panel',
+        //        height: 60,
+        //        html:'贴心服务'
+        //    }, {
+        //        xtype: 'panel',
+        //        height: 100,
+        //        html: '物业管家'
+        //    }, {
+        //        xtype: 'panel',
+        //        height: 60,
+        //        html: '其他'
+        //    }
+        //]
     },
     //layout: 'vbox',
     //初始化
