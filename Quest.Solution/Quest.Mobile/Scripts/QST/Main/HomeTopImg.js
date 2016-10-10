@@ -16,11 +16,11 @@ Ext.define('QST.Main.HomeTopImg', {
         items: [
             {
                 xtype: 'panel',
-                html: '<img  class="topImg" fire="onDelete" src="resources/images/4.jpg">'
+                html: '<img src="resources/images/top-1.png" class="topImg" fire="onDelete">'
             },
             {
                 xtype: 'panel',
-                html: '<img src="resources/images/5.jpg"  class="topImg" fire="onDelete">'
+                html: '<img src="resources/images/5.jpg" class="topImg" fire="onDelete">'
             },
             {
                 xtype: 'panel',

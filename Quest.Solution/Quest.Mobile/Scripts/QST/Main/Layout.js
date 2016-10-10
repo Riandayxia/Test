@@ -36,7 +36,7 @@ Ext.define('QST.Main.Layout', {
             layout: 'card',
             id: 'c_main_home',
             items: [{
-                xtype: 'userLogin',
+                xtype: 'main_home'
             }]
         }, {
             xtype: 'container',
