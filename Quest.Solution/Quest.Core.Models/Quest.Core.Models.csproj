@@ -70,6 +70,9 @@
     <Compile Include="BPM\WFTask.cs" />
     <Compile Include="BPM\CDColumn.cs" />
     <Compile Include="BPM\CDController.cs" />
+    <Compile Include="Maps\Property\ComplaintsConfiguration.cs" />
+    <Compile Include="Maps\Property\NewsPaperConfiguration.cs" />
+    <Compile Include="Property\Complaints.cs" />
     <Compile Include="Maps\Base\MenuConfiguration.cs" />
     <Compile Include="Maps\Base\DictionaryConfiguration.cs" />
     <Compile Include="Maps\Base\RoleConfiguration.cs" />
@@ -89,6 +92,7 @@
     <Compile Include="Base\User.cs" />
     <Compile Include="Maps\BPM\CDControllerConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Property\NewsPaper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Compiler\" />
