@@ -24,19 +24,22 @@ namespace Quest.Mobile.Controllers
         /// </summary>
         [Import]
         public IUserService UserService { get; set; }
-
         #endregion
-        public UserController()
-        {
-        }
+       
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult Registered(User entity)
-        {
-            OperationResult or = UserService.InsertRegistered(entity);
-            return this.JsonFormat(or);
-        }
+        //public ActionResult Registered(User entity)
+        //{
+        //    OperationResult or = UserService.InsertRegistered(entity);
+        //    return this.JsonFormat(or);
+        //}
+
+        //public ActionResult Reset(User entity)
+        //{
+        //    OperationResult or = UserService.Reset(entity);
+        //    return this.JsonFormat(or);
+        //}
     }
 }

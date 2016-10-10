@@ -183,18 +183,27 @@ Ext.define("QST.Main.Registered", {
                     Ext.Msg.alert('提示', passwordErrors.regexText);
                     return;
                 }
+                //是否同意协议
+                var Protocol = view.down('checkboxfield[name=Protocol]').getChecked();
+                if (Protocol == false) {
+                    Ext.Msg.alert('提示', '未同意并阅读注册协议！');
+                    return;
+                }
                 view.submit({
                     url: config.url + '/User/Registered',
                     method: 'POST',
                     //提交成功
                     success: function (action, response) {
                         //存储用户信息
-                        util.storeSet("logininfor", Ext.JSON.encode(response.data));
-                        util.showMessage(response.msg, true);
-                        //初始化用户数据
-                        view.loadInit();
-                        //更新当前用户设备信息[5秒后执行 不占用菜单请求时间]
-                        setTimeout(SHUtil.UpdateEquipment, 5000);
+                        //util.storeSet("logininfor", Ext.JSON.encode(response.data));
+                        //util.showMessage(response.msg, true);
+                        ////初始化用户数据
+                        //view.loadInit();
+                        ////更新当前用户设备信息[5秒后执行 不占用菜单请求时间]
+                        //setTimeout(SHUtil.UpdateEquipment, 5000);
+                        util.redirectTo(this.backUrl, "back");
+                        this.reset();
+                        util.showMessage("注册成功，请登录！", true);
                     },
                     //提交失败
                     failure: function (action, response) {

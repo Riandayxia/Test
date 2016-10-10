@@ -15,7 +15,20 @@ namespace Quest.Core.Base
         #endregion
 
         #region 公共方法
+        /// <summary>
+        /// 注册添加验证
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="isSave"></param>
+        /// <returns></returns>
         OperationResult InsertRegistered(User entity, Boolean isSave = true);
+        /// <summary>
+        /// 找回密码
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="isSave"></param>
+        /// <returns></returns>
+        OperationResult Reset(User entity);
         #endregion
 
         #region 私有方法

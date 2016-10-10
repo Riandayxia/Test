@@ -131,9 +131,10 @@
     <Compile Include="CommonSupport\Filter\NoAuthorizeAttribute.cs" />
     <Compile Include="CommonSupport\Filter\ViewPageAttribute.cs" />
     <Compile Include="CommonSupport\FormatJsonExtension.cs" />
+    <Compile Include="Controllers\Base\Auto\UserController.cs" />
+    <Compile Include="Controllers\Base\UserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InitDataController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

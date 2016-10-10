@@ -14,13 +14,7 @@ Ext.define("QST.Main.Retrieve", {
         title: config.str.Reset,
         redirect: null,
         items: [
-            {
-                xtype: 'component',
-                styleHtmlContent: true,
-                margin: '30 10 0 10',
-                html: '<div style="text-align:center"><img src="resources/icons/Icon.png" width="100" height="100"></div><div style="text-align:center"></div>'
-            }
-            , {
+           {
                 xtype: 'fieldset',
                 defaults: {
                     labelWidth: '40%'
@@ -143,23 +137,26 @@ Ext.define("QST.Main.Retrieve", {
                     return;
                 }
                 view.submit({
-                    url: config.url + '/User/Registered',
+                    url: config.url + '/User/Reset',
                     method: 'POST',
                     //提交成功
                     success: function (action, response) {
-                        //存储用户信息
-                        util.storeSet("logininfor", Ext.JSON.encode(response.data));
-                        util.showMessage(response.msg, true);
-                        //初始化用户数据
-                        view.loadInit();
-                        //更新当前用户设备信息[5秒后执行 不占用菜单请求时间]
-                        setTimeout(SHUtil.UpdateEquipment, 5000);
+                        ////存储用户信息
+                        //util.storeSet("logininfor", Ext.JSON.encode(response.data));
+                        //util.showMessage(response.msg, true);
+                        ////初始化用户数据
+                        //view.loadInit();
+                        ////更新当前用户设备信息[5秒后执行 不占用菜单请求时间]
+                        //setTimeout(SHUtil.UpdateEquipment, 5000);
+                        util.redirectTo(this.backUrl, "back");
+                        this.reset();
+                        util.showMessage("重置成功，请登录！", true);
                     },
                     //提交失败
                     failure: function (action, response) {
                         util.hideMessage();
                         if (response.status == 500) {
-                            Ext.Msg.alert('提示', '注册失败！');
+                            Ext.Msg.alert('提示', '重置失败！');
                         }
                         else {
                             util.showMessage(response.msg, true);
