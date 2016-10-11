@@ -110,7 +110,9 @@
     </Compile>
     <Compile Include="Property\IComplaintsService.cs" />
     <Compile Include="Property\Impl\ComplaintsService.cs" />
+    <Compile Include="Property\Impl\PaymentService.cs" />
     <Compile Include="Property\Impl\NewsPaperService.cs" />
+    <Compile Include="Property\IPaymentService.cs" />
     <Compile Include="Property\INewsPaperService.cs" />
     <Compile Include="SourceOperating.cs" />
     <Compile Include="T4\EntityCodeScript1.cs">

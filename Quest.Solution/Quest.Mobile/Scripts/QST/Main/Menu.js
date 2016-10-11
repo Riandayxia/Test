@@ -24,6 +24,9 @@ Ext.define('QST.Main.Menu', {
                 items: [{
                     text: '在线缴费',
                     iconCls: 'htgl',
+                    handler: function (but) {
+                        util.redirectTo("QST.Property.Payment.List", "", { parentUrl: "QST.Main.Layout" });
+                    }
                 }, {
                     text: '社区资讯',
                     iconCls: 'organize orange',
@@ -39,9 +42,15 @@ Ext.define('QST.Main.Menu', {
                 items: [{
                     text: '投诉建议',
                     iconCls: 'search green',
+                    handler: function (but) {
+                        util.redirectTo("QST.Property.Complaints.List", "", { parentUrl: "QST.Main.Layout" });
+                    }
                 }, {
                     text: '报事报修',
                     iconCls: 'settings blue',
+                    handler: function (but) {
+                        util.redirectTo("QST.Property.NewsPaper.Layout", "", { parentUrl: "QST.Main.Layout" });
+                    }
                 }, {
                     text: '在线营业厅',
                     iconCls: 'star yellow',

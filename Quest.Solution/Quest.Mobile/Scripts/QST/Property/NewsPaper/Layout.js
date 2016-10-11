@@ -25,8 +25,7 @@ Ext.define('QST.Property.NewsPaper.Layout', {
             data: [
                    { "name": "新增报事", url:'QST.Property.NewsPaper.List', "icon": 'add.png', "needsIcon": true },
                    { "name": "未处理报事", url:'QST.Property.NewsPaper.SList', "icon": 'Material.png', "needsIcon": true },
-                   { "name": "历史报事", url: 'QST.Property.NewsPaper.HList', "icon": 'Supplied.png', "needsIcon": true },
-                   { "name": "投诉", url: 'QST.Property.Complaints.List', "icon": 'Supplied.png', "needsIcon": true },
+                   { "name": "历史报事", url: 'QST.Property.NewsPaper.HList', "icon": 'Supplied.png', "needsIcon": true }
             ]
         },
         listeners: {

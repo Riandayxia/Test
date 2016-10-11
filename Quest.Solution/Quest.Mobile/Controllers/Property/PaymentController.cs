@@ -13,29 +13,18 @@ using Quest.Mobile;
 namespace Quest.WebSite.Controllers.Property
 {
     /// <summary>
-    ///在线缴费 控制器
+    /// 在线缴费 控制器
     /// </summary>
-    public partial class NewsPaperController : BaseController
+    public partial class PaymentController : BaseController
     {
+
         /// <summary>
         /// 分页查询
         /// </summary>
         /// <returns>返回操作结果</returns>
         public virtual ActionResult GetAll()
         {
-            return this.JsonFormat(NewsPaperService.Entities);
+            return this.JsonFormat(PaymentService.Entities);
         }
-
-
-        /// <summary>
-        /// 未处理的报事
-        /// </summary>
-        /// <returns>返回操作结果</returns>
-        public virtual ActionResult GetStare()
-        {
-            return this.JsonFormat(NewsPaperService.GetStare(1));
-        }
-
-
     }
 }

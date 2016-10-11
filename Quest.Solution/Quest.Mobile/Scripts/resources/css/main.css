@@ -713,11 +713,24 @@ body.x-desktop {
 /*#endregion*/
 
 /*#region 查询按钮 */
+.bottom .x-button {
+    background-image: none;
+    background-color:#f8f9f9;
+    border: 0;
+    border-radius: 0;
+    margin-bottom:6em;
+    font-weight:100;
+    color: #3F444A;
+    font-size: .8em;
+}
+/*#endregion*/
+
+/*#region 查询按钮 */
 .search .x-button {
     background-image: none;
     background-color: #FFF;
     border: 0;
-    border-radius: 0;
+    border-radius: 0; 
 }
 /*#endregion*/
 /*#region 首页 */

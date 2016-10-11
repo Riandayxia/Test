@@ -133,8 +133,10 @@
     <Compile Include="CommonSupport\FormatJsonExtension.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InitDataController.cs" />
+    <Compile Include="Controllers\Property\Auto\PaymentController.cs" />
     <Compile Include="Controllers\Property\Auto\NewsPaperController.cs" />
     <Compile Include="Controllers\Property\Auto\ComplaintsController.cs" />
+    <Compile Include="Controllers\Property\PaymentController.cs" />
     <Compile Include="Controllers\Property\NewsPaperController.cs" />
     <Compile Include="Controllers\Property\ComplaintsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -226,6 +228,9 @@
     <Content Include="Scripts\QST\Property\NewsPaper\HList.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\SList.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\List.js" />
+    <Content Include="Scripts\QST\Property\Payment\Edit.js" />
+    <Content Include="Scripts\QST\Property\Payment\List.js" />
+    <Content Include="Scripts\QST\Property\Payment\Layout.js" />
     <Content Include="Scripts\QST\Util.js" />
     <Content Include="Scripts\resources\css\app.css" />
     <Content Include="Scripts\resources\css\main.css" />
