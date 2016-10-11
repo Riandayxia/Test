@@ -29,6 +29,12 @@ namespace Quest.Core.Base
         /// <param name="isSave"></param>
         /// <returns></returns>
         OperationResult Reset(User entity);
+        /// <summary>
+        /// 登录
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        OperationResult Login(User entity);
         #endregion
 
         #region 私有方法

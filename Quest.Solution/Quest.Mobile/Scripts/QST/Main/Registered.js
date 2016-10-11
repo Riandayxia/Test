@@ -125,14 +125,14 @@ Ext.define("QST.Main.Registered", {
                  {
                      xtype: 'checkboxfield',
                      name: 'Protocol',
-                     margin: '250 50 0 0',
+                     margin: '250 0 0 0',
                      checked: true,
                  }, {
                      html: '<span class="dl">已同意并阅读注册协议</span>',
                      style: {
                          'font-size': '1.4em;',
                          'text-align': 'left',
-                         'margin': '255px 10px 0 0px',
+                         'margin': '255px 110px 0 0',
                          'color': ' #666',
                      },
                      listeners: [{

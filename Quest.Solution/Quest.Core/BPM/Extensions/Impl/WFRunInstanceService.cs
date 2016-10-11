@@ -167,7 +167,7 @@ namespace Quest.Core.BPM.Impl
                 MainId = ri.MainId,
                 StepId = rStep.Id,
                 StepName = rStep.Name,
-                Title = user.Name + "的" + info.Name,
+                Title = user.LoginName + "的" + info.Name,
                 Type = 0,
                 FormUrl = rStep.FormUrl,
                 FormId = rStep.FormId,

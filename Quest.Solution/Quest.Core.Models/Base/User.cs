@@ -24,7 +24,7 @@ namespace Quest.Core.Models.Base
         [DataMember]
         [StringLength(64)]
         [DBColumn("用户名")]
-        public String Name { get; set; }
+        public String LoginName { get; set; }
 
         /// <summary>
         /// 获取或设置 手机
