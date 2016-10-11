@@ -224,15 +224,14 @@
     <Content Include="Scripts\QST\Main\PersonalMiddle.js" />
     <Content Include="Scripts\QST\Main\Registered.js" />
     <Content Include="Scripts\QST\Main\Retrieve.js" />
-    <Content Include="Scripts\QST\Main\SetList.js" />
     <Content Include="Scripts\QST\Property\Complaints\Edit.js" />
     <Content Include="Scripts\QST\Property\Complaints\List.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\Details.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\Edit.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\Layout.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\HList.js" />
-    <Content Include="Scripts\QST\Property\NewsPaper\SList.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\List.js" />
+    <Content Include="Scripts\QST\Property\NewsPaper\SList.js" />
     <Content Include="Scripts\QST\Property\Payment\Edit.js" />
     <Content Include="Scripts\QST\Property\Payment\List.js" />
     <Content Include="Scripts\QST\Property\Payment\Layout.js" />
