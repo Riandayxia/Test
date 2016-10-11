@@ -108,7 +108,9 @@
     <Compile Include="Property\Extensions\INewsPaperService.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Property\ICommunityService.cs" />
     <Compile Include="Property\IComplaintsService.cs" />
+    <Compile Include="Property\Impl\CommunityService.cs" />
     <Compile Include="Property\Impl\ComplaintsService.cs" />
     <Compile Include="Property\Impl\PaymentService.cs" />
     <Compile Include="Property\Impl\NewsPaperService.cs" />

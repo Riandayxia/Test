@@ -14,17 +14,19 @@
 // </copyright>
 //------------------------------------------------------------------------------
 
+
 using System;
 using System.ComponentModel.Composition;
 using Quest.Core.Data;
 using Quest.Core.Models.Property;
 
-namespace Quest.Core.Property
+namespace Quest.Core.Property.Impl
 {
 	/// <summary>
-    /// 投诉管理 核心业务契约
+    /// 活动资讯 核心业务契约
     /// </summary>
-    public partial interface IComplaintsService : IRepository<Complaints, Guid>
+    [Export(typeof(ICommunityService))]
+    internal partial class CommunityService : RepositoryBase<Community, Guid>, ICommunityService
     {
         #region 公共属性
 

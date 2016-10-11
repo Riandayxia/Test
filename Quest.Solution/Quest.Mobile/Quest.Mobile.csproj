@@ -135,9 +135,11 @@
     <Compile Include="Controllers\Base\UserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InitDataController.cs" />
+    <Compile Include="Controllers\Property\Auto\CommunityController.cs" />
     <Compile Include="Controllers\Property\Auto\PaymentController.cs" />
     <Compile Include="Controllers\Property\Auto\NewsPaperController.cs" />
     <Compile Include="Controllers\Property\Auto\ComplaintsController.cs" />
+    <Compile Include="Controllers\Property\CommunityController.cs" />
     <Compile Include="Controllers\Property\PaymentController.cs" />
     <Compile Include="Controllers\Property\NewsPaperController.cs" />
     <Compile Include="Controllers\Property\ComplaintsController.cs" />
@@ -224,6 +226,9 @@
     <Content Include="Scripts\QST\Main\PersonalMiddle.js" />
     <Content Include="Scripts\QST\Main\Registered.js" />
     <Content Include="Scripts\QST\Main\Retrieve.js" />
+    <Content Include="Scripts\QST\Property\Community\Layout.js" />
+    <Content Include="Scripts\QST\Property\Community\AList.js" />
+    <Content Include="Scripts\QST\Property\Community\List.js" />
     <Content Include="Scripts\QST\Property\Complaints\Edit.js" />
     <Content Include="Scripts\QST\Property\Complaints\List.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\Details.js" />
@@ -233,6 +238,7 @@
     <Content Include="Scripts\QST\Property\NewsPaper\List.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\SList.js" />
     <Content Include="Scripts\QST\Property\Payment\Edit.js" />
+    <Content Include="Scripts\QST\Property\Payment\Hlist.js" />
     <Content Include="Scripts\QST\Property\Payment\List.js" />
     <Content Include="Scripts\QST\Property\Payment\Layout.js" />
     <Content Include="Scripts\QST\Util.js" />
@@ -376,7 +382,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Scripts\QST\App\" />
+    <Folder Include="Scripts\QST\App\HRManagement\User\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

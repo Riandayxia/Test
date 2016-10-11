@@ -718,10 +718,13 @@ body.x-desktop {
     background-color:#f8f9f9;
     border: 0;
     border-radius: 0;
-    margin-bottom:6em;
     font-weight:100;
-    color: #3F444A;
+    color: Gray;
+    
     font-size: .8em;
+    padding-bottom:2em;
+   
+   
 }
 /*#endregion*/
 
@@ -1622,4 +1625,8 @@ body.x-desktop {
 }*/
 .icon {
     src: url('data:application/x-font-woff;base64,M50,2.125c26.441,0,47.875,21.434,47.875,47.875S76.441,97.875,50,97.875C17.857,97.875,2.125,76.441,2.125,50S23.559,2.125,50,2.125z') format('svg');
+}
+.payment {
+    font-size:0.8em;
+    
 }
