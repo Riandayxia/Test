@@ -18,9 +18,9 @@ Ext.define("QST.Main.Login", {
                 xtype: 'component',
                 styleHtmlContent: true,
                 margin: '0 10 0 10',
-                html: '<div style="text-align:center"><img src="resources/icons/icon-500.png" width="60%" height="60%"></div><div style="text-align:center"></div><div style="text-align:center" font-family:Microsoft YaHei>智慧公租房</div>'
-            }
-            , {
+                html: '<div style="text-align:center"><img src="resources/icons/icon-500.png" width="30%" height="30%"></div><div style="text-align:center"></div><div style="text-align:center" font-family:Microsoft YaHei>智慧公租房</div>'
+            },
+            {
                 xtype: 'fieldset',
                 defaults: {
                     labelWidth: '40%'
@@ -103,6 +103,67 @@ Ext.define("QST.Main.Login", {
                     }]
                 }
             ]
+        },
+        {
+            xtype: 'panel',
+            layout: 'hbox',
+            defaults: { flex: 1  },
+            items: [
+                //QQ
+                {
+                    html: '<div style="text-align:center"><img src="resources/icons/icon-500.png" width="30%" height="30%"></div><div style="text-align:center"></div>',
+                    style: {
+                        'text-align': 'left',
+                        'margin': '110px 10px 0 50px',
+                        'color': ' #666',
+                        'font-size': '.8em'
+                    },
+                    listeners: [{
+                        event: 'tap',
+                        fn: function () {
+                            util.redirectTo("QST.Main.Registered", "", { parentUrl: "QST.Main.Login", url: config.url + '/User/Add' });
+                        },
+                        element: 'innerElement',
+                        delegate: 'span.zc'
+                    }]
+                },
+                //微信
+                {
+                    html: '<div style="text-align:center"><img src="resources/icons/icon-500.png" width="30%" height="30%"></div><div style="text-align:center"></div>',
+                    style: {
+                        'text-align': 'center',
+                        'margin': '110px 20px 0 10px',
+                        'color': ' #666',
+                        'font-size': '.8em'
+                    },
+                    listeners: [{
+                        event: 'tap',
+                        fn: function () {
+                            util.redirectTo("QST.Main.Retrieve", "", { parentUrl: "QST.Main.Login" });
+                        },
+                        element: 'innerElement',
+                        delegate: 'span.zh'
+                    }]
+                },
+                //微博
+                {
+                    html: '<div style="text-align:center"><img src="resources/icons/icon-500.png" width="30%" height="30%"></div><div style="text-align:center"></div>',
+                    style: {
+                        'text-align': 'right',
+                        'margin': '110px 50px 0 10px',
+                        'color': ' #666',
+                        'font-size': '.8em'
+                    },
+                    listeners: [{
+                        event: 'tap',
+                        fn: function () {
+                            util.redirectTo("QST.Main.Retrieve", "", { parentUrl: "QST.Main.Login" });
+                        },
+                        element: 'innerElement',
+                        delegate: 'span.zh'
+                    }]
+                }
+            ]
         }
         ],
         listeners: {
@@ -113,31 +174,39 @@ Ext.define("QST.Main.Login", {
             //登录
             login: function (but) {
                 var me = this;
-                util.showMessage(config.str.LoginStatus, false);
-                me.submit({
-                    url: config.url + '/Home/LoginPhone',
-                    method: 'POST',
-                    success: function (action, response) {
-                        //存储用户信息
-                        util.storeSet("logininfor", Ext.JSON.encode(response.data));
-                        config.LoginUser = response.data;
-                        util.hideMessage();
-                        //初始化用户数据
-                        me.loadInit();
-                        SHUtil.UpdateEquipment();
-                        ////更新当前用户设备信息[10秒后执行 不占用菜单请求时间]
-                        //setTimeout(SHUtil.UpdateEquipment, 10000);
-                    },
-                    failure: function (action, response) {
-                        util.hideMessage();
-                        if (response.status == 500) {
-                            Ext.Msg.alert('提示', config.str.LoginError);
+                var account = me.down('textfield[name=Account]').getValue();
+                var password = me.down('passwordfield[name=Password]').getValue();
+                //是否输入帐号或密码
+                if (account != ""  && password != "") {
+                    util.showMessage(config.str.LoginStatus, false);
+                    me.submit({
+                        url: config.url + '/User/LoginPhone',
+                        method: 'POST',
+                        success: function (action, response) {
+                            //存储用户信息
+                            util.storeSet("logininfor", Ext.JSON.encode(response.data));
+                            config.LoginUser = response.data;
+                            util.hideMessage();
+                            //初始化用户数据
+                            me.loadInit();
+                            SHUtil.UpdateEquipment();
+                            ////更新当前用户设备信息[10秒后执行 不占用菜单请求时间]
+                            //setTimeout(SHUtil.UpdateEquipment, 10000);
+                            //Ext.Msg.alert('提示', response.msg);
+                        },
+                        failure: function (action, response) {
+                            util.hideMessage();
+                            if (response.status == 500) {
+                                Ext.Msg.alert('提示', config.string.LoginError);
+                            }
+                            else {
+                                Ext.Msg.alert('提示', response.msg);
+                            }
                         }
-                        else {
-                            Ext.Msg.alert('提示', response.msg);
-                        }
-                    }
-                });
+                    });
+                } else {
+                    Ext.Msg.alert('提示', "请输入帐号和密码");
+                }
             }
         }
     },
