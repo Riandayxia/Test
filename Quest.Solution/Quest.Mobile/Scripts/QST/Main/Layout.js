@@ -8,7 +8,7 @@ Ext.define('QST.Main.Layout', {
     extend: 'Ext.TabPanel',
     xtype: 'main_layout',
     id: 'QST_Main_Layout',
-    requires: ['QST.Util', 'QST.Main.Home', 'QST.Main.Login'],
+    requires: ['QST.Util', 'QST.Main.Home','QST.Main.Personal', 'QST.Main.Login'],
     config: {
         fullscreen: true,
         cls: 'navToolbarHone',
@@ -61,9 +61,9 @@ Ext.define('QST.Main.Layout', {
             title: config.str.MiArea,
             iconCls: 'settings',
             layout: 'card',
-            id: 'c_main_setlist',
+            id: 'c_main_personal',
             items: [{
-                xtype: 'panel',
+                xtype: 'personal',
             }]
         }],
         listeners: {

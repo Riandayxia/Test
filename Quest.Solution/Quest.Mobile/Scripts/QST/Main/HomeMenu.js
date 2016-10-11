@@ -4,9 +4,9 @@
 * @create time：2015/1/27 
 * @modified history: //修改历史
 /-------------------------------------------------------------------*/
-Ext.define('QST.Main.Menu', {
+Ext.define('QST.Main.HomeMenu', {
     extend: 'Ext.Container',
-    xtype: 'main_menu',
+    xtype: 'home_menu',
     config: {
         layout: 'vbox',
         cls: 'home',

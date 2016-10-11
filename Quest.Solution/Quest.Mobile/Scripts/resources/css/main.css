@@ -261,7 +261,7 @@ body.x-desktop {
     font-size: .8em;
     line-height: 2em;
     border: 1px solid #ECEAE9;
-    padding: 5px!important;
+    padding: 5px !important;
 }
 
 .topImg {
@@ -720,6 +720,52 @@ body.x-desktop {
     border-radius: 0;
 }
 /*#endregion*/
+
+/*个人页*/
+.personal {
+    background-image: url("../images/personal_top.jpg");
+    background-size: 100%;
+    padding-top: 2em;
+}
+
+    .personal .x-button {
+        background-image: none;
+        background-color: transparent;
+        border: 0;
+        padding: .6em 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        color: #fff;
+        font-size: 1.2em;
+    top: 0.3em;
+    }
+
+    .personal .x-panel-inner {
+        border-radius: 1em !important;
+    }
+
+    .personal .x-button-label {
+        margin: .5em;
+    }
+
+.myInfo {
+    top: 2em;
+}
+
+    .myInfo .htgl {
+        font-size: 3em;
+        width: 2em;
+        height: 2em;
+        border-radius: 2em;
+        background-color: #fff !important;
+    }
+/*.personal .x-button .x-button-icon {
+    font-size: 5em;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 1em;
+    background-color: #fff !important;
+}*/
 /*#region 首页 */
 
 .menus .x-button {
@@ -728,10 +774,10 @@ body.x-desktop {
     border: 0;
     padding: .6em 0;
     margin: 0;
-    border-bottom: 1px solid #CCC;
+    /*border-bottom: 1px solid #CCC;*/
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    color: #1C88FB;
+    color: #fff;
     font-size: 1.2em;
 }
 

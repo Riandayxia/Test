@@ -4,9 +4,9 @@
 * @create time：2015/1/27 
 * @modified history: //修改历史
 /-------------------------------------------------------------------*/
-Ext.define('QST.Main.MiddleImg', {
+Ext.define('QST.Main.HomeMiddleImg', {
     extend: 'Ext.Container',
-    xtype: 'middleimg',
+    xtype: 'main_middle_img',
     config: {
         layout: 'vbox',
         items: [{
