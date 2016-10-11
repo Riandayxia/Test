@@ -131,6 +131,8 @@
     <Compile Include="CommonSupport\Filter\NoAuthorizeAttribute.cs" />
     <Compile Include="CommonSupport\Filter\ViewPageAttribute.cs" />
     <Compile Include="CommonSupport\FormatJsonExtension.cs" />
+    <Compile Include="Controllers\Base\Auto\UserController.cs" />
+    <Compile Include="Controllers\Base\UserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InitDataController.cs" />
     <Compile Include="Controllers\Property\Auto\PaymentController.cs" />
@@ -145,6 +147,7 @@
     </Compile>
     <Compile Include="Helper\Ioc\MefDependencySolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\LoginModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -208,18 +211,20 @@
     <Content Include="Scripts\cordova.js" />
     <Content Include="Scripts\cordova_plugins.js" />
     <Content Include="Scripts\index.html" />
-    <Content Include="Scripts\QST\App\HRManagement\User\Registered.js" />
     <Content Include="Scripts\QST\Main\Home.js" />
-    <Content Include="Scripts\QST\Main\MiddleImg.js" />
+    <Content Include="Scripts\QST\Main\HomeMiddleImg.js" />
     <Content Include="Scripts\QST\Main\HomeTopImg.js" />
     <Content Include="Scripts\QST\Main\InfoTab.js" />
     <Content Include="Scripts\QST\Main\Layout.js" />
     <Content Include="Scripts\QST\Main\Login.js" />
-    <Content Include="Scripts\QST\Main\Menu.js" />
+    <Content Include="Scripts\QST\Main\HomeMenu.js" />
+    <Content Include="Scripts\QST\Main\Personal.js" />
+    <Content Include="Scripts\QST\Main\PersonalBottom.js" />
+    <Content Include="Scripts\QST\Main\PersonalTop.js" />
+    <Content Include="Scripts\QST\Main\PersonalMiddle.js" />
     <Content Include="Scripts\QST\Main\Registered.js" />
     <Content Include="Scripts\QST\Main\Retrieve.js" />
     <Content Include="Scripts\QST\Main\SetList.js" />
-    <Content Include="Scripts\QST\Property\Complaints\Details.js" />
     <Content Include="Scripts\QST\Property\Complaints\Edit.js" />
     <Content Include="Scripts\QST\Property\Complaints\List.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\Details.js" />
@@ -251,6 +256,7 @@
     <Content Include="Scripts\resources\icons\Icon~ipad.png" />
     <Content Include="Scripts\resources\icons\iTunesArtwork.png" />
     <Content Include="Scripts\resources\images\1.jpg" />
+    <Content Include="Scripts\resources\images\personal_top.jpg" />
     <Content Include="Scripts\resources\images\3.jpg" />
     <Content Include="Scripts\resources\images\4.jpg" />
     <Content Include="Scripts\resources\images\5.jpg" />
@@ -370,7 +376,9 @@
       <Name>Quest.Framework</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Scripts\QST\App\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

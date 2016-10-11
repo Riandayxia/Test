@@ -7,7 +7,7 @@
 Ext.define('QST.Main.Home', {
     extend: 'Ext.Container',
     xtype: 'main_home',
-    requires: ['QST.Main.HomeTopImg', 'QST.Main.Menu', 'QST.Main.MiddleImg'],
+    requires: ['QST.Main.HomeTopImg', 'QST.Main.HomeMenu', 'QST.Main.HomeMiddleImg'],
     fullscreen: true,
     config: {
         title: '城南花园',
@@ -17,12 +17,12 @@ Ext.define('QST.Main.Home', {
         },
         items: [
             {
-                xtype: 'home_topImg',
+                xtype: 'home_top_img',
                 height: 160
             }, {
-                xtype: 'main_menu',
+                xtype: 'home_menu',
             }, {
-                xtype: 'middleimg'
+                xtype: 'main_middle_img'
             }, {
                 xtype: 'panel',
                 cls: 'home_msg',
@@ -36,7 +36,6 @@ Ext.define('QST.Main.Home', {
             }
         ]
     },
-    //layout: 'vbox',
     //初始化
     constructor: function (cfg) {
         var me = this;

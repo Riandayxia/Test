@@ -19,6 +19,13 @@ namespace Quest.Core.Base.Impl
         #endregion
 
         #region 公共方法
+
+        /// <summary>
+        /// 注册添加验证
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="isSave"></param>
+        /// <returns></returns>
         public OperationResult InsertRegistered(User entity, Boolean isSave = true)
         {
             #region 参数验证
@@ -39,6 +46,62 @@ namespace Quest.Core.Base.Impl
             else
             {
                 return new OperationResult(OperationResultType.QueryNull, "该手机号码已注册", false);
+            }
+        }
+        /// <summary>
+        /// 找回密码
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="isSave"></param>
+        /// <returns></returns>
+        public OperationResult Reset(User entity)
+        {
+
+            var items = this.Entities.Where(c => c.Mobile == entity.Mobile).FirstOrDefault();
+            items.VerificationCode = entity.VerificationCode;
+            items.Password = entity.Password;
+            if (this.Update(items).Equals(0))
+            {
+                return new OperationResult(OperationResultType.QueryNull, "添加或修改失败", false);
+            }
+            else
+            {
+                return new OperationResult(OperationResultType.Success, "添加或修改成功", true);
+            }
+        }
+        /// <summary>
+        /// 用户登录信息验证
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public OperationResult Login(User entity)
+        {
+            #region 参数验证
+            try
+            {
+                PublicHelper.CheckArgument(entity, "user");
+            }
+            catch (ComponentException e)
+            {
+                return new OperationResult(OperationResultType.ParamError, e.Message, false);
+            }
+            #endregion
+
+            try
+            {
+                User user = this.Entities.Where(c => (c.LoginName == entity.LoginName || c.Mobile == entity.LoginName) && c.Password == entity.Password).FirstOrDefault();
+                if (user.IsNullOrEmpty())
+                {
+                    return new OperationResult(OperationResultType.Warning, "用户帐号或密码错误", user);
+                }
+                else
+                {
+                    return new OperationResult(OperationResultType.Success, "登录成功", user);
+                }
+            }
+            catch (Exception e)
+            {
+                return new OperationResult(OperationResultType.Error, e.Message, null);
             }
         }
         #endregion

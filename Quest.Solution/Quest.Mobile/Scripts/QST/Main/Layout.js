@@ -8,7 +8,7 @@ Ext.define('QST.Main.Layout', {
     extend: 'Ext.TabPanel',
     xtype: 'main_layout',
     id: 'QST_Main_Layout',
-    requires: ['QST.Util', 'QST.Main.Home', 'QST.Main.Login', 'QST.Property.Payment.Layout'],
+    requires: ['QST.Util', 'QST.Main.Home','QST.Main.Personal', 'QST.Main.Login'],
     config: {
         fullscreen: true,
         cls: 'navToolbarHone',
@@ -45,7 +45,7 @@ Ext.define('QST.Main.Layout', {
             layout: 'card',
             id: 'c_main_menu',
             items: [{
-                xtype: 'property_payment_layout',
+                xtype: 'userLogin',
             }]
         }, {
             xtype: 'container',
@@ -61,9 +61,9 @@ Ext.define('QST.Main.Layout', {
             title: config.str.MiArea,
             iconCls: 'settings',
             layout: 'card',
-            id: 'c_main_setlist',
+            id: 'c_main_personal',
             items: [{
-                xtype: 'panel',
+                xtype: 'personal',
             }]
         }],
         listeners: {
@@ -112,13 +112,11 @@ Ext.define('QST.Main.Layout', {
     },
     // 是否登录操作
     isLogin: function (onSuccess) {
-        
-        //if (QSTUtil.IsLogin()) {
-        //    onSuccess();
-        //} else {
-        //    util.redirectTo("QST.Main.Login", "", { parentUrl: "QST.Main.Layout", onSuccess: onSuccess });
-        //}
-
+        if (QSTUtil.IsLogin()) {
+            onSuccess();
+        } else {
+            util.redirectTo("QST.Main.Login", "", { parentUrl: "QST.Main.Layout", onSuccess: onSuccess });
+        }
     },
     //安卓 返回按钮
     onBackTap: function () {
@@ -138,42 +136,6 @@ Ext.define('QST.Main.Layout', {
     },
     // 初始化系统信息
     loadInit: function () {
-        ////加载用户信息
-        //Ext.Ajax.request({
-        //    url: config.url + '/InitData/InitSysInfo',
-        //    params: { Dev: 'phone' },
-        //    async: false,
-        //    success: function (response) {
-        //        config.idata = Ext.decode(response.responseText);
-        //        //得到 单位
-        //        var dictions = Ext.decode(config.idata.sysInfo.dictions);
-        //        var dicData = [];
-        //        Ext.Array.each(dictions, function (item) {
-        //            var isFind = item.DictionKey.indexOf('10002') == -1 ? false : true;
-        //            if (isFind) {
-        //                dicData.push({
-        //                    Text: item.DictionValue,
-        //                    Value: item.DictionKey,
-        //                    Tobject: item
-        //                });
-        //            }
-        //        });
-        //        config.dics = dicData;
-
-        //        var setUp = [];
-        //        Ext.Array.each(dictions, function (item) {
-        //            var isFind = item.DictionKey.indexOf('1004100') == -1 ? false : true;
-        //            if (isFind) {
-        //                setUp.push({
-        //                    Text: item.DictionValue,
-        //                    Value: item.DictionKey,
-        //                    Id: item.Id
-        //                });
-        //            }
-        //        });
-        //        config.set = setUp;
-        //    }
-        //});
     },
     //加载Cordova
     loadCordova: function () {

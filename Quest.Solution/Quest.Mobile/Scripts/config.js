@@ -25,12 +25,6 @@ Ext.define('config', {
             Update: '修 改',
             Delete: '删 除',
         },
-        // 项目信息
-        project: {
-            // 所属项目Id
-            pId: '',//'0F8F0ECB-BC05-4DB7-8A9D-A46100D936DC','8CD30B2E-EDBD-42BD-88F9-A45800B84AD8'
-            pName: '未选择项目'
-        },
         // 登录用户
         LoginUser: {
             Name: '',
@@ -38,13 +32,13 @@ Ext.define('config', {
             Id: ''
         },
         // 系统启动页面
-        MainPage: 'QST.Main.Layout',
+        MainPage:  'QST.Main.Personal',//'QST.Main.Layout',
+        // 登录界面
+        LoginPage: 'QST.Main.Login',
         // 当前登录时间
         CurrentTime: 0,
         // 过期时间
         Timeout: 15 * 60,
-        // 登录界面
-        LoginPage: 'QST.Main.Login',
         // 权限菜单
         powers: ['QST.Main.Menu', 'QST.Main.Infobar', 'QST.Main.SetList'],
         // 用户信息及系统信息

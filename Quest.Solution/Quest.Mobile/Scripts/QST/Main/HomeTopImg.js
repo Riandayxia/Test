@@ -6,7 +6,7 @@
 /-------------------------------------------------------------------*/
 Ext.define('QST.Main.HomeTopImg', {
     extend: 'Ext.Carousel',//'Ext.Container',
-    xtype: 'home_topImg',
+    xtype: 'home_top_img',
     fullscreen: true,
     defaults: {
         styleHtmlContent: true
