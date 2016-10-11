@@ -16,7 +16,7 @@ Ext.define('QST.Main.HomeMenu', {
             defaults: {
                 flex: 1,
                 xtype: 'button',
-                iconAlign: 'top',
+                iconAlign: 'top'
             }
         },
         items: [

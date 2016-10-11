@@ -4,36 +4,63 @@
     alternateClassName: 'personal',
     config: {
         layout: 'vbox',
-        style: 'border: 2px solid red;margin: 5px 15px;',
         defaults: {
             layout: 'hbox',
             defaults: {
                 flex: 1,
                 xtype: 'label',
                 iconAlign: 'top',
+                style: 'margin-left:.5em;',
             }
         },
         items: [
             {
-                html: '我的订单'
+                xtype: 'titlebar',
+                docked: 'top',
+                cls: 'personalBar',
+                defaults: {
+                    xtype: 'label',
+                },
+                items: [{
+                    align: 'left',
+                    html: '我的订单'
+                }, {
+                    align: 'right',
+                    html: '查看全部订单<img class="personalArrow" fire="onDelete" src="resources/images/Arrow.png">'
+                }]
             },
             {
-                items: [
-                    {
-                        html: '待付款'
-                    },
-                    {
-                        html: '待发货'
-                    },
-                    {
-                        html: '待收货'
-                    },
-                    {
-                        html: '待评论'
-                    },
-                    {
-                        html: '退款/售后'
+                layout: 'vbox',
+                cls: 'personalOrder',
+                defaults: {
+                    layout: 'hbox',
+                    defaults: {
+                        flex: 1,
+                        xtype: 'button',
+                        iconAlign: 'top'
                     }
+                },
+                items: [
+                   {
+                       items: [
+                            {
+                                text: '待付款',
+                                iconCls: 'htgl'
+                            }, {
+                                text: '待发货',
+                                iconCls: 'htgl'
+                            }, {
+                                text: '待收货',
+                                iconCls: 'htgl'
+                            }, {
+                                text: '待评论',
+                                iconCls: 'htgl'
+                            }, {
+                                text: '退款/售后',
+                                iconCls: 'htgl'
+                            }
+                       ]
+                   }
                 ]
             }
         ]

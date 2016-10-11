@@ -4,7 +4,7 @@
     alternateClassName: 'personal',
     config: {
         layout: 'vbox',
-        height: 250,
+        height: 240,
         cls: 'personal',
         defaults: {
             flex: 1,
@@ -34,18 +34,18 @@
             ]
         },
         {
-            style: 'margin-top:5em;background-color: rgb(52, 202, 236);;',
+            cls: 'personaltop',
             items: [{
-                iconCls: 'trash #eee',
-                text: '我的优惠券'
+                //iconCls: 'trash #eee',
+                html: '我的优惠券'
             },
             {
-                iconCls: 'maps #eee',
-                text: '我的银行卡'
+                //iconCls: 'maps #eee',
+                html: '我的银行卡'
             },
             {
-                iconCls: 'star #eee',
-                text: '我的收藏'
+                //iconCls: 'star #eee',
+                html: '我的收藏'
             }]
         }]
     },
