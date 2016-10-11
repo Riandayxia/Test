@@ -8,7 +8,7 @@ Ext.define('QST.Main.Layout', {
     extend: 'Ext.TabPanel',
     xtype: 'main_layout',
     id: 'QST_Main_Layout',
-    requires: ['QST.Util', 'QST.Main.Home', 'QST.Main.Login'],
+    requires: ['QST.Util', 'QST.Main.Home','QST.Main.Personal', 'QST.Main.Login'],
     config: {
         fullscreen: true,
         cls: 'navToolbarHone',
@@ -61,9 +61,9 @@ Ext.define('QST.Main.Layout', {
             title: config.str.MiArea,
             iconCls: 'settings',
             layout: 'card',
-            id: 'c_main_setlist',
+            id: 'c_main_personal',
             items: [{
-                xtype: 'panel',
+                xtype: 'personal',
             }]
         }],
         listeners: {
@@ -80,7 +80,6 @@ Ext.define('QST.Main.Layout', {
                 newTab.badgeText = 18;
                 var view = newTab.getActiveItem();
                 this.tabIndex = 0;
-
                 switch (tab._title) {
                     case config.str.WorkArea:
                         this.tabIndex = 1;
@@ -137,42 +136,6 @@ Ext.define('QST.Main.Layout', {
     },
     // 初始化系统信息
     loadInit: function () {
-        ////加载用户信息
-        //Ext.Ajax.request({
-        //    url: config.url + '/InitData/InitSysInfo',
-        //    params: { Dev: 'phone' },
-        //    async: false,
-        //    success: function (response) {
-        //        config.idata = Ext.decode(response.responseText);
-        //        //得到 单位
-        //        var dictions = Ext.decode(config.idata.sysInfo.dictions);
-        //        var dicData = [];
-        //        Ext.Array.each(dictions, function (item) {
-        //            var isFind = item.DictionKey.indexOf('10002') == -1 ? false : true;
-        //            if (isFind) {
-        //                dicData.push({
-        //                    Text: item.DictionValue,
-        //                    Value: item.DictionKey,
-        //                    Tobject: item
-        //                });
-        //            }
-        //        });
-        //        config.dics = dicData;
-
-        //        var setUp = [];
-        //        Ext.Array.each(dictions, function (item) {
-        //            var isFind = item.DictionKey.indexOf('1004100') == -1 ? false : true;
-        //            if (isFind) {
-        //                setUp.push({
-        //                    Text: item.DictionValue,
-        //                    Value: item.DictionKey,
-        //                    Id: item.Id
-        //                });
-        //            }
-        //        });
-        //        config.set = setUp;
-        //    }
-        //});
     },
     //加载Cordova
     loadCordova: function () {

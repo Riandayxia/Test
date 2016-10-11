@@ -4,9 +4,9 @@ using Quest.Framework;
 namespace Quest.Core.Models.Maps.Property
 {
     /// <summary>
-    /// 实体类-数据表映射 报事
+    /// 实体类-数据表映射 在线缴费
     /// </summary>    
-    internal partial class NewsPaperConfiguration : MappingBase<NewsPaper>
+    internal partial class PaymentConfiguration : MappingBase<Payment>
     {
     }
 }

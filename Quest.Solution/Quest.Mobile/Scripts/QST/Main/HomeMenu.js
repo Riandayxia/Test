@@ -4,9 +4,9 @@
 * @create time：2015/1/27 
 * @modified history: //修改历史
 /-------------------------------------------------------------------*/
-Ext.define('QST.Main.Menu', {
+Ext.define('QST.Main.HomeMenu', {
     extend: 'Ext.Container',
-    xtype: 'main_menu',
+    xtype: 'home_menu',
     config: {
         layout: 'vbox',
         cls: 'home',
@@ -16,7 +16,7 @@ Ext.define('QST.Main.Menu', {
             defaults: {
                 flex: 1,
                 xtype: 'button',
-                iconAlign: 'top',
+                iconAlign: 'top'
             }
         },
         items: [
@@ -24,6 +24,9 @@ Ext.define('QST.Main.Menu', {
                 items: [{
                     text: '在线缴费',
                     iconCls: 'htgl',
+                    handler: function (but) {
+                        util.redirectTo("QST.Property.Payment.List", "", { parentUrl: "QST.Main.Layout" });
+                    }
                 }, {
                     text: '社区资讯',
                     iconCls: 'organize orange',
@@ -39,9 +42,15 @@ Ext.define('QST.Main.Menu', {
                 items: [{
                     text: '投诉建议',
                     iconCls: 'search green',
+                    handler: function (but) {
+                        util.redirectTo("QST.Property.Complaints.List", "", { parentUrl: "QST.Main.Layout" });
+                    }
                 }, {
                     text: '报事报修',
                     iconCls: 'settings blue',
+                    handler: function (but) {
+                        util.redirectTo("QST.Property.NewsPaper.Layout", "", { parentUrl: "QST.Main.Layout" });
+                    }
                 }, {
                     text: '在线营业厅',
                     iconCls: 'star yellow',

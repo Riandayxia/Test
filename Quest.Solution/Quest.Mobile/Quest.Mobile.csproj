@@ -137,6 +137,13 @@
     <Compile Include="Controllers\HouseManage\Auto\HousekeepingController.cs" />
     <Compile Include="Controllers\HouseManage\HousekeepingController.cs" />
     <Compile Include="Controllers\InitDataController.cs" />
+    <Compile Include="Controllers\Property\Auto\PaymentController.cs" />
+    <Compile Include="Controllers\Property\Auto\NewsPaperController.cs" />
+    <Compile Include="Controllers\Property\Auto\ComplaintsController.cs" />
+    <Compile Include="Controllers\Property\PaymentController.cs" />
+    <Compile Include="Controllers\Property\NewsPaperController.cs" />
+    <Compile Include="Controllers\Property\ComplaintsController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -212,19 +219,29 @@
     <Content Include="Scripts\QST\HouseManage\Housekeeping\PJEdit.js" />
     <Content Include="Scripts\QST\HouseManage\Housekeeping\YSEdit.js" />
     <Content Include="Scripts\QST\Main\Home.js" />
-    <Content Include="Scripts\QST\Main\MiddleImg.js" />
+    <Content Include="Scripts\QST\Main\HomeMiddleImg.js" />
     <Content Include="Scripts\QST\Main\HomeTopImg.js" />
     <Content Include="Scripts\QST\Main\InfoTab.js" />
     <Content Include="Scripts\QST\Main\Layout.js" />
     <Content Include="Scripts\QST\Main\Login.js" />
-    <Content Include="Scripts\QST\Main\Menu.js" />
+    <Content Include="Scripts\QST\Main\HomeMenu.js" />
+    <Content Include="Scripts\QST\Main\Personal.js" />
+    <Content Include="Scripts\QST\Main\PersonalBottom.js" />
+    <Content Include="Scripts\QST\Main\PersonalTop.js" />
+    <Content Include="Scripts\QST\Main\PersonalMiddle.js" />
     <Content Include="Scripts\QST\Main\Registered.js" />
     <Content Include="Scripts\QST\Main\Retrieve.js" />
-    <Content Include="Scripts\QST\Main\SetList.js" />
     <Content Include="Scripts\QST\Property\Complaints\Edit.js" />
     <Content Include="Scripts\QST\Property\Complaints\List.js" />
+    <Content Include="Scripts\QST\Property\NewsPaper\Details.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\Edit.js" />
+    <Content Include="Scripts\QST\Property\NewsPaper\Layout.js" />
+    <Content Include="Scripts\QST\Property\NewsPaper\HList.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\List.js" />
+    <Content Include="Scripts\QST\Property\NewsPaper\SList.js" />
+    <Content Include="Scripts\QST\Property\Payment\Edit.js" />
+    <Content Include="Scripts\QST\Property\Payment\List.js" />
+    <Content Include="Scripts\QST\Property\Payment\Layout.js" />
     <Content Include="Scripts\QST\Util.js" />
     <Content Include="Scripts\resources\css\app.css" />
     <Content Include="Scripts\resources\css\main.css" />
@@ -245,6 +262,7 @@
     <Content Include="Scripts\resources\icons\Icon~ipad.png" />
     <Content Include="Scripts\resources\icons\iTunesArtwork.png" />
     <Content Include="Scripts\resources\images\1.jpg" />
+    <Content Include="Scripts\resources\images\personal_top.jpg" />
     <Content Include="Scripts\resources\images\3.jpg" />
     <Content Include="Scripts\resources\images\4.jpg" />
     <Content Include="Scripts\resources\images\5.jpg" />
