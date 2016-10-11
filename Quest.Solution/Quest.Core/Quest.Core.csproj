@@ -97,6 +97,10 @@
     <Compile Include="BPM\IWFRunStepService.cs" />
     <Compile Include="BPM\IWFTaskService.cs" />
     <Compile Include="CoreInitializer.cs" />
+    <Compile Include="HouseManage\Extensions\IHousekeepingService.cs" />
+    <Compile Include="HouseManage\Extensions\Imp\HousekeepingService.cs" />
+    <Compile Include="HouseManage\IHousekeepingService.cs" />
+    <Compile Include="HouseManage\Impl\HousekeepingService.cs" />
     <Compile Include="Impl\MsSqlProvider.cs" />
     <Compile Include="Initialize\BasicDataInitializer.cs" />
     <Compile Include="Initialize\ContentInitializer.cs">
@@ -199,6 +203,7 @@
       <Name>Quest.Framework</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -13,6 +13,13 @@ Ext.define('config', {
             loginPwdTip: '请输入密码',
             LoginStatus: '登录中....',
             Reset: '重置密码',
+            //家政服务
+            Housekeeping: '家政服务',
+            PartTimeJob: '在线预约—钟点工',
+            YueSao: '在线预约—月嫂',
+            CareWorkers: '在线预约—护工',
+            HomeAunt: '在线预约—住家阿姨',
+            Houseprotocol:'《智慧公租房家政服务协议》',
 
             HomeArea: '首页',
             WorkArea: '工作区',

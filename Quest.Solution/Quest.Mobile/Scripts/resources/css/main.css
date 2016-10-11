@@ -741,7 +741,7 @@ body.x-desktop {
 .personal {
     background-image: url("../images/personal_top.jpg");
     background-size: 100%;
-    padding-top: 2em;
+    padding-top: 1em;
 }
 
     .personal .x-button {
@@ -781,7 +781,7 @@ body.x-desktop {
 }
 
     .personaltop .x-button {
-        top: 4.8em;
+        top: 4.5em;
         border-left: 1px solid #fff;
         border-right: 1px solid #fff;
         border-radius: 0;

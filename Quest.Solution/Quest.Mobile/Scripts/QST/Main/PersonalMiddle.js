@@ -1,9 +1,10 @@
 ﻿Ext.define('QST.Main.PersonalMiddle', {
     extend: 'Ext.Container',
     xtype: 'personal_middle',
-    alternateClassName: 'personal',
+    alternateClassName: 'personal_middle',
     config: {
         layout: 'vbox',
+        style: 'border:1px solid #CCC',
         defaults: {
             layout: 'hbox',
             defaults: {
