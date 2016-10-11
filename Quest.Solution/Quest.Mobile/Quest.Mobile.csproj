@@ -134,6 +134,8 @@
     <Compile Include="Controllers\Base\Auto\UserController.cs" />
     <Compile Include="Controllers\Base\UserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HouseManage\Auto\HousekeepingController.cs" />
+    <Compile Include="Controllers\HouseManage\HousekeepingController.cs" />
     <Compile Include="Controllers\InitDataController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -204,6 +206,11 @@
     <Content Include="Scripts\cordova.js" />
     <Content Include="Scripts\cordova_plugins.js" />
     <Content Include="Scripts\index.html" />
+    <Content Include="Scripts\QST\HouseManage\Housekeeping\CWEdit.js" />
+    <Content Include="Scripts\QST\HouseManage\Housekeeping\HAEdit.js" />
+    <Content Include="Scripts\QST\HouseManage\Housekeeping\List.js" />
+    <Content Include="Scripts\QST\HouseManage\Housekeeping\PJEdit.js" />
+    <Content Include="Scripts\QST\HouseManage\Housekeeping\YSEdit.js" />
     <Content Include="Scripts\QST\Main\Home.js" />
     <Content Include="Scripts\QST\Main\MiddleImg.js" />
     <Content Include="Scripts\QST\Main\HomeTopImg.js" />
