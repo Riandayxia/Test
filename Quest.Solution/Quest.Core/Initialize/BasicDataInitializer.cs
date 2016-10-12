@@ -57,7 +57,11 @@ namespace Quest.Core.Initialize
             Dictionary dic1 = new Dictionary() { Id = "00000000-0000-0000-0001-000000000001".GetGuid(), ParentId = dic_MType.Id, Keyword = "菜单", Key = MenuType.Menu.GetHashCode().GetString(), Value = "菜单", Sequence = 1 };
             Dictionary dic2 = new Dictionary() { Id = "00000000-0000-0000-0001-000000000002".GetGuid(), ParentId = dic_MType.Id, Keyword = "功能", Key = MenuType.Feature.GetHashCode().GetString(), Value = "功能", Sequence = 2 };
 
-            List<Dictionary> dics = new List<Dictionary>() { dic_MType, dic1, dic2 };
+            Dictionary dic_Community = new Dictionary() { Id = "00000000-0000-0000-0003-000000000000".GetGuid(), ParentId = Guid.Empty, Keyword = "活动资讯", Key = "10003", Value = "社区资讯", Sequence = 3 };
+            Dictionary dic_Community1 = new Dictionary() { Id = "00000000-0000-0000-0003-000000000001".GetGuid(), ParentId = dic_Community.Id, Keyword = "社区活动", Key = "10003001", Value = "社区活动", Sequence = 1 };
+            Dictionary dic_Community2 = new Dictionary() { Id = "00000000-0000-0000-0003-000000000002".GetGuid(), ParentId = dic_Community.Id, Keyword = "社区公告", Key = "10003002", Value = "社区公告", Sequence = 2 };
+
+            List<Dictionary> dics = new List<Dictionary>() { dic_MType, dic1, dic2 ,dic_Community,dic_Community1,dic_Community2};
             OperationResult or = DictionaryService.AddOrUpdate((c => new { c.Id }), dics.ToArray(), false);
 
             #endregion

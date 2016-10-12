@@ -25,11 +25,14 @@ Ext.define('QST.Main.HomeMenu', {
                     text: '在线缴费',
                     iconCls: 'htgl',
                     handler: function (but) {
-                        util.redirectTo("QST.Property.Payment.List", "", { parentUrl: "QST.Main.Layout" });
+                        util.redirectTo("QST.Property.Payment.Layout", "", { parentUrl: "QST.Main.Layout" });
                     }
                 }, {
                     text: '社区资讯',
                     iconCls: 'organize orange',
+                    handler: function (but) {
+                        util.redirectTo("QST.Property.Community.Layout", "", { parentUrl: "QST.Main.Layout" });
+                    }
                 }, {
                     text: '家政服务',
                     iconCls: 'list roseRed',

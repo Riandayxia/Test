@@ -761,6 +761,9 @@ body.x-desktop {
     font-weight: 100;
     color: #3F444A;
     font-size: .8em;
+    padding-bottom:2em;
+   
+   
 }
 /*#endregion*/
 
@@ -769,7 +772,7 @@ body.x-desktop {
     background-image: none;
     background-color: #FFF;
     border: 0;
-    border-radius: 0;
+    border-radius: 0; 
 }
 /*#endregion*/
 
@@ -891,30 +894,30 @@ body.x-desktop {
 .personalOrder {
 }
 
-    .personalOrder .x-button {
-        background-image: none;
-        background-color: transparent;
-        border: 0;
-        padding: .2em 0;
-        margin: .2em 0;
+.personalOrder .x-button {
+    background-image: none;
+    background-color: transparent;
+    border: 0;
+    padding: .2em 0;
+    margin: .2em 0;
+}
+
+
+    .personalOrder .x-button .x-button-label {
+        font-weight: normal;
+        color: #3F444A;
+        font-size: .8em;
+        margin-top: .1em !important;
+        line-height: 2em;
     }
 
-
-        .personalOrder .x-button .x-button-label {
-            font-weight: normal;
-            color: #3F444A;
-            font-size: .8em;
-            margin-top: .1em !important;
-            line-height: 2em;
-        }
-
-        .personalOrder .x-button .x-button-icon {
-            font-size: 2em;
-            width: 1.6em;
-            height: 1.6em;
-            border-radius: .3em;
-            background-color: #f0f1f1 !important;
-        }
+    .personalOrder .x-button .x-button-icon {
+        font-size: 2em;
+        width: 1.6em;
+        height: 1.6em;
+        border-radius: .3em;
+        background-color: #f0f1f1 !important;
+    }
 
 /*.personal .x-button .x-button-icon {
     font-size: 5em;
@@ -1670,3 +1673,8 @@ body.x-desktop {
 .icon {
     src: url('data:application/x-font-woff;base64,M50,2.125c26.441,0,47.875,21.434,47.875,47.875S76.441,97.875,50,97.875C17.857,97.875,2.125,76.441,2.125,50S23.559,2.125,50,2.125z') format('svg');
 }
+.payment {  font-size:0.8em;}
+.community { clear: both;}
+.community img { width: 100% !important; height: 20em !important; margin: 5px !important; padding-right: 10px !important;  }
+.communityspan {  border:1px solid #CCC; padding: 0 0.3em;}
+.communityp {font-size: 6px;color: Gray; }

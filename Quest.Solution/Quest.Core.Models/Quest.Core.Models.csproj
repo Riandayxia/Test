@@ -70,9 +70,11 @@
     <Compile Include="BPM\WFTask.cs" />
     <Compile Include="BPM\CDColumn.cs" />
     <Compile Include="BPM\CDController.cs" />
+    <Compile Include="Maps\Property\CommunityConfiguration.cs" />
     <Compile Include="Maps\Property\ComplaintsConfiguration.cs" />
     <Compile Include="Maps\Property\PaymentConfiguration.cs" />
     <Compile Include="Maps\Property\NewsPaperConfiguration.cs" />
+    <Compile Include="Property\Community.cs" />
     <Compile Include="Maps\HouseManage\HousekeepingConfiguration.cs" />
     <Compile Include="Property\Complaints.cs" />
     <Compile Include="Maps\Base\MenuConfiguration.cs" />
