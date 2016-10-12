@@ -233,6 +233,7 @@
     <Content Include="Scripts\QST\Main\PersonalMiddle.js" />
     <Content Include="Scripts\QST\Main\Registered.js" />
     <Content Include="Scripts\QST\Main\Retrieve.js" />
+    <Content Include="Scripts\QST\Property\Community\Details.js" />
     <Content Include="Scripts\QST\Property\Community\Layout.js" />
     <Content Include="Scripts\QST\Property\Community\AList.js" />
     <Content Include="Scripts\QST\Property\Community\List.js" />

@@ -1626,7 +1626,8 @@ body.x-desktop {
 .icon {
     src: url('data:application/x-font-woff;base64,M50,2.125c26.441,0,47.875,21.434,47.875,47.875S76.441,97.875,50,97.875C17.857,97.875,2.125,76.441,2.125,50S23.559,2.125,50,2.125z') format('svg');
 }
-.payment {
-    font-size:0.8em;
-    
-}
+.payment {  font-size:0.8em;}
+.community { clear: both;}
+.community img { width: 100% !important; height: 20em !important; margin: 5px !important; padding-right: 10px !important;  }
+.communityspan {  border:1px solid #CCC; padding: 0 0.3em;}
+.communityp {font-size: 6px;color: Gray; }

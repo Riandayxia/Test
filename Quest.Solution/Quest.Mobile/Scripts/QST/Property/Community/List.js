@@ -13,55 +13,62 @@ Ext.define('QST.Property.Community.List', {
         moreBut: false,
         rootProperty: "data",
         cls: 'ux_list',
-        search: true,//是否添加查询
         ckId: 'Id',  //设置数据主键(可配置)
         title: '社区活动',
         dataUrl: config.url + '/Community/GetAll',
-        modelArray: ['Id', 'Title', 'Content', 'ActivityTime', 'Publisher', 'IsDeleted', 'CreatedTime', 'LastUpdatedTime'],
+        modelArray: ['Id', 'Title', 'Content', 'ActivityTime', 'Text', 'ContentType', 'ImageUrl', 'Publisher', 'IsDeleted', 'CreatedTime', 'LastUpdatedTime'],
+        //模板
         itemTpl: Ext.create('Ext.XTemplate',
             '<div class="container">',
-                '<div class="header"><h1>{Title}<h1></div>',
-                '<div class="header2">',
-                    '<div class="ctent" style="width:33%;border:0px!important;"><li class="title">活动时间</li><li><span class="_ctent">{[SHUtil.FormatTime(values.ActivityTime)]}</span></li></div>',
-                    '<div class="ctent" style="width:33%;"><li class="title">活动内容</li><li><span class="_ctent">{Content}</span></li></div>',
-                    '<div class="ctent" style="width:33%;"><li class="title">发布人</li><li><span class="_ctent">{Publisher}</span></li></div>',
+                '<div class="header">',
+                    ' <h1>{Title}<h1><p class="communityp">{[SHUtil.FormatTime(values.ActivityTime)]}</p>',
                 '</div>',
+                '<div ><span  class="communityp">{[SHUtil.GetText(values.Text)]}</span></div>',
+                '<div class="menu">{[SHUtil.GetImg(values.ImageUrl,values.Title)]}</div>',
+                '<div ><span class="communityp">点击查看详细</span></div>',
                 '<div class="footer"></div>',
             '</div>'),
         listeners: {
-
             //返回上一级
             Back: function (but, list) {
-                util.redirectTo(this.backUrl, "back", {});
+                util.redirectTo(this.backUrl, "back");
             },
             //单击查看详细信息
-            itemsingletap: function (list, index, target, record, e, eOpts) {
+            itemsingletap: function () {
                 if (!this._tapHold) {
-                    var record = util.copyObjects(record.data);
-                    util.redirectTo("QST.Property.Complaints.Details", "", { parentUrl: "QST.Property.Complaints.List", data: record });
+                    var record = this.getSelection()[0].data;
+                    util.redirectTo("QST.Property.Community.Details", "", { parentUrl: "QST.Property.Community.List", data: record });
                 }
             },
-            //查询
-            Search: function (field, list) {
-                var search = field.getValue();
-                //设置查询参数
-                this.getStore().setParams({ search: search });
-                this.getStore().loadPage(1);
+            //只要按键长按住就会触发，和按键是否离开没有关系
+            itemtaphold: function (list, index, target, record, e) {
+                //开始多选
+                this.beginSimple();
             }
         }
     },
+    // 加载数据
+    loadData: function (cType) {
+        this.getStore().setParams({ ContentType: cType });
+        this.getStore().loadPage(1);
+    },
+ 
     //主界面到此界面时加载[List刷新时会默认加载此方法]
     rendering: function (params) {
-        if (params) {
+        if (params)
             this.backUrl = params.parentUrl;
-        }
-        //加载数据
-        this.getStore().load();
+        this.getStore().loadPage(1);
     },
     //子界面返回到此界面时加载
     overViewResult: function (params) {
-        //this.getStore().loadPage(1);
-        this.getStore().load();
+        //当编辑数据成功时加载数据
+        if (params.editSuccess) {
+            this.getStore().loadPage(1);
+        }
+    },
+    //初始化
+    constructor: function (config) {
+        var me = this;
+        this.callParent(arguments);
     }
-
 })

@@ -23,7 +23,7 @@ using Quest.Core.Models.Property;
 namespace Quest.Core.Property.Impl
 {
 	/// <summary>
-    /// 活动资讯 核心业务契约
+    /// 投诉管理 核心业务契约
     /// </summary>
     [Export(typeof(ICommunityService))]
     internal partial class CommunityService : RepositoryBase<Community, Guid>, ICommunityService

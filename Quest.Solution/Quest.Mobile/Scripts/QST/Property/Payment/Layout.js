@@ -28,7 +28,7 @@
                 style: 'background:#f8f9f9',
                 items: [
                     {
-                        xtype: "button", text: '缴费记录', style: ' margin-left:25%;text-align:right',
+                        xtype: "button", text: '缴费记录', style: ' margin-left:30%;',
                         handler: function (but) {
                             util.redirectTo("QST.Property.Payment.HList", "", { parentUrl: "QST.Property.Payment.Layout" });
                         }
@@ -37,7 +37,7 @@
                        
                     },
                     {
-                        xtype: "button", text: '帮助中心', style: 'text-align:right',
+                        xtype: "button", text: '帮助中心', style: '',
                         handler: function (but) {
                             util.redirectTo("", "", { parentUrl: "QST.Property.Payment.Layout" });
                         }

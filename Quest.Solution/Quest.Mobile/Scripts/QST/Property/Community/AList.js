@@ -13,21 +13,22 @@ Ext.define('QST.Property.Community.AList', {
         moreBut: false,
         rootProperty: "data",
         cls: 'ux_list',
-        search: true,//是否添加查询
         ckId: 'Id',  //设置数据主键(可配置)
         title: '社区公告',
         dataUrl: config.url + '/Community/GetAll',
-        modelArray: ['Id', 'Title', 'Content', 'ActivityTime', 'Publisher', 'IsDeleted', 'CreatedTime', 'LastUpdatedTime'],
+        modelArray: ['Id', 'Title', 'Content', 'ActivityTime','Text','ContentType','Publisher','ImageUrl', 'IsDeleted', 'CreatedTime', 'LastUpdatedTime'],
+        //模板
         itemTpl: Ext.create('Ext.XTemplate',
             '<div class="container">',
-                '<div class="header"><h1>{Title}<h1></div>',
-                '<div class="header2">',
-                    '<div class="ctent" style="width:33%;border:0px!important;"><li class="title">活动时间</li><li><span class="_ctent">{[SHUtil.FormatTime(values.ActivityTime)]}</span></li></div>',
-                    '<div class="ctent" style="width:33%;"><li class="title">活动内容</li><li><span class="_ctent">{Content}</span></li></div>',
-                    '<div class="ctent" style="width:33%;"><li class="title">发布人</li><li><span class="_ctent">{Publisher}</span></li></div>',
+                '<div class="header">',
+                    ' <h1 ><span class="communityspan">公告</span> {Title}<h1><p class="communityp">{[SHUtil.FormatTime(values.ActivityTime)]}</p>',
                 '</div>',
+                '<div ><span  class="communityp">{[SHUtil.GetText(values.Text)]}</span></div>',
+                '<div class="menu">{[SHUtil.GetImg(values.ImageUrl,values.Title)]}</div>',
+                '<div ><span  class="communityp">点击查看详细</span></div>',
                 '<div class="footer"></div>',
-            '</div>'),
+            '</div>'
+            ),
         listeners: {
 
             //返回上一级
@@ -38,7 +39,7 @@ Ext.define('QST.Property.Community.AList', {
             itemsingletap: function (list, index, target, record, e, eOpts) {
                 if (!this._tapHold) {
                     var record = util.copyObjects(record.data);
-                    util.redirectTo("QST.Property.Complaints.Details", "", { parentUrl: "QST.Property.Complaints.List", data: record });
+                    util.redirectTo("QST.Property.Community.Details", "", { parentUrl: "QST.Property.Community.AList", data: record });
                 }
             },
             //查询

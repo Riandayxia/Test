@@ -42,6 +42,27 @@ namespace Quest.Core.Models.Property
         [DataMember]
         [DBColumn("发布人")]
         public String Publisher { get; set; }
+
+
+        /// <summary>
+        /// 活动文字
+        /// </summary>
+        [DataMember]
+        [DBColumn("活动文字")]
+        public String Text { get; set; }
+        /// <summary>
+        /// 图片信息
+        /// </summary>
+        [DataMember]
+        [DBColumn("活动图片")]
+        public String ImageUrl { get; set; }
+
+        /// <summary>
+        /// 内容类型
+        /// </summary>
+        [DataMember]
+        [DBColumn("内容类型")]
+        public String ContentType { get; set; }
         #endregion
     }
 }
