@@ -1,6 +1,14 @@
 .0985d715c5e92ca61395a0f06d9e17b84c79394c {
     display: block;
 }
+/* 隐藏x方向滚动条 */
+.x-scroll-bar-x.active {
+    width: 0px;
+}
+/* 隐藏y方向滚动条 */
+.x-scroll-bar-y.active {
+    width: 0px;
+}
 /*#region pick */
 
 .x-picker-slot-title {
@@ -715,11 +723,11 @@ body.x-desktop {
 /*#region 查询按钮 */
 .bottom .x-button {
     background-image: none;
-    background-color:#f8f9f9;
+    background-color: #f8f9f9;
     border: 0;
     border-radius: 0;
-    margin-bottom:6em;
-    font-weight:100;
+    margin-bottom: 6em;
+    font-weight: 100;
     color: #3F444A;
     font-size: .8em;
 }
@@ -730,13 +738,13 @@ body.x-desktop {
     background-image: none;
     background-color: #FFF;
     border: 0;
-    border-radius: 0; 
+    border-radius: 0;
 }
 /*#endregion*/
 
 /*个人页*/
 .personal {
-    background-image: url("../images/personal_top.jpg");
+    background-image: url("../images/personal_top.png");
     background-size: 100%;
     padding-top: 1em;
 }
@@ -759,19 +767,27 @@ body.x-desktop {
     .personal .x-button-label {
         margin: .5em;
         font-weight: 400;
+        color: #fff;
     }
 
 .myInfo {
     top: 3em;
 }
 
-    .myInfo .htgl {
+    .myInfo .user_img {
         font-size: 3em;
         width: 2em;
         height: 2em;
         border-radius: 2em;
         background-color: #fff !important;
     }
+
+/*合同管理*/
+.user_img {
+    background: url(../images/desktop/gczs.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}
 
 .personaltop {
     background-color: rgb(52, 202, 236);
@@ -841,33 +857,33 @@ body.x-desktop {
     margin: 0em .5em;
 }
 
-.personalOrder{
-
-}
-.personalOrder .x-button {
-    background-image: none;
-    background-color: transparent;
-    border: 0;
-    padding: .2em 0;
-    margin: .2em 0;
+.personalOrder {
 }
 
-
-    .personalOrder .x-button .x-button-label {
-        font-weight: normal;
-        color: #3F444A;
-        font-size: .8em;
-        margin-top: .1em !important;
-        line-height: 2em;
+    .personalOrder .x-button {
+        background-image: none;
+        background-color: transparent;
+        border: 0;
+        padding: .2em 0;
+        margin: .2em 0;
     }
 
-    .personalOrder .x-button .x-button-icon {
-        font-size: 2em;
-        width: 1.6em;
-        height: 1.6em;
-        border-radius: .3em;
-        background-color: #f0f1f1 !important;
-    }
+
+        .personalOrder .x-button .x-button-label {
+            font-weight: normal;
+            color: #3F444A;
+            font-size: .8em;
+            margin-top: .1em !important;
+            line-height: 2em;
+        }
+
+        .personalOrder .x-button .x-button-icon {
+            font-size: 2em;
+            width: 1.6em;
+            height: 1.6em;
+            border-radius: .3em;
+            background-color: #f0f1f1 !important;
+        }
 
 /*.personal .x-button .x-button-icon {
     font-size: 5em;

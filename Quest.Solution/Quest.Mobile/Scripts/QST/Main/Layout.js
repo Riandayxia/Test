@@ -8,7 +8,7 @@ Ext.define('QST.Main.Layout', {
     extend: 'Ext.TabPanel',
     xtype: 'main_layout',
     id: 'QST_Main_Layout',
-    requires: ['QST.Util', 'QST.Main.Home','QST.Main.Personal', 'QST.Main.Login'],
+    requires: ['QST.Util', 'QST.Main.Home', 'QST.Mall.Layout', 'QST.Personal.Layout', 'QST.Main.Login'],
     config: {
         fullscreen: true,
         cls: 'navToolbarHone',
@@ -22,10 +22,6 @@ Ext.define('QST.Main.Layout', {
             defaults: {
                 flex: 1,
                 layout: 'card'
-            },
-            scrollable: { //设置可滚动的属性
-                direction: 'vertical',
-                indicators: false
             }
         },
         items: [{
@@ -43,9 +39,9 @@ Ext.define('QST.Main.Layout', {
             title: config.str.Wares,
             iconCls: 'star',
             layout: 'card',
-            id: 'c_main_menu',
+            id: 'c_mall_layout',
             items: [{
-                xtype: 'userLogin',
+                xtype: 'mall_layout',
             }]
         }, {
             xtype: 'container',
@@ -55,15 +51,16 @@ Ext.define('QST.Main.Layout', {
             id: 'c_main_infotab',
             items: [{
                 xtype: 'panel',
+                html:'接口對接中'
             }]
         }, {
             xtype: 'container',
             title: config.str.MiArea,
             iconCls: 'settings',
             layout: 'card',
-            id: 'c_main_personal',
+            id: 'c_personal_layout',
             items: [{
-                xtype: 'personal',
+                xtype: 'personal_layout',
             }]
         }],
         listeners: {
@@ -83,24 +80,12 @@ Ext.define('QST.Main.Layout', {
                 switch (tab._title) {
                     case config.str.WorkArea:
                         this.tabIndex = 1;
-                        function loadWork() {
-                            //view.loadMenu();
-                        }
-                        this.isLogin(loadWork);
                         break;
                     case config.str.InfoAre:
                         this.tabIndex = 2;
-                        function loadNotification() {
-                            //view.loadData();
-                        }
-                        this.isLogin(loadNotification);
                         break;
                     case config.str.MiArea:
                         this.tabIndex = 3;
-                        function loadSetUp() {
-                            //view.loadData();
-                        }
-                        this.isLogin(loadSetUp);
                         break;
                     default:
                         this.tabIndex = 0;
@@ -108,14 +93,6 @@ Ext.define('QST.Main.Layout', {
                 }
                 tabBar.setActiveItem(newTab);
             }
-        }
-    },
-    // 是否登录操作
-    isLogin: function (onSuccess) {
-        if (QSTUtil.IsLogin()) {
-            onSuccess();
-        } else {
-            util.redirectTo("QST.Main.Login", "", { parentUrl: "QST.Main.Layout", onSuccess: onSuccess });
         }
     },
     //安卓 返回按钮

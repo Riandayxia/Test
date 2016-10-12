@@ -218,12 +218,17 @@
     <Content Include="Scripts\QST\Main\Layout.js" />
     <Content Include="Scripts\QST\Main\Login.js" />
     <Content Include="Scripts\QST\Main\HomeMenu.js" />
-    <Content Include="Scripts\QST\Main\Personal.js" />
-    <Content Include="Scripts\QST\Main\PersonalBottom.js" />
-    <Content Include="Scripts\QST\Main\PersonalTop.js" />
-    <Content Include="Scripts\QST\Main\PersonalMiddle.js" />
+    <Content Include="Scripts\QST\Mall\Digital.js" />
+    <Content Include="Scripts\QST\Mall\Selling.js" />
+    <Content Include="Scripts\QST\Mall\MiddleImg.js" />
+    <Content Include="Scripts\QST\Mall\Menu.js" />
+    <Content Include="Scripts\QST\Personal\Layout.js" />
+    <Content Include="Scripts\QST\Personal\Bottom.js" />
+    <Content Include="Scripts\QST\Personal\Middle.js" />
+    <Content Include="Scripts\QST\Personal\Top.js" />
     <Content Include="Scripts\QST\Main\Registered.js" />
     <Content Include="Scripts\QST\Main\Retrieve.js" />
+    <Content Include="Scripts\QST\Mall\Layout.js" />
     <Content Include="Scripts\QST\Property\Complaints\Edit.js" />
     <Content Include="Scripts\QST\Property\Complaints\List.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\Details.js" />
@@ -255,7 +260,6 @@
     <Content Include="Scripts\resources\icons\Icon~ipad.png" />
     <Content Include="Scripts\resources\icons\iTunesArtwork.png" />
     <Content Include="Scripts\resources\images\1.jpg" />
-    <Content Include="Scripts\resources\images\personal_top.jpg" />
     <Content Include="Scripts\resources\images\3.jpg" />
     <Content Include="Scripts\resources\images\4.jpg" />
     <Content Include="Scripts\resources\images\5.jpg" />
@@ -315,6 +319,7 @@
     <Content Include="Scripts\resources\images\middle_img_2.png" />
     <Content Include="Scripts\resources\images\middle_img_3.png" />
     <Content Include="Scripts\resources\images\ok.png" />
+    <Content Include="Scripts\resources\images\personal_top.png" />
     <Content Include="Scripts\resources\images\save.png" />
     <Content Include="Scripts\resources\images\set\Equipment.png" />
     <Content Include="Scripts\resources\images\set\help.png" />
@@ -329,6 +334,7 @@
     <Content Include="Scripts\resources\images\set\Supplied.png" />
     <Content Include="Scripts\resources\images\set\Turnover.png" />
     <Content Include="Scripts\resources\images\set\version.png" />
+    <Content Include="Scripts\resources\images\Mall-1.png" />
     <Content Include="Scripts\resources\images\top-1.png" />
     <Content Include="Scripts\resources\startup\1496x2048.png" />
     <Content Include="Scripts\resources\startup\1536x2008.png" />

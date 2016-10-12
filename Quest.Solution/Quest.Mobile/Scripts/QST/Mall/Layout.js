@@ -1,16 +1,15 @@
 ﻿/**-----------------------------------------------------------------
-* @explanation:主界面菜单
+* @explanation:购物中心
 * @created：Rainday
 * @create time：2015/1/27 
 * @modified history: //修改历史
 /-------------------------------------------------------------------*/
-Ext.define('QST.Main.Home', {
+Ext.define('QST.Mall.Layout', {
     extend: 'Ext.Container',
-    xtype: 'main_home',
-    requires: ['QST.Main.HomeTopImg', 'QST.Main.HomeMenu', 'QST.Main.HomeMiddleImg'],
+    xtype: 'mall_layout',
+    requires: ['QST.Mall.Menu', 'QST.Mall.MiddleImg', 'QST.Mall.Selling', 'QST.Mall.Digital'],
     fullscreen: true,
     config: {
-        title: '城南花园',
         layout: 'vbox',
         scrollable: {
             directionLock: true,
@@ -21,21 +20,16 @@ Ext.define('QST.Main.Home', {
         },
         items: [
             {
-                xtype: 'home_top_img'
-            }, {
-                xtype: 'home_menu',
-            }, {
-                xtype: 'main_middle_img'
-            }, {
                 xtype: 'panel',
-                cls: 'home_msg',
-                height: 60,
-                html: '限时抢购推荐'
+                html: '<img src="resources/images/top-1.png" class="topImg" fire="onDelete">'
             }, {
-                xtype: 'panel',
-                cls: 'home_msg',
-                height: 60,
-                html: '限时抢购推荐'
+                xtype: 'mall_menu'
+            }, {
+                xtype: 'mall_middle_img'
+            }, {
+                xtype: 'mall_selling'
+            }, {
+                xtype: 'mall_digital'
             }
         ]
     },
@@ -51,14 +45,12 @@ Ext.define('QST.Main.Home', {
         var me = this;
         if (!this._headerBar) {
             this._headerBar = Ext.create("app.user.NavigationBar", {
-                title: me._title,
                 docked: 'top',
                 items: [{
                     action: 'Back',
                     cls: 'nbutton',
                     align: 'left',
-                    iconCls: 'maps',
-                    text: '地区',
+                    iconCls: 'list',
                     handler: function (but) {
                         me.fireEvent('Back', but, me);
                     }
