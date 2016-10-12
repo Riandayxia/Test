@@ -73,6 +73,7 @@
     <Compile Include="Maps\Property\ComplaintsConfiguration.cs" />
     <Compile Include="Maps\Property\PaymentConfiguration.cs" />
     <Compile Include="Maps\Property\NewsPaperConfiguration.cs" />
+    <Compile Include="Maps\HouseManage\HousekeepingConfiguration.cs" />
     <Compile Include="Property\Complaints.cs" />
     <Compile Include="Maps\Base\MenuConfiguration.cs" />
     <Compile Include="Maps\Base\DictionaryConfiguration.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Base\User.cs" />
     <Compile Include="Maps\BPM\CDControllerConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HouseManage\Housekeeping.cs" />
     <Compile Include="Property\NewsPaper.cs" />
     <Compile Include="Property\Payment.cs" />
   </ItemGroup>
