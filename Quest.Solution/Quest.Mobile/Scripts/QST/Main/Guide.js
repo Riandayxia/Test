@@ -31,7 +31,6 @@ Ext.define('QST.Main.Guide', {
                     ////触发自定义事件
                     //me.fireEvent('showMain');
                     setTimeout(function () { util.redirectTo('QST.Main.Layout'); }, 0)
-                    
                 }
             }
         });

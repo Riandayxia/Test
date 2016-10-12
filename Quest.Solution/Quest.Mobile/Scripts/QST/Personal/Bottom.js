@@ -19,7 +19,7 @@
                 '<div class="menuList" style="<tpl if="needsIcon">background-color:#fff</tpl>">',
                      '<tpl if="needsIcon"><img width="{[this.getWidth(values.iconW)]}" height="{[this.getHeight(values.iconH)]}" style="margin: 5px 10px;" src="resources/images/set/{icon}.png" align="absmiddle" /></tpl>',
                      '<font style="margin:2px 0 10px 0">{name} </font>',
-                     '<tpl if="needsIcon"><img width="6" height="15" src="resources/images/Arrow.png" style="display: inline; float: right; margin:10px;"/></tpl>',
+                     '<tpl if="needsIcon"><img width="6" height="15" src="resources/images/Arrow.png" style="display: inline; float: right; margin:18px"/></tpl>',
                  '</div>',
                  {
                      getWidth: function (iconW) {
