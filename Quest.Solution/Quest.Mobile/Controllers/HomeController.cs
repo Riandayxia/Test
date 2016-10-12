@@ -34,44 +34,5 @@ namespace Quest.Mobile.Controllers
         {
             return View();
         }
-
-        //[NoAuthorize]
-        //[HttpPost]
-        //public ActionResult LoginPhone(LoginModel model)
-        //{
-        //    User user = new User() { LoginName = model.Account, Password = model.Password };
-        //    OperationResult result = UserService.Login(user);
-        //    if (result.ResultType == OperationResultType.Success)
-        //    {
-        //        User member = (User)result.AppendData;
-        //        CurrentUser.Save(member);
-        //        //写入cookie
-        //        WriteCookie(model, user);
-        //    }
-        //    return this.JsonFormat(result);
-        //}
-
-        ///// <summary>
-        ///// 写cookie
-        ///// </summary>
-        ///// <param name="user"></param>
-        //private void WriteCookie(LoginModel model, User user)
-        //{
-        //    FormsAuthentication.SetAuthCookie(user.LoginName, true, FormsAuthentication.FormsCookiePath);
-        //    FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(
-        //    1, user.LoginName, DateTime.Now, DateTime.Now.AddMinutes(5), false, user.LoginName);
-        //    Task t1 = Task.Factory.StartNew(delegate
-        //    {
-        //        // generate new identity
-        //        FormsIdentity identity = new FormsIdentity(ticket);
-        //    });
-        //    Task t2 = Task.Factory.StartNew(delegate
-        //    {
-        //        HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName, FormsAuthentication.Encrypt(ticket));
-        //        // write to client.
-        //        Response.Cookies.Add(cookie);
-        //    });
-        //    Task.WaitAll(t1, t2);
-        //}
     }
 }

@@ -16,7 +16,6 @@ Ext.define('QST.HouseManage.Housekeeping.List', {
         disableSelection: true,
         itemTpl: Ext.create('Ext.XTemplate',
             '<div class="menuList" style="<tpl if="needsIcon">background-color:#fff</tpl>">',
-                //'<div style="text-align:center"><img src="resources/icons/icon-500.png" width="30%" height="30%"></div><div style="text-align:center">',
                 '<tpl if="needsIcon"><img width="{[this.getWidth(values.iconW)]}" height="{[this.getHeight(values.iconH)]}" style="margin: 5px 10px;" src="resources/images/set/{icon}.png" align="absmiddle" /></tpl>',
                 '<font style="margin:2px 0 10px 0">{name} </font>',
                 '<tpl if="needsIcon"><img width="6" height="15" src="resources/images/Arrow.png" style="display: inline; float: right; margin:18px 10px 0 0;"/></tpl>',
@@ -41,8 +40,7 @@ Ext.define('QST.HouseManage.Housekeeping.List', {
                         return 23;
                     }
                 }
-            }
-            ),
+            }),
         store: {
             fields: ['name', 'icon', 'needsIcon', 'url', 'style', 'iconW', 'iconH'],
             data: [
@@ -72,6 +70,12 @@ Ext.define('QST.HouseManage.Housekeeping.List', {
             parentUrl: "QST.HouseManage.Housekeeping.List",
             url: config.url + '/Housekeeping/Add'
         });
+    },
+    //主界面到此界面时加载[List刷新时会默认加载此方法]
+    rendering: function (params) {
+        if (params) {
+            this.backUrl = params.parentUrl;
+        }
     },
     //初始化
     constructor: function (config) {

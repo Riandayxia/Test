@@ -131,6 +131,8 @@
     <Compile Include="CommonSupport\Filter\NoAuthorizeAttribute.cs" />
     <Compile Include="CommonSupport\Filter\ViewPageAttribute.cs" />
     <Compile Include="CommonSupport\FormatJsonExtension.cs" />
+    <Compile Include="Controllers\Users\AddressController.cs" />
+    <Compile Include="Controllers\Users\Auto\AddressController.cs" />
     <Compile Include="Controllers\Base\Auto\UserController.cs" />
     <Compile Include="Controllers\Base\UserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -143,7 +145,6 @@
     <Compile Include="Controllers\Property\PaymentController.cs" />
     <Compile Include="Controllers\Property\NewsPaperController.cs" />
     <Compile Include="Controllers\Property\ComplaintsController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -242,6 +243,10 @@
     <Content Include="Scripts\QST\Property\Payment\Edit.js" />
     <Content Include="Scripts\QST\Property\Payment\List.js" />
     <Content Include="Scripts\QST\Property\Payment\Layout.js" />
+    <Content Include="Scripts\QST\Users\Address\Details.js" />
+    <Content Include="Scripts\QST\Users\Address\Edit.js" />
+    <Content Include="Scripts\QST\Users\Address\List.js" />
+    <Content Include="Scripts\QST\Users\Address\MyAccount.js" />
     <Content Include="Scripts\QST\Util.js" />
     <Content Include="Scripts\resources\css\app.css" />
     <Content Include="Scripts\resources\css\main.css" />

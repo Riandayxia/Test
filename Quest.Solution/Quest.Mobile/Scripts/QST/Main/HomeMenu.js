@@ -33,6 +33,9 @@ Ext.define('QST.Main.HomeMenu', {
                 }, {
                     text: '家政服务',
                     iconCls: 'list roseRed',
+                    handler: function (but) {
+                        util.redirectTo("QST.HouseManage.Housekeeping.List", "", { parentUrl: "QST.Main.Layout" });
+                    }
                 }, {
                     text: '便民服务',
                     iconCls: 'refresh lightBlue',

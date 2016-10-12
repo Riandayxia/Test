@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Users\Address.cs" />
     <Compile Include="Base\Dictionary.cs" />
     <Compile Include="Base\Menu.cs" />
     <Compile Include="BPM\CDList.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="BPM\WFTask.cs" />
     <Compile Include="BPM\CDColumn.cs" />
     <Compile Include="BPM\CDController.cs" />
+    <Compile Include="Maps\Base\AddressConfiguration.cs" />
     <Compile Include="Maps\Property\ComplaintsConfiguration.cs" />
     <Compile Include="Maps\Property\PaymentConfiguration.cs" />
     <Compile Include="Maps\Property\NewsPaperConfiguration.cs" />

@@ -71,5 +71,28 @@ namespace Quest.Core.Models.Base
         [DBColumn("是否同意协议")]
         public Boolean Protocol { get; set; }
 
+        /// <summary>
+        /// 获取或设置 性别
+        /// </summary>
+        [DataMember]
+        [StringLength(64)]
+        [DBColumn("性别")]
+        public String Gender { get; set; }
+
+        /// <summary>
+        /// 获取或设置 出生年月
+        /// </summary>
+        [DataMember]
+        [DBColumn("出生年月")]
+
+        public DateTime? Birth { get; set; }
+
+         /// <summary>
+        /// 头像
+        /// </summary>
+        [DataMember]
+        [DBColumn("头像")]
+        public String Avatar { get; set; }
+
     }
 }

@@ -24,7 +24,23 @@ On CDTable
 As
 	Delete dbo.CDColumn from CDColumn p,Deleted d where p.TableId=d.Id
 GO	
-
+-----默认地址 触发器
+IF (object_id('tgr_Address_AddOrUpdate', 'TR') is not null)
+    drop trigger tgr_Address_AddOrUpdate
+GO
+create trigger tgr_Address_AddOrUpdate
+on  Address
+	for insert,update
+as 
+	DECLARE @IsDefault bit,@Id NVARCHAR(64)
+	select @Id=Id,@IsDefault=IsDefault From Inserted;
+	begin
+	If(@IsDefault=1)
+	begin 
+	update Address set IsDefault=0 where Id not in (@Id);
+	end
+	end
+GO
 
 
 select * from CDList

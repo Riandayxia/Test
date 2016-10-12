@@ -35,6 +35,12 @@ namespace Quest.Core.Base
         /// <param name="entity"></param>
         /// <returns></returns>
         OperationResult Login(User entity);
+        /// <summary>
+        /// 个人信息
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        OperationResult GetByLoginId(Guid dicKey);
         #endregion
 
         #region 私有方法
