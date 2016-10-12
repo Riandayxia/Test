@@ -1,0 +1,16 @@
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\bin\Debug\Quest.Core.Models.dll.config
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\bin\Debug\Quest.Core.Models.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\bin\Debug\Quest.Core.Models.pdb
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\bin\Debug\EntityFramework.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\bin\Debug\EntityFramework.SqlServer.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\bin\Debug\Quest.Framework.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\bin\Debug\Newtonsoft.Json.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\bin\Debug\Quest.Framework.pdb
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\bin\Debug\EntityFramework.xml
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\bin\Debug\EntityFramework.SqlServer.xml
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\bin\Debug\Newtonsoft.Json.xml
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\obj\Debug\Quest.Core.Models.csprojResolveAssemblyReference.cache
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\obj\Debug\Quest.Core.Models.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Core.Models\obj\Debug\Quest.Core.Models.pdb

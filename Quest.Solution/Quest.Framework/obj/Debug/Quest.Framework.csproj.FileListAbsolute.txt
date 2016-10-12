@@ -1,0 +1,15 @@
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Framework\bin\Debug\Quest.Framework.dll.config
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Framework\bin\Debug\Quest.Framework.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Framework\bin\Debug\Quest.Framework.pdb
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Framework\bin\Debug\EntityFramework.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Framework\bin\Debug\EntityFramework.SqlServer.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Framework\bin\Debug\Newtonsoft.Json.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Framework\bin\Debug\System.Data.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Framework\bin\Debug\System.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Framework\bin\Debug\System.Xml.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Framework\bin\Debug\EntityFramework.xml
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Framework\bin\Debug\EntityFramework.SqlServer.xml
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Framework\bin\Debug\Newtonsoft.Json.xml
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Framework\obj\Debug\Quest.Framework.csprojResolveAssemblyReference.cache
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Framework\obj\Debug\Quest.Framework.dll
+E:\Working\Codes\Quest.APP\Quest.Solution\Quest.Framework\obj\Debug\Quest.Framework.pdb

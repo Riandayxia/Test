@@ -24,6 +24,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -122,8 +123,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppStart\AuthManage_AR.cs" />
     <Compile Include="AppStart\Base_AR.cs" />
     <Compile Include="AppStart\BPM_AR.cs" />
+    <Compile Include="AppStart\BusinessManageCenter\MerchantManage_AR.cs" />
+    <Compile Include="AppStart\BusinessManageCenter_AR.cs" />
+    <Compile Include="AppStart\PropertyManageCenter_AR.cs" />
     <Compile Include="AppStart\RouteConfig.cs" />
     <Compile Include="AppStart\SuHuiRazorViewEngine.cs" />
     <Compile Include="CommonSupport\BaseController.cs" />
@@ -135,6 +140,10 @@
     <Compile Include="CommonSupport\Filter\NoAuthorizeAttribute.cs" />
     <Compile Include="CommonSupport\Filter\ViewPageAttribute.cs" />
     <Compile Include="CommonSupport\FormatJsonExtension.cs" />
+    <Compile Include="Controllers\AuthManage\AuthConfigController.cs" />
+    <Compile Include="Controllers\AuthManage\MenuManageController.cs" />
+    <Compile Include="Controllers\AuthManage\RoleManageController.cs" />
+    <Compile Include="Controllers\AuthManage\UserManageController.cs" />
     <Compile Include="Controllers\Base\Auto\DictionaryController.cs" />
     <Compile Include="Controllers\Base\Auto\MenuController.cs" />
     <Compile Include="Controllers\Base\Auto\RoleController.cs">
@@ -173,8 +182,16 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controllers\Base\DictionaryController.cs" />
+    <Compile Include="Controllers\BusinessManageCenter\MerchantManage\MerchandiseManageController.cs" />
+    <Compile Include="Controllers\BusinessManageCenter\MerchantManage\MerchandiseToBeShippedController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InitDataController.cs" />
+    <Compile Include="Controllers\PropertyManageCenter\ComplaintManagementController.cs" />
+    <Compile Include="Controllers\PropertyManageCenter\InformationCenterController.cs" />
+    <Compile Include="Controllers\PropertyManageCenter\PaymentManageController.cs" />
+    <Compile Include="Controllers\PropertyManageCenter\WorkOrderManageController.cs" />
+    <Compile Include="Controllers\PropertyManageCenter\OwnerManageController.cs" />
+    <Compile Include="Controllers\PropertyManageCenter\PropertyManageController.cs" />
     <Compile Include="Controllers\Ueditor\Config.cs" />
     <Compile Include="Controllers\Ueditor\ConfigHandler.cs" />
     <Compile Include="Controllers\Ueditor\CrawlerHandler.cs" />
