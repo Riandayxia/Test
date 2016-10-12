@@ -10,7 +10,7 @@ Ext.define('QST.Property.NewsPaper.Layout', {
     xtype: 'property_newspaper_layout',
     itemHeight: 100,
     config: {
-        title: '报事报修',
+        title: '我的工单',
         fullscreen: true,
         cls: 'list_wf',
         disableSelection: true,

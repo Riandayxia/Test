@@ -46,13 +46,13 @@ Ext.define('QST.Main.HomeMenu', {
                     text: '投诉建议',
                     iconCls: 'search green',
                     handler: function (but) {
-                        util.redirectTo("QST.Property.Complaints.List", "", { parentUrl: "QST.Main.Layout" });
+                        util.redirectTo("QST.Property.Complaints.Edit", "", { parentUrl: "QST.Main.Layout" });
                     }
                 }, {
                     text: '报事报修',
                     iconCls: 'settings blue',
                     handler: function (but) {
-                        util.redirectTo("QST.Property.NewsPaper.Layout", "", { parentUrl: "QST.Main.Layout" });
+                        util.redirectTo("QST.Property.NewsPaper.Edit", "", { parentUrl: "QST.Main.Layout" });
                     }
                 }, {
                     text: '在线营业厅',
