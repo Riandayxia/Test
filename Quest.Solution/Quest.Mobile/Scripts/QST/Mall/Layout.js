@@ -7,7 +7,7 @@
 Ext.define('QST.Mall.Layout', {
     extend: 'Ext.Container',
     xtype: 'mall_layout',
-    requires: ['QST.Mall.Menu', 'QST.Mall.MiddleImg', 'QST.Mall.Selling', 'QST.Mall.Digital'],
+    requires: ['QST.Mall.Menu', 'QST.Mall.Top', 'QST.Mall.MiddleImg', 'QST.Mall.Selling', 'QST.Mall.Digital'],
     fullscreen: true,
     config: {
         layout: 'vbox',
@@ -18,45 +18,25 @@ Ext.define('QST.Mall.Layout', {
             //隐藏滚动条样式  
             indicators: false
         },
-        items: [
-            {
-                xtype: 'panel',
-                html: '<img src="resources/images/top-1.png" class="topImg" fire="onDelete">'
-            }, {
-                xtype: 'mall_menu'
-            }, {
-                xtype: 'mall_middle_img'
-            }, {
-                xtype: 'mall_selling'
-            }, {
-                xtype: 'mall_digital'
-            }
+        items: [{
+            xtype: 'mall_top'
+        }, {
+            xtype: 'panel',
+            html: '<img src="resources/images/mallTop.png" class="topImg" fire="onDelete">'
+        }, {
+            xtype: 'mall_menu'
+        }, {
+            xtype: 'mall_middle_img'
+        }, {
+            xtype: 'mall_selling'
+        }, {
+            xtype: 'mall_digital'
+        }
         ]
     },
     //初始化
     constructor: function (cfg) {
         var me = this;
         this.callParent(arguments);
-        //加载头部
-        me.add(this.getHeaderBar());
     },
-    //获得头部
-    getHeaderBar: function () {
-        var me = this;
-        if (!this._headerBar) {
-            this._headerBar = Ext.create("app.user.NavigationBar", {
-                docked: 'top',
-                items: [{
-                    action: 'Back',
-                    cls: 'nbutton',
-                    align: 'left',
-                    iconCls: 'list',
-                    handler: function (but) {
-                        me.fireEvent('Back', but, me);
-                    }
-                }]
-            });
-        }
-        return this._headerBar;
-    }
 });

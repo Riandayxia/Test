@@ -211,6 +211,7 @@
     <Content Include="Scripts\cordova.js" />
     <Content Include="Scripts\cordova_plugins.js" />
     <Content Include="Scripts\index.html" />
+    <Content Include="Scripts\QST\Main\Guide.js" />
     <Content Include="Scripts\QST\Main\Home.js" />
     <Content Include="Scripts\QST\Main\HomeMiddleImg.js" />
     <Content Include="Scripts\QST\Main\HomeTopImg.js" />
@@ -222,6 +223,7 @@
     <Content Include="Scripts\QST\Mall\Selling.js" />
     <Content Include="Scripts\QST\Mall\MiddleImg.js" />
     <Content Include="Scripts\QST\Mall\Menu.js" />
+    <Content Include="Scripts\QST\Mall\Top.js" />
     <Content Include="Scripts\QST\Personal\Layout.js" />
     <Content Include="Scripts\QST\Personal\Bottom.js" />
     <Content Include="Scripts\QST\Personal\Middle.js" />
@@ -316,6 +318,10 @@
     <Content Include="Scripts\resources\images\desktop\zdftzgl.png" />
     <Content Include="Scripts\resources\images\desktop\zlgl.png" />
     <Content Include="Scripts\resources\images\desktop\ztbxx.png" />
+    <Content Include="Scripts\resources\images\Guide1.png" />
+    <Content Include="Scripts\resources\images\Guide2.png" />
+    <Content Include="Scripts\resources\images\Guide3.png" />
+    <Content Include="Scripts\resources\images\mallTop.png" />
     <Content Include="Scripts\resources\images\middle_img_2.png" />
     <Content Include="Scripts\resources\images\middle_img_3.png" />
     <Content Include="Scripts\resources\images\ok.png" />

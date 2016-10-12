@@ -645,6 +645,37 @@ body.x-desktop {
     }
 
 /*#endregion*/
+
+.malltop {
+}
+
+    .malltop .x-toolbar-dark {
+        padding-top:20px;
+        height:60px;
+        background-color: #EEE;
+        background-image: -webkit-linear-gradient(top, #eee,#eee 3%,#eee);
+    }
+
+        .malltop .x-toolbar-dark .x-button {
+            background-color: #EEE;
+            background-image: -webkit-linear-gradient(top, #eee,#eee 3%,#eee);
+            border: 0px;
+            color: #057CFB;
+        }
+
+    .malltop .x-toolbar .x-field-search .x-component-outer {
+        border-radius: 0em;
+        box-shadow: 0.01em 0.01em 0.01em 0.01em;
+    }
+
+    .malltop .x-toolbar .x-field-search .x-field-input {
+        padding: 0em;
+    }
+
+    .malltop .x-field .x-input-el {
+        padding: 0em 0.6em;
+    }
+
 /*#region TitleBar */
 .bottomBar {
     background-color: #Fafafa;
