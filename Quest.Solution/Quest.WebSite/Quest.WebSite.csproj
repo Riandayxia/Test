@@ -122,6 +122,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppStart\Property_AR.cs" />
     <Compile Include="AppStart\Base_AR.cs" />
     <Compile Include="AppStart\BPM_AR.cs" />
     <Compile Include="AppStart\RouteConfig.cs" />
@@ -175,6 +176,8 @@
     <Compile Include="Controllers\Base\DictionaryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InitDataController.cs" />
+    <Compile Include="Controllers\Property\Auto\CommunityController.cs" />
+    <Compile Include="Controllers\Property\CommunityController.cs" />
     <Compile Include="Controllers\Ueditor\Config.cs" />
     <Compile Include="Controllers\Ueditor\ConfigHandler.cs" />
     <Compile Include="Controllers\Ueditor\CrawlerHandler.cs" />
@@ -272,6 +275,10 @@
     <Content Include="Scripts\App\Main\Bottom.js" />
     <Content Include="Scripts\App\Main\Top.js" />
     <Content Include="Scripts\App\Main\Layout.js" />
+    <Content Include="Scripts\App\Property\Community\Edit.js" />
+    <Content Include="Scripts\App\Property\Community\Grid.js" />
+    <Content Include="Scripts\App\Property\Community\Layout.js" />
+    <Content Include="Scripts\App\UX\Ueditor\UEditor.js" />
     <Content Include="Scripts\App\UX\Ueditor\UEPlugin.js" />
     <Content Include="Scripts\App\UX\Ueditor\common.js" />
     <Content Include="Scripts\App\UX\Ueditor\compule.js" />

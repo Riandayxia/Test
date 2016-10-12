@@ -1,6 +1,14 @@
 .0985d715c5e92ca61395a0f06d9e17b84c79394c {
     display: block;
 }
+/* 隐藏x方向滚动条 */
+.x-scroll-bar-x.active {
+    width: 0px;
+}
+/* 隐藏y方向滚动条 */
+.x-scroll-bar-y.active {
+    width: 0px;
+}
 /*#region pick */
 
 .x-picker-slot-title {
@@ -637,6 +645,37 @@ body.x-desktop {
     }
 
 /*#endregion*/
+
+.malltop {
+}
+
+    .malltop .x-toolbar-dark {
+        padding-top:20px;
+        height:60px;
+        background-color: #EEE;
+        background-image: -webkit-linear-gradient(top, #eee,#eee 3%,#eee);
+    }
+
+        .malltop .x-toolbar-dark .x-button {
+            background-color: #EEE;
+            background-image: -webkit-linear-gradient(top, #eee,#eee 3%,#eee);
+            border: 0px;
+            color: #057CFB;
+        }
+
+    .malltop .x-toolbar .x-field-search .x-component-outer {
+        border-radius: 0em;
+        box-shadow: 0.01em 0.01em 0.01em 0.01em;
+    }
+
+    .malltop .x-toolbar .x-field-search .x-field-input {
+        padding: 0em;
+    }
+
+    .malltop .x-field .x-input-el {
+        padding: 0em 0.6em;
+    }
+
 /*#region TitleBar */
 .bottomBar {
     background-color: #Fafafa;
@@ -715,13 +754,16 @@ body.x-desktop {
 /*#region 查询按钮 */
 .bottom .x-button {
     background-image: none;
-    background-color:#f8f9f9;
+    background-color: #f8f9f9;
     border: 0;
     border-radius: 0;
-    margin-bottom:6em;
-    font-weight:100;
+    margin-bottom: 6em;
+    font-weight: 100;
     color: #3F444A;
     font-size: .8em;
+    padding-bottom:2em;
+   
+   
 }
 /*#endregion*/
 
@@ -736,7 +778,7 @@ body.x-desktop {
 
 /*个人页*/
 .personal {
-    background-image: url("../images/personal_top.jpg");
+    background-image: url("../images/personal_top.png");
     background-size: 100%;
     padding-top: 1em;
 }
@@ -759,19 +801,27 @@ body.x-desktop {
     .personal .x-button-label {
         margin: .5em;
         font-weight: 400;
+        color: #fff;
     }
 
 .myInfo {
     top: 3em;
 }
 
-    .myInfo .htgl {
+    .myInfo .user_img {
         font-size: 3em;
         width: 2em;
         height: 2em;
         border-radius: 2em;
         background-color: #fff !important;
     }
+
+/*合同管理*/
+.user_img {
+    background: url(../images/desktop/gczs.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}
 
 .personaltop {
     background-color: rgb(52, 202, 236);
@@ -841,9 +891,9 @@ body.x-desktop {
     margin: 0em .5em;
 }
 
-.personalOrder{
-
+.personalOrder {
 }
+
 .personalOrder .x-button {
     background-image: none;
     background-color: transparent;
@@ -1623,3 +1673,8 @@ body.x-desktop {
 .icon {
     src: url('data:application/x-font-woff;base64,M50,2.125c26.441,0,47.875,21.434,47.875,47.875S76.441,97.875,50,97.875C17.857,97.875,2.125,76.441,2.125,50S23.559,2.125,50,2.125z') format('svg');
 }
+.payment {  font-size:0.8em;}
+.community { clear: both;}
+.community img { width: 100% !important; height: 20em !important; margin: 5px !important; padding-right: 10px !important;  }
+.communityspan {  border:1px solid #CCC; padding: 0 0.3em;}
+.communityp {font-size: 6px;color: Gray; }

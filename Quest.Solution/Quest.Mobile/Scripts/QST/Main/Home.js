@@ -13,12 +13,15 @@ Ext.define('QST.Main.Home', {
         title: '城南花园',
         layout: 'vbox',
         scrollable: {
-            directionLock: true
+            directionLock: true,
+            //注意横向竖向模式的配置，不能配错  
+            direction: 'vertical',
+            //隐藏滚动条样式  
+            indicators: false
         },
         items: [
             {
-                xtype: 'home_top_img',
-                height: 160
+                xtype: 'home_top_img'
             }, {
                 xtype: 'home_menu',
             }, {
@@ -54,6 +57,7 @@ Ext.define('QST.Main.Home', {
                     action: 'Back',
                     cls: 'nbutton',
                     align: 'left',
+                    iconCls: 'maps',
                     text: '地区',
                     handler: function (but) {
                         me.fireEvent('Back', but, me);

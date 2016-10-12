@@ -1,4 +1,4 @@
-﻿Ext.define('QST.Main.PersonalMiddle', {
+﻿Ext.define('QST.Personal.Middle', {
     extend: 'Ext.Container',
     xtype: 'personal_middle',
     alternateClassName: 'personal_middle',

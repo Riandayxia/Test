@@ -1497,6 +1497,43 @@ Ext.define('SH.Util', {
             Ext.Viewport.add(win);
 
             return win;
+        },
+
+        /*
+        *活动资讯
+        */
+        //设置 显示文字长度
+        GetText: function (value) {
+            var text = value;
+            if (value.length > 20) {
+                text = value.substring(0, 20) + "....";
+            }
+            return text;
+        },
+        //图片加载
+        GetImg: function (imageUrl, contents) {
+            var html = "";
+            var number = 0;
+            if (imageUrl) {
+                var str = imageUrl.split(",")
+                for (var i = 0; i < str.length; i++) {
+                    number += 1;
+                    if (i % 3 == 0 && i != 0) {
+                        html = html + "</p>" + str[i]
+                    } else {
+                        html += str[i];
+                    }
+                    if (str.length == 1) {
+                        html = '<span class="imgWidth">' + html + "</span>";
+                    }
+                    if (number == 3)
+                        break;
+                }
+            }
+            if (!html) {
+                html = contents.substring(0, 50);
+            }
+            return html
         }
     }
 })

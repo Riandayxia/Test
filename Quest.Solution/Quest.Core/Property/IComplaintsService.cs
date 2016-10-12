@@ -24,7 +24,7 @@ namespace Quest.Core.Property
 	/// <summary>
     /// 投诉管理 核心业务契约
     /// </summary>
-    public partial interface IComplaintsService : IRepository<Complaints,Guid>
+    public partial interface IComplaintsService : IRepository<Complaints, Guid>
     {
         #region 公共属性
 
