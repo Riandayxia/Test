@@ -1,8 +1,7 @@
-﻿Ext.define('QST.Main.PersonalBottom', {
+﻿Ext.define('QST.Personal.Bottom', {
     extend: 'Ext.Container',
     xtype: 'personal_bottom',
     alternateClassName: 'personal_bottom',
-    requires: ['QST.Property.NewsPaper.Layout'],
     config: {
         layout: 'fit',
         height: 500,

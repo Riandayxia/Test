@@ -39,7 +39,7 @@ Ext.define('config', {
             Id: ''
         },
         // 系统启动页面
-        MainPage: 'QST.Main.Layout',//'QST.Main.Layout',
+        MainPage: 'QST.Main.Guide',
         // 登录界面
         LoginPage: 'QST.Main.Login',
         // 当前登录时间

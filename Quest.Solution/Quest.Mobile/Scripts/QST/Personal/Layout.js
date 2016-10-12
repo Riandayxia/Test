@@ -1,8 +1,8 @@
-﻿Ext.define('QST.Main.Personal', {
+﻿Ext.define('QST.Personal.Layout', {
     extend: 'Ext.Container',
-    xtype: 'personal',
+    xtype: 'personal_layout',
     alternateClassName: 'personal',
-    requires: ['QST.Main.PersonalTop', 'QST.Main.PersonalMiddle', 'QST.Main.PersonalBottom'],
+    requires: ['QST.Personal.Top', 'QST.Personal.Middle', 'QST.Personal.Bottom'],
     config: {
         scrollable: {
             directionLock: true,
