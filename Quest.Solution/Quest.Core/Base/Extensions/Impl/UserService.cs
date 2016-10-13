@@ -104,8 +104,17 @@ namespace Quest.Core.Base.Impl
                 return new OperationResult(OperationResultType.Error, e.Message, null);
             }
         }
+        /// <summary>
+        /// 个人信息
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        public OperationResult GetByLoginId(Guid dicKey)
+        {
+            var items = this.Entities.Where(c => c.Id == dicKey).ToList();
+            return new OperationResult(OperationResultType.Success, "查询成功", items);
+        }
         #endregion
-
         #region 私有方法
 
         #endregion

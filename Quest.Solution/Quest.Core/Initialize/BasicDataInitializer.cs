@@ -57,7 +57,28 @@ namespace Quest.Core.Initialize
             Dictionary dic1 = new Dictionary() { Id = "00000000-0000-0000-0001-000000000001".GetGuid(), ParentId = dic_MType.Id, Keyword = "菜单", Key = MenuType.Menu.GetHashCode().GetString(), Value = "菜单", Sequence = 1 };
             Dictionary dic2 = new Dictionary() { Id = "00000000-0000-0000-0001-000000000002".GetGuid(), ParentId = dic_MType.Id, Keyword = "功能", Key = MenuType.Feature.GetHashCode().GetString(), Value = "功能", Sequence = 2 };
 
-            List<Dictionary> dics = new List<Dictionary>() { dic_MType, dic1, dic2 };
+            #region 家政服务类型
+            Dictionary Housekeeping = new Dictionary() { Id = "00000000-0000-0000-0000-000000000002".GetGuid(), ParentId = Guid.Empty, Keyword = "家政服务类型", Key = "10002", Value = "家政服务类型", Sequence = 1 };
+            Dictionary Housekeeping1 = new Dictionary() { Id = "00000000-0000-0000-0002-000000000001".GetGuid(), ParentId = Housekeeping.Id, Keyword = "钟点工", Key ="10002001" , Value = "钟点工", Sequence = 1 };
+            Dictionary Housekeeping2 = new Dictionary() { Id = "00000000-0000-0000-0002-000000000002".GetGuid(), ParentId = Housekeeping.Id, Keyword = "月嫂", Key = "10002002", Value = "月嫂", Sequence = 2 };
+            Dictionary Housekeeping3 = new Dictionary() { Id = "00000000-0000-0000-0002-000000000003".GetGuid(), ParentId = Housekeeping.Id, Keyword = "护工", Key = "10002003", Value = "护工", Sequence = 3 };
+            Dictionary Housekeeping4 = new Dictionary() { Id = "00000000-0000-0000-0002-000000000004".GetGuid(), ParentId = Housekeeping.Id, Keyword = "住家阿姨", Key = "10002004", Value = "住家阿姨", Sequence = 4 };
+            #endregion
+
+            #region 性别
+            Dictionary sex = new Dictionary() { Id = "00000000-0000-0000-0000-000000000003".GetGuid(), ParentId = Guid.Empty, Keyword = "性别", Key = "10003", Value = "性别", Sequence = 1 };
+            Dictionary sexA = new Dictionary() { Id = "00000000-0000-0000-0003-000000000001".GetGuid(), ParentId = Housekeeping.Id, Keyword = "男", Key = "10003001", Value = "男", Sequence = 1 };
+            Dictionary sexB = new Dictionary() { Id = "00000000-0000-0000-0003-000000000002".GetGuid(), ParentId = Housekeeping.Id, Keyword = "女", Key = "10003002", Value = "女", Sequence = 2 };
+            #endregion
+            List<Dictionary> dics = new List<Dictionary>() { 
+                dic_MType, dic1, dic2,
+                #region 家政服务类型
+                Housekeeping, Housekeeping1, Housekeeping2, Housekeeping3, Housekeeping4,
+                #endregion 
+                #region 性别
+                sex, sexA, sexB,
+                #endregion 
+            };
             OperationResult or = DictionaryService.AddOrUpdate((c => new { c.Id }), dics.ToArray(), false);
 
             #endregion

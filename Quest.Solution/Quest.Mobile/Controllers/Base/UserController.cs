@@ -87,6 +87,11 @@ namespace Quest.Mobile.Controllers.Base
             });
             Task.WaitAll(t1, t2);
         }
+        public ActionResult GetByLoginId()
+        {
+            Guid dicKey = QuestRequest.GetGuid("dicKey");
+            return this.JsonFormat(UserService.GetByLoginId(dicKey));
+        }
         #endregion
     }
 }

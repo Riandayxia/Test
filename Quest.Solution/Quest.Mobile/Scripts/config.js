@@ -20,6 +20,11 @@ Ext.define('config', {
             CareWorkers: '在线预约—护工',
             HomeAunt: '在线预约—住家阿姨',
             Houseprotocol:'《智慧公租房家政服务协议》',
+            //账户管理
+            MyAccount:'我的账户',
+            AddressList: '地址管理',
+            AddressEdit: '编辑地址',
+            AddressDetails: '地址详细',
 
             HomeArea: '首页',
             WorkArea: '工作区',
@@ -39,7 +44,7 @@ Ext.define('config', {
             Id: ''
         },
         // 系统启动页面
-        MainPage:  'QST.Main.Personal',//'QST.Main.Layout',
+        MainPage: 'QST.Users.Address.MyAccount',//'QST.Main.Layout',
         // 登录界面
         LoginPage: 'QST.Main.Login',
         // 当前登录时间

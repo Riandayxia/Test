@@ -20,7 +20,7 @@ Ext.define('QST.HouseManage.Housekeeping.CWEdit', {
                 { label: '联系电话', name: 'Phone', xtype: 'textfield', matcher: /^1[3|4|5|8][0-9]{9}$/, message: '手机号码格式错误！', placeHolder: '请填写联系电话', allowBlank: true },
                 { label: '服务地址', name: 'Address', xtype: 'textareafield', placeHolder: '请填写服务地址', allowBlank: true },
                 { label: '服务价格', name: 'ServicePrice', xtype: 'textfield', value: '100元/天起', readOnly: true },
-                { label: '服务类型', name: 'Type', xtype: 'hiddenfield', value: "4" },
+                { label: '服务类型', name: 'Type', xtype: 'hiddenfield', value: "10002003" },
                 { label: '服务时长', name: 'Duration', xtype: 'textfield', placeHolder: '请选择服务时长', allowBlank: true },
                 { label: '特殊要求', name: 'Content', xtype: 'textareafield', placeHolder: '告诉我们' },
                 { label: '是否删除', name: 'IsDeleted', xtype: 'hiddenfield' },

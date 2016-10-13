@@ -47,19 +47,19 @@ Ext.define('QST.Property.Payment.List', {
     },
     // 菜单点击事件处理
     menuTapButton: function (url,name) {
-        util.redirectTo(url, "", { parentUrl: "QST.Property.Payment.List", name: name });
+        util.redirectTo(url, "", { parentUrl: "QST.Property.Payment.Layout", name: name });
     },
     //初始化
     constructor: function (config) {
         var me = this;
         this.callParent(arguments);
         util.rightSwipe(me, "Back");
-        //加载头部菜单信息
-        this.add(this.getHeader());
-        //头部标签
-        this.add(this.getTop());
-        //底部标签
-        this.add(this.getBottom());
+        ////加载头部菜单信息
+        //this.add(this.getHeader());
+        ////头部标签
+        //this.add(this.getTop());
+        ////底部标签
+        //this.add(this.getBottom());
       
     },
     //主界面到此界面时加载[List刷新时会默认加载此方法]
@@ -114,24 +114,16 @@ Ext.define('QST.Property.Payment.List', {
                 cls: 'bottom',
                 //html: '缴费历史|帮助中心',
                 items: [{
-                    xtype: 'label',
-                    html: '缴费历史',
+                    xtype: 'button',
+                    text: '缴费历史',
                     handler: function (but) {
-                        alert(12);
-                        me.fireEvent("Search", but.up("panel").down("searchfield"), me);
-                    }
-                },{
-                    xtype: 'label',
-                    html: '缴费历史',
-                    handler: function (but) {
-                        alert(12);
-                        me.fireEvent("Search", but.up("panel").down("searchfield"), me);
+                        util.redirectTo("QST.Property.Payment.HList", "", { parentUrl: "QST.Property.Payment.List"});
                     }
                 }, {
                     xtype: 'button',
                     text: '帮助中心',
                     handler: function (but) {
-                        me.fireEvent("Search", but.up("panel").down("searchfield"), me);
+                        util.redirectTo("", "", { parentUrl: "QST.Property.Payment.List" });
                     }
                 }]
             });

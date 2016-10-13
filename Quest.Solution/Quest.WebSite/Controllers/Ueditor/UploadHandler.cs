@@ -92,7 +92,7 @@ public class UploadHandler : Handler
         this.WriteJson(new
         {
             state = GetStateMessage(Result.State),
-            url = "http://www.cnsuhui.com:90" + Result.Url,
+            url = "http://localhost:8888" + Result.Url,
             title = Result.OriginFileName,
             original = Result.OriginFileName,
             error = Result.ErrorMessage

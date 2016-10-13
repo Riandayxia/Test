@@ -64,12 +64,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Users\Extensions\IAddressService.cs" />
+    <Compile Include="Users\Extensions\Impl\AddressService.cs" />
+    <Compile Include="Users\IAddressService.cs" />
     <Compile Include="Base\Extensions\IMenuService.cs" />
     <Compile Include="Base\Extensions\Impl\MenuService.cs" />
     <Compile Include="Base\Extensions\Impl\UserService.cs" />
     <Compile Include="Base\Extensions\IUserService.cs" />
     <Compile Include="Base\IDictionaryService.cs" />
     <Compile Include="Base\IMenuService.cs" />
+    <Compile Include="Users\Impl\AddressService.cs" />
     <Compile Include="Base\Impl\DictionaryService.cs" />
     <Compile Include="Base\Impl\MenuService.cs" />
     <Compile Include="Base\Impl\RoleService.cs" />
@@ -108,11 +112,17 @@
     </Compile>
     <Compile Include="Process\WorkflowApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Property\Extensions\ICommunityService.cs" />
+    <Compile Include="Property\Extensions\Impl\CommunityService.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Property\Extensions\Impl\NewsPaperService.cs" />
     <Compile Include="Property\Extensions\INewsPaperService.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Property\ICommunityService.cs" />
     <Compile Include="Property\IComplaintsService.cs" />
+    <Compile Include="Property\Impl\CommunityService.cs" />
     <Compile Include="Property\Impl\ComplaintsService.cs" />
     <Compile Include="Property\Impl\PaymentService.cs" />
     <Compile Include="Property\Impl\NewsPaperService.cs" />

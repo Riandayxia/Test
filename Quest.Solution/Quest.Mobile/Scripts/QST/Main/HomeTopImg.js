@@ -13,6 +13,7 @@ Ext.define('QST.Main.HomeTopImg', {
     },
     config: {
         ui: 'dark',
+        height: 160,
         items: [
             {
                 xtype: 'panel',

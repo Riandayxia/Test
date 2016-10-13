@@ -1,4 +1,4 @@
-﻿Ext.define('QST.Main.PersonalTop', {
+﻿Ext.define('QST.Personal.Top', {
     extend: 'Ext.Container',
     xtype: 'personal_top',
     alternateClassName: 'personal',
@@ -26,7 +26,7 @@
                 }, {
                     flex: 6,
                     cls: 'myInfo',
-                    iconCls: 'htgl',
+                    iconCls: 'user_img',
                     text: '我的名称'
                 }, {
                     iconCls: 'settings #eee'
