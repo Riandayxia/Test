@@ -31,22 +31,21 @@ Ext.define('QST.Users.Address.List', {
                '<div class="header2">',
                   '<div class="ctent" style="width:30%;"><li class="title">联系电话</li><li><span class="_ctent">{Mobile}</span></li></div>',
                   '<div class="ctent" style="width:50%;"><li class="title">详细地址</li><li><span class="_ctent">{DetailedAddress}</span></li></div>',
-                  '<div class="ctent" style="width:20%;"><li class="title">默认地址</li><li><span class="_ctent">{[this.IsVisible(values.IsDefault)]}</span></li></div>',
+                  '<div class="ctent" style="width:20%;"><li class="title">设置为默认地址</li><li><span class="_ctent">{[this.IsDefault(values.IsDefault)]}</span></li></div>',
                '</div>',
                '<div class="footer"></div>',
            '</div>', {
-               //是否激活
-               IsVisible: function (val) {
-                   var str = '<span style="display:inline-block;padding: .4em .6em .5em;border-radius: .5em;color: white;';
+               //是否为默认地址
+               IsDefault: function (val) {
                    switch (val) {
                        case false:
-                           str = str + 'background-color: #CACACA;">不是';
+                           var str = '<input class="rad" type="radio" style="width:20px;height:20px" name="radiobutton" > ';
                            break;
                        case true:
-                           str = str + 'background-color:#E66767">是'
+                           var str = '<input class="rad" type="radio" style="width:20px;height:20px" name="radiobutton" checked> ';
                            break;
                    }
-                   return str + '</span>';
+                   return str;
                }
            }),
         //fieldArray: [
@@ -75,10 +74,30 @@ Ext.define('QST.Users.Address.List', {
             },
             //单击查看详细信息
             itemsingletap: function (list, index, target, record, e, eOpts) {
+                if (e.target.name == "radiobutton") {
+                    var record = util.copyObjects(record.data);
+                    if (record.IsDefault==false) {
+                        record.IsDefault = true
+                        Ext.Ajax.request({
+                            url: config.url + '/Address/Update',//提交地址
+                            params: record,
+                            success: function (response) {
+                                var result = Ext.decode(response.responseText);
+                                if (result.success) {
+                                    util.showMessage(result.msg, true);
+                                    list.rendering();
+                                } else {
+                                    util.showMessage(result.msg, true);
+                                }
+                            }
+                        });
+                    }
+                } else {
                     var record = util.copyObjects(record.data);
                     util.redirectTo("QST.Users.Address.Details", "", {
                         parentUrl: "QST.Users.Address.List", data: record
                     });
+                }
             },
             // 列表展示设置
             SetColumn: function (but, view, record) {
@@ -107,6 +126,12 @@ Ext.define('QST.Users.Address.List', {
             }
         }
     },
+    ////初始化
+    //constructor: function (config) {
+    //    var me = this;
+    //    this.callParent(arguments);
+    //    me.set_Listener();
+    //},
     //主界面到此界面时加载[List刷新时会默认加载此方法]
     rendering: function (params) {
         if (params) {
@@ -128,5 +153,20 @@ Ext.define('QST.Users.Address.List', {
         //当编辑数据成功时加载数据
         this.getStore().setParams({ userId: this.UserId });
         this.getStore().load();
+    },
+    // 设置事件
+    set_Listener: function () {
+        var me = this;
+        // 默认地址
+        me.addListener('tap', function (but, view, record) {
+            util.redirectTo("SH.App.HRManagement.UserBank.List", "",
+                         {
+                             parentUrl: "QST.Users.Address.MyAccount",
+                             data: { BankUserId: this.Id }
+                         });
+        }, me, {
+            element: 'innerElement',
+            delegate: 'input.rad'
+        });
     }
 })

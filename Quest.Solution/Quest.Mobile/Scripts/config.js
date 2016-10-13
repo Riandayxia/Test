@@ -23,8 +23,8 @@ Ext.define('config', {
             //账户管理
             MyAccount:'我的账户',
             AddressList: '地址管理',
-            AddressEdit: '编辑地址管理',
-            AddressDetails: '地址管理详细',
+            AddressEdit: '编辑地址',
+            AddressDetails: '地址详细',
 
             HomeArea: '首页',
             WorkArea: '工作区',
