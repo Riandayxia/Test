@@ -16,7 +16,7 @@ Ext.define('QST.Property.Community.AList', {
         ckId: 'Id',  //设置数据主键(可配置)
         title: '社区公告',
         dataUrl: config.url + '/Community/GetAll',
-        modelArray: ['Id', 'Title', 'Content', 'ActivityTime','Text','ContentType','Publisher','ImageUrl', 'IsDeleted', 'CreatedTime', 'LastUpdatedTime'],
+        modelArray: ['Id', 'Title', 'Content', 'ActivityTime', 'Text', 'ContentType', 'Publisher', 'ImageUrl', 'IsDeleted', 'CreatedTime', 'LastUpdatedTime'],
         //模板
         itemTpl: Ext.create('Ext.XTemplate',
             '<div class="container">',
