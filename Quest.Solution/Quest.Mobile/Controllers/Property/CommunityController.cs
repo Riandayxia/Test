@@ -17,7 +17,6 @@ namespace Quest.WebSite.Controllers.Property
     /// </summary>
     public partial class CommunityController : BaseController
     {
-
         /// <summary>
         /// 分页查询
         /// </summary>
