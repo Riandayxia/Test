@@ -25,16 +25,16 @@
             }, {
                 layout: 'hbox',
                 flex: 1.3, cls: 'bottom',
-                style: 'background:#f8f9f9',
+                style: 'background:#fbfbfb',
                 items: [
                     {
                         xtype: "button", text: '缴费记录', style: ' margin-left:30%;',
                         handler: function (but) {
                             util.redirectTo("QST.Property.Payment.HList", "", { parentUrl: "QST.Property.Payment.Layout" });
                         }
-                    }, {
-                        xtype: "button", text: '|', style: 'margin:0;text-align:right',//;background:white
-                       
+                    },
+                    {
+                        xtype: "button", text: '|', style: '',
                     },
                     {
                         xtype: "button", text: '帮助中心', style: '',

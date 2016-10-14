@@ -8,14 +8,15 @@ Ext.define('QST.Property.Complaints.Edit', {
     extend: 'app.user.NForm',
     xtype: 'property_complaints_edit',
     config: {
-        title: "编辑投诉建议",
+        title: "新增投诉建议",
         subUrl: config.url + '/Complaints/Add',
         defaults: {
             labelWidth: '30%'
         },
         items: [{
             xtype: 'fieldset',
-            items: [{
+            items: [
+                {
                 label: '类型',
                 xtype: 'selectfield',
                 name: 'CType',
@@ -31,30 +32,26 @@ Ext.define('QST.Property.Complaints.Edit', {
                 label: '投诉内容',
                 xtype: 'textareafield',
                 name: 'Content',
-                placeHolder: '请输入投诉内容（必填）'
             },
             {
                 label: '提交人信息',
                 xtype: 'textfield',
                 name: 'Submitter',
-                allowBlank: true,
-                placeHolder: '请输入提交人信息（必填）'
+                placeHolder: '请输入提交人信息'
             }, {
                 label: '联系人',
                 xtype: 'textfield',
                 name: 'Contacts',
-                placeHolder: '请输入联系人（必填）'
+                placeHolder: '请输入联系人'
             }, {
                 label: '联系电话',
-                xtype: 'textareafield',
+                xtype: 'textfield',
                 name: 'Phone',
-                allowBlank: true,
-                placeHolder: '请输入联系电话（必填）'
+                placeHolder: '请输入联系电话'
             }, {
                 label: '详细地址',
                 xtype: 'textareafield',
                 name: 'Address',
-                allowBlank: true,
                 placeHolder: '请输入详细地址'
             }, {
                 xtype: 'hiddenfield',
@@ -68,9 +65,9 @@ Ext.define('QST.Property.Complaints.Edit', {
                 xtype: 'hiddenfield',
                 name: 'CreatedTime'
             }, {
-                name: '修改时间',
+                name: 'LastUpdatedTime',
                 xtype: 'hiddenfield',
-                label: '提交人信息'
+                label: '修改时间'
 
             }]
         }],

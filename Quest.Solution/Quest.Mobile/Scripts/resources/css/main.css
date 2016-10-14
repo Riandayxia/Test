@@ -38,6 +38,7 @@
     height: 17px;
     width: 100%;
     border-radius: 10px;
+    color:#fbfbfb
 }
 
 .progress-b {
@@ -498,6 +499,13 @@ body.x-desktop {
         overflow: hidden;
         padding-left: 10px;
         background-color: #F7F7F7;
+    }  .list_wf .menuListX {
+        border-bottom: 1px solid #CCC !important;
+        height: 100px !important;
+        line-height: 50px !important;
+        overflow: hidden;
+        padding-left: 10px;
+        background-color: #F7F7F7;
     }
 
 .Pcontainer {
@@ -751,20 +759,7 @@ body.x-desktop {
 }
 /*#endregion*/
 
-/*#region 查询按钮 */
-.bottom .x-button {
-    background-image: none;
-    background-color: #f8f9f9;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 6em;
-    font-weight: 100;
-    color: #3F444A;
-    font-size: .8em;
-    padding-bottom:2em;
-   
-   
-}
+
 /*#endregion*/
 
 /*#region 查询按钮 */
@@ -1678,3 +1673,34 @@ body.x-desktop {
 .community img { width: 100% !important; height: 20em !important; margin: 5px !important; padding-right: 10px !important;  }
 .communityspan {  border:1px solid #CCC; padding: 0 0.3em;}
 .communityp {font-size: 6px;color: Gray; }
+/*便民服务样式*/
+.conveniencediv { border-top:.3em solid #e5e5e5 ; border-bottom:.3em solid #e5e5e5 ;margin:0; width:100%; height:3em;text-align:center; }
+.conveniencespan {text-align: left; width: 80% ;float:left; height:80%;margin: 0.2em auto auto 2%; border-left:.2em solid #157efb;padding-left:1%;padding-top:0.2em}
+.conveniencesimg {text-align: right; width: 14%;float:left; height:80%;margin: 0.2em 0 0 0;padding-top:0.4em;color:Gray;font-size:13px;}
+.conveniencelistdiv { height:98%;width:30%;   float:left; padding-top:2%}
+.div1 { float:left; width:68%;  height:100%;margin:0;padding:0}
+ .name { font-size:16px;font-weight:bold; height:30%; width:100% ;background:#fff; margin:0;padding:0;text-align:left}
+ .name2 { font-size:12px; height:25%; width:100% ; margin:0 ;padding:0;text-align:right;color:#CCC}
+ .name3 { font-size:12px; height:25%; width:100% ; margin:0 ;padding:0;text-align:left;color:#CCC}
+ /*在线缴费*/
+
+.bottom .x-button {
+    background-image: none;
+    background-color: #fbfbfb;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 6em;
+    font-weight:100;
+    color: #6BC8FB;
+    font-size: .8em;
+    padding-bottom:2em;
+   
+   
+}
+.menuList .img {
+   width:75%; height:100%;float:left;
+}
+
+.menuList .add {
+    width:25%; height:100%;float:left;color:#CCC;font-size:12px;
+}

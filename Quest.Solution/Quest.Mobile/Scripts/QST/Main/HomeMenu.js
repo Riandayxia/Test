@@ -35,10 +35,13 @@ Ext.define('QST.Main.HomeMenu', {
                     }
                 }, {
                     text: '家政服务',
-                    iconCls: 'list roseRed',
+                    iconCls: 'list roseRed'
                 }, {
                     text: '便民服务',
                     iconCls: 'refresh lightBlue',
+                    handler: function (but) {
+                        util.redirectTo("QST.Property.Convenience.Layout", "", { parentUrl: "QST.Main.Layout" });
+                    }
                 }]
             },
             {

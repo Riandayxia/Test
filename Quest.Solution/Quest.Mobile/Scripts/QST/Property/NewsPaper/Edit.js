@@ -29,30 +29,27 @@ Ext.define('QST.Property.NewsPaper.Edit', {
                 label: '报事地址',
                 xtype: 'textareafield',
                 name: 'Address',
-                placeHolder: '请输入报事地址（必填）'
+                placeHolder: '请输入报事地址'
             },
              {
                 label: '联系人',
                 xtype: 'textfield',
                 name: 'Contacts',
-                placeHolder: '请输入联系人（必填）'
+                placeHolder: '请输入联系人'
             }, {
                 label: '联系电话',
-                xtype: 'textareafield',
+                xtype: 'textfield',
                 name: 'Phone',
-                allowBlank: true,
-                placeHolder: '请输入联系电话（必填）'
+                placeHolder: '请输入联系电话'
             }, {
                 label: '报事标题',
                 xtype: 'textfield',
                 name: 'Title',
-                allowBlank: true,
                 placeHolder: '请输入报事标题'
             }, {
                 label: '报事内容',
                 xtype: 'textareafield',
                 name: 'Content',
-                allowBlank: true,
                 placeHolder: '请输入报事内容'
             }, {
                 xtype: 'hiddenfield',
@@ -76,7 +73,7 @@ Ext.define('QST.Property.NewsPaper.Edit', {
                 name: 'CreatedTime',
                 
             }, {
-                label: '提交人信息',
+                label: '创建时间',
                 xtype: 'hiddenfield',
                 name: 'LastUpdatedTime'
 

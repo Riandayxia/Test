@@ -215,6 +215,10 @@
     <Content Include="Scripts\cordova.js" />
     <Content Include="Scripts\cordova_plugins.js" />
     <Content Include="Scripts\index.html" />
+    <Content Include="Scripts\QST\Property\Convenience\Layout.js" />
+    <Content Include="Scripts\QST\Property\Convenience\List.js" />
+    <Content Include="Scripts\QST\Property\Convenience\Middle.js" />
+    <Content Include="Scripts\QST\Property\Convenience\Top.js" />
     <Content Include="Scripts\QST\HouseManage\Housekeeping\CWEdit.js" />
     <Content Include="Scripts\QST\HouseManage\Housekeeping\HAEdit.js" />
     <Content Include="Scripts\QST\HouseManage\Housekeeping\List.js" />
