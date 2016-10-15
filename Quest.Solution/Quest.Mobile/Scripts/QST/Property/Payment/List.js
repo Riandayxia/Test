@@ -16,7 +16,7 @@ Ext.define('QST.Property.Payment.List', {
         disableSelection: true,
         itemTpl: Ext.create('Ext.XTemplate',
             '<div class="menuList" style="<tpl if="needsIcon">background-color:#fff</tpl>">',
-            '<div class="img"><tpl if="needsIcon"><img width="23" height="23" style="margin: 0 5px 0 10px;" src="resources/images/set/{icon}" align="absmiddle" /></tpl><font style="margin:2px 0 0 0">{name}</font></div>',
+            '<div class="img"><tpl if="needsIcon"><img width="23" height="23" style="margin: 0 5px 0 10px;" src="resources/images/property/payment/{icon}" align="absmiddle" /></tpl><font style="margin:2px 0 0 0">{name}</font></div>',
             '<div class="add">可添加<tpl if="needsIcon"><img width="6" height="15" src="resources/images/Arrow.png" style="display: inline; float: right; margin:18px 10px 0 0;"/></tpl></div>',
                 //'<div><tpl if="needsIcon"><img width="23" height="23" style="margin: 0 5px 0 10px;" src="resources/images/set/{icon}" align="absmiddle" /></tpl><font style="margin:2px 0 0 0">{name}</font></div>',
                 //'<div><tpl if="needsIcon"><img width="6" height="15" src="resources/images/Arrow.png" style="display: inline; float: right; margin:18px 10px 0 0;"/></tpl><div>',
@@ -25,13 +25,13 @@ Ext.define('QST.Property.Payment.List', {
         store: {
             fields: ['name', 'icon', 'needsIcon', 'url', 'style'],
             data: [
-                   { "name": "物业费", url: 'QST.Property.Payment.Edit', "icon": 'add.png', "needsIcon": true },
-                   { "name": "停车费", url: 'QST.Property.Payment.Edit', "icon": 'Material.png', "needsIcon": true },
-                   { "name": "有线电视费", url: 'QST.Property.Payment.Edit', "icon": 'Supplied.png', "needsIcon": true },
-                   { "name": "有线宽带", url: 'QST.Property.Payment.Edit', "icon": 'Material.png', "needsIcon": true },
-                   { "name": "水费", url: 'QST.Property.Payment.Edit', "icon": 'Supplied.png', "needsIcon": true },
-                   { "name": "电费", url: 'QST.Property.Payment.Edit', "icon": 'Material.png', "needsIcon": true },
-                   { "name": "煤气费", url: 'QST.Property.Payment.Edit', "icon": 'Supplied.png', "needsIcon": true }
+                   { "name": "物业费", url: 'QST.Property.Payment.Edit', "icon": 'property2x.png', "needsIcon": true },
+                   { "name": "停车费", url: 'QST.Property.Payment.Edit', "icon": 'carpark2x.png', "needsIcon": true },
+                   { "name": "有线电视费", url: 'QST.Property.Payment.Edit', "icon": 'cableTV2x.png', "needsIcon": true },
+                   { "name": "有线宽带", url: 'QST.Property.Payment.Edit', "icon": 'broadband2x.png', "needsIcon": true },
+                   { "name": "水费", url: 'QST.Property.Payment.Edit', "icon": 'electricity2x.png', "needsIcon": true },
+                   { "name": "电费", url: 'QST.Property.Payment.Edit', "icon": 'electricity2x.png', "needsIcon": true },
+                   { "name": "煤气费", url: 'QST.Property.Payment.Edit', "icon": 'gas2x.png', "needsIcon": true }
             ]
         },
         listeners: {

@@ -12,7 +12,7 @@ Ext.define('QST.Main.HomeMiddleImg', {
         items: [{
             xtype: 'panel',
             cls: 'home_msg',
-            html: '停电通知：2016-10-10 8：00至12：00'
+            html: '<div  class="speaker"><div class="img"><img  fire="onDelete" src="resources/images/main/speaker2x.png"></div><div class="div">|&nbsp;&nbsp;&nbsp;停电通知：2016-10-10 8：00至12：00</div> </div>'
         }, {
             xtype: 'panel',
             height: 50,

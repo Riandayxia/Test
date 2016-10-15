@@ -23,37 +23,37 @@ Ext.define('QST.Property.Convenience.Top', {
             {
                 items: [{
                     text: '公租房政策信息',
-                    iconCls: 'htgl',
+                    iconCls: 'houses',
                     handler: function (but) {
                         util.redirectTo("QST.Property.Payment.Layout", "", { parentUrl: "QST.Main.Layout" });
                     }
                 }, {
                     text: '医院',
-                    iconCls: 'organize orange',
+                    iconCls: 'hospital',
                     handler: function (but) {
                         util.redirectTo("QST.Property.Community.Layout", "", { parentUrl: "QST.Main.Layout" });
                     }
                 }, {
                     text: '学校',
-                    iconCls: 'list roseRed',
+                    iconCls: 'school',
                 }]
             },
             {
                 items: [{
                     text: '餐厅',
-                    iconCls: 'search green',
+                    iconCls: 'restaurant',
                     handler: function (but) {
                         util.redirectTo("QST.Property.Complaints.Edit", "", { parentUrl: "QST.Main.Layout" });
                     }
                 }, {
                     text: '公安局',
-                    iconCls: 'settings blue',
+                    iconCls: 'police',
                     handler: function (but) {
                         util.redirectTo("QST.Property.NewsPaper.Edit", "", { parentUrl: "QST.Main.Layout" });
                     }
                 }, {
                     text: '政府',
-                    iconCls: 'star yellow',
+                    iconCls: 'governmen',
                 }]
             }
         ],

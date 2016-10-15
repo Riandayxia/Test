@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -138,14 +139,15 @@
     <Compile Include="Controllers\HouseManage\HousekeepingController.cs" />
     <Compile Include="Controllers\InitDataController.cs" />
     <Compile Include="Controllers\Property\Auto\CommunityController.cs" />
+    <Compile Include="Controllers\Property\Auto\PAccountController.cs" />
     <Compile Include="Controllers\Property\Auto\PaymentController.cs" />
     <Compile Include="Controllers\Property\Auto\NewsPaperController.cs" />
     <Compile Include="Controllers\Property\Auto\ComplaintsController.cs" />
     <Compile Include="Controllers\Property\CommunityController.cs" />
+    <Compile Include="Controllers\Property\PAccountController.cs" />
     <Compile Include="Controllers\Property\PaymentController.cs" />
     <Compile Include="Controllers\Property\NewsPaperController.cs" />
     <Compile Include="Controllers\Property\ComplaintsController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -215,6 +217,7 @@
     <Content Include="Scripts\cordova.js" />
     <Content Include="Scripts\cordova_plugins.js" />
     <Content Include="Scripts\index.html" />
+    <Content Include="Scripts\QST\Property\Complaints\Details.js" />
     <Content Include="Scripts\QST\Property\Convenience\Layout.js" />
     <Content Include="Scripts\QST\Property\Convenience\List.js" />
     <Content Include="Scripts\QST\Property\Convenience\Middle.js" />
@@ -256,6 +259,14 @@
     <Content Include="Scripts\QST\Property\NewsPaper\HList.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\List.js" />
     <Content Include="Scripts\QST\Property\NewsPaper\SList.js" />
+    <Content Include="Scripts\QST\Property\PAccount\Edit.js" />
+    <Content Include="Scripts\QST\Property\PAccount\Hlist.js" />
+    <Content Include="Scripts\QST\Property\PAccount\Layout.js" />
+    <Content Include="Scripts\QST\Property\PAccount\List.js" />
+    <Content Include="Scripts\QST\Property\PAccount\SEdit.js" />
+    <Content Include="Scripts\QST\Property\PAccount\TEdit.js" />
+    <Content Include="Scripts\QST\Property\PAccount\KEdit.js" />
+    <Content Include="Scripts\QST\Property\PAccount\WEdit.js" />
     <Content Include="Scripts\QST\Property\Payment\Edit.js" />
     <Content Include="Scripts\QST\Property\Payment\Hlist.js" />
     <Content Include="Scripts\QST\Property\Payment\List.js" />
@@ -339,11 +350,60 @@
     <Content Include="Scripts\resources\images\Guide1.png" />
     <Content Include="Scripts\resources\images\Guide2.png" />
     <Content Include="Scripts\resources\images\Guide3.png" />
+    <Content Include="Scripts\resources\images\main\convenience2x.png" />
+    <Content Include="Scripts\resources\images\main\wyf2x.png" />
+    <Content Include="Scripts\resources\images\main\service2x.png" />
+    <Content Include="Scripts\resources\images\main\information2x.png" />
+    <Content Include="Scripts\resources\images\main\live2x.png" />
+    <Content Include="Scripts\resources\images\main\business2x.png" />
+    <Content Include="Scripts\resources\images\main\housekeeping2x.png" />
+    <Content Include="Scripts\resources\images\main\mall2x.png" />
+    <Content Include="Scripts\resources\images\main\speaker2x.png" />
     <Content Include="Scripts\resources\images\mallTop.png" />
     <Content Include="Scripts\resources\images\middle_img_2.png" />
     <Content Include="Scripts\resources\images\middle_img_3.png" />
     <Content Include="Scripts\resources\images\ok.png" />
     <Content Include="Scripts\resources\images\personal_top.png" />
+    <Content Include="Scripts\resources\images\property\convenience\government2x.png" />
+    <Content Include="Scripts\resources\images\property\convenience\government3x.png" />
+    <Content Include="Scripts\resources\images\property\convenience\hospital2x.png" />
+    <Content Include="Scripts\resources\images\property\convenience\hospital3x.png" />
+    <Content Include="Scripts\resources\images\property\convenience\houses2x.png" />
+    <Content Include="Scripts\resources\images\property\convenience\houses3x.png" />
+    <Content Include="Scripts\resources\images\property\convenience\police2x.png" />
+    <Content Include="Scripts\resources\images\property\convenience\police3x.png" />
+    <Content Include="Scripts\resources\images\property\convenience\restaurant2x.png" />
+    <Content Include="Scripts\resources\images\property\convenience\restaurant3x.png" />
+    <Content Include="Scripts\resources\images\property\convenience\school2x.png" />
+    <Content Include="Scripts\resources\images\property\convenience\school3x.png" />
+    <Content Include="Scripts\resources\images\property\newspaper\addreport2x.png" />
+    <Content Include="Scripts\resources\images\property\newspaper\addreport3x.png" />
+    <Content Include="Scripts\resources\images\property\newspaper\history2x.png" />
+    <Content Include="Scripts\resources\images\property\newspaper\history3x.png" />
+    <Content Include="Scripts\resources\images\property\newspaper\pending2x.png" />
+    <Content Include="Scripts\resources\images\property\newspaper\pending3x.png" />
+    <Content Include="Scripts\resources\images\property\newspaper\reply2x.png" />
+    <Content Include="Scripts\resources\images\property\newspaper\reply3x.png" />
+    <Content Include="Scripts\resources\images\property\payment\broadband2x.png" />
+    <Content Include="Scripts\resources\images\property\payment\broadband3x.png" />
+    <Content Include="Scripts\resources\images\property\payment\cableTVsmall3x.png" />
+    <Content Include="Scripts\resources\images\property\payment\broadbandsmall2x.png" />
+    <Content Include="Scripts\resources\images\property\payment\broadbandsmall3x.png" />
+    <Content Include="Scripts\resources\images\property\payment\cableTV2x.png" />
+    <Content Include="Scripts\resources\images\property\payment\cableTV3x.png" />
+    <Content Include="Scripts\resources\images\property\payment\cableTVsmall2x.png" />
+    <Content Include="Scripts\resources\images\property\payment\carpark2x.png" />
+    <Content Include="Scripts\resources\images\property\payment\carpark3x.png" />
+    <Content Include="Scripts\resources\images\property\payment\carparksmall.png" />
+    <Content Include="Scripts\resources\images\property\payment\carparksmall2x.png" />
+    <Content Include="Scripts\resources\images\property\payment\electricity2x.png" />
+    <Content Include="Scripts\resources\images\property\payment\electricity3x.png" />
+    <Content Include="Scripts\resources\images\property\payment\gas2x.png" />
+    <Content Include="Scripts\resources\images\property\payment\gas3x.png" />
+    <Content Include="Scripts\resources\images\property\payment\property2x.png" />
+    <Content Include="Scripts\resources\images\property\payment\property3x.png" />
+    <Content Include="Scripts\resources\images\property\payment\propertysmall2x.png" />
+    <Content Include="Scripts\resources\images\property\payment\propertysmall3x.png" />
     <Content Include="Scripts\resources\images\save.png" />
     <Content Include="Scripts\resources\images\set\Equipment.png" />
     <Content Include="Scripts\resources\images\set\help.png" />
@@ -360,48 +420,6 @@
     <Content Include="Scripts\resources\images\set\version.png" />
     <Content Include="Scripts\resources\images\Mall-1.png" />
     <Content Include="Scripts\resources\images\top-1.png" />
-    <Content Include="Scripts\resources\images\Property\Convenience\policesmall.png" />
-    <Content Include="Scripts\resources\images\Property\Convenience\policebig.png" />
-    <Content Include="Scripts\resources\images\Property\Convenience\公租房政策%402x.png" />
-    <Content Include="Scripts\resources\images\Property\Convenience\公租房政策%403x.png" />
-    <Content Include="Scripts\resources\images\Property\Convenience\医院-%281%29%402x.png" />
-    <Content Include="Scripts\resources\images\Property\Convenience\医院-%281%29%403x.png" />
-    <Content Include="Scripts\resources\images\Property\Convenience\restaurantsmall.png" />
-    <Content Include="Scripts\resources\images\Property\Convenience\restaurantbig.png" />
-    <Content Include="Scripts\resources\images\Property\Convenience\学校%402x.png" />
-    <Content Include="Scripts\resources\images\Property\Convenience\学校%403x.png" />
-    <Content Include="Scripts\resources\images\Property\Convenience\政府%402x.png" />
-    <Content Include="Scripts\resources\images\Property\Convenience\政府%403x.png" />
-    <Content Include="Scripts\resources\images\Property\Convenience\默认图片%402x.png" />
-    <Content Include="Scripts\resources\images\Property\Convenience\默认图片%403x.png" />
-    <Content Include="Scripts\resources\images\Property\NewsPaper\历史报事%402x.png" />
-    <Content Include="Scripts\resources\images\Property\NewsPaper\历史报事%403x.png" />
-    <Content Include="Scripts\resources\images\Property\NewsPaper\回复%402x.png" />
-    <Content Include="Scripts\resources\images\Property\NewsPaper\回复%403x.png" />
-    <Content Include="Scripts\resources\images\Property\NewsPaper\待处理报事%402x.png" />
-    <Content Include="Scripts\resources\images\Property\NewsPaper\待处理报事%403x.png" />
-    <Content Include="Scripts\resources\images\Property\NewsPaper\新增报事%402x.png" />
-    <Content Include="Scripts\resources\images\Property\NewsPaper\新增报事%403x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\收费停车场da%402x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\收费停车场da%403x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\收费停车场小%402x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\收费停车场小%403x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\有线电视%402x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\有线电视%403x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\有线电视小%402x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\有线电视小%403x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\煤气天然气%402x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\煤气天然气%403x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\物业费da%402x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\物业费da%403x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\物业费小%402x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\物业费小%403x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\电费-1-%281%29%402x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\电费-1-%281%29%403x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\网络宽带%402x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\网络宽带%403x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\网络宽带小%402x.png" />
-    <Content Include="Scripts\resources\images\Property\Payment\网络宽带小%403x.png" />
     <Content Include="Scripts\resources\startup\1496x2048.png" />
     <Content Include="Scripts\resources\startup\1536x2008.png" />
     <Content Include="Scripts\resources\startup\320x460.jpg" />

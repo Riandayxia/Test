@@ -57,6 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Maps\Property\PAccountConfiguration.cs" />
+    <Compile Include="Property\PAccount.cs" />
     <Compile Include="Users\Address.cs" />
     <Compile Include="Base\Dictionary.cs" />
     <Compile Include="Base\Menu.cs" />

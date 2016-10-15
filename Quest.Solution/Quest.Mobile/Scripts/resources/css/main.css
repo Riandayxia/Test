@@ -1704,3 +1704,99 @@ body.x-desktop {
 .menuList .add {
     width:25%; height:100%;float:left;color:#CCC;font-size:12px;
 }
+/*首页图片样式*/
+/*在线缴费*/
+.wyf {
+    background: url(../images/main/wyf2x.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}
+.mall {
+    background: url(../images/main/mall2x.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}
+/*家政服务*/
+.housekeeping {
+    background: url(../images/main/housekeeping2x.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}/*社区资讯*/
+.information {
+    background: url(../images/main/information2x.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}
+
+   
+/*报事报修*/
+.service {
+    background: url(../images/main/service2x.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}
+         
+/*便民服务*/
+.convenience {
+    background: url(../images/main/convenience2x.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}
+ /*在线营业厅*/
+.business {
+    background: url(../images/main/business2x.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}
+/*在线看直播*/
+.live {
+    background: url(../images/main/live2x.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}
+
+.edetdiv { height: 2em;  width: 100%; text-align: left; padding-left: 1em;margin-top: 1%;font-size: 12px;}
+.edetdiv .span {color: rgba(14, 140, 232, 0.98); font-size: 12px; }
+
+/*便民服务的图片样式*/
+/*公租房政策信息*/
+.houses {
+    background: url(../images/property/convenience/houses2x.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}
+/*医院*/
+.hospital {
+    background: url(../images/property/convenience/hospital2x.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}
+/*学校*/
+.school {
+    background: url(../images/property/convenience/school2x.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}
+/*餐厅*/
+.restaurant {
+    background: url(../images/property/convenience/restaurant2x.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}
+/*公安局*/
+.police {
+    background: url(../images/property/convenience/police2x.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}
+/*政府*/
+.governmen {
+    background: url(../images/property/convenience/government2x.png) no-repeat center !important;
+    background-size: 80% 80% !important;
+    border-radius: .5em;
+}
+/*首页样式*/
+/*喇叭样式*/
+.speaker {  width:!00%; height:40px;}
+.speaker .img { width: 9%;height: 100%;float: left; margin-right: 1%;}
+.speaker .div{    width: 90%; height: 98%; float: left; padding-top: 1.5%; color:Gray}

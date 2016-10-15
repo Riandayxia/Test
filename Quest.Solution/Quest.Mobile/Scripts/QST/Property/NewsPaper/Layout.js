@@ -16,16 +16,16 @@ Ext.define('QST.Property.NewsPaper.Layout', {
         disableSelection: true,
         itemTpl: Ext.create('Ext.XTemplate',
             '<div class="menuList" style="<tpl if="needsIcon">background-color:#fff</tpl>">',
-                '<tpl if="needsIcon"><img width="23" height="23" style="margin: 0 5px 0 10px;" src="resources/images/set/{icon}" align="absmiddle" /></tpl><font style="margin:2px 0 0 0">{name}</font>',
+                '<tpl if="needsIcon"><img width="23" height="23" style="margin: 0 5px 0 10px;" src="resources//property/payment/newspaper/{icon}" align="absmiddle" /></tpl><font style="margin:2px 0 0 0">{name}</font>',
                 '<tpl if="needsIcon"><img width="6" height="15" src="resources/images/Arrow.png" style="display: inline; float: right; margin:18px 10px 0 0;"/></tpl>',
             '</div>'
             ),
         store: {
             fields: ['name', 'icon', 'needsIcon', 'url', 'style'],
             data: [
-                   { "name": "新增报事", url: 'QST.Property.NewsPaper.List', "icon": 'add.png', "needsIcon": true },
-                   { "name": "未处理报事", url: 'QST.Property.NewsPaper.SList', "icon": 'Material.png', "needsIcon": true },
-                   { "name": "历史报事", url: 'QST.Property.NewsPaper.HList', "icon": 'Supplied.png', "needsIcon": true }
+                   { "name": "新增报事", url: 'QST.Property.NewsPaper.List', "icon": 'pending2x.png', "needsIcon": true },
+                   { "name": "未处理报事", url: 'QST.Property.NewsPaper.SList', "icon": 'addreport2x.png', "needsIcon": true },
+                   { "name": "历史报事", url: 'QST.Property.NewsPaper.HList', "icon": 'history2x.png', "needsIcon": true }
             ]
         },
         listeners: {

@@ -64,6 +64,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Property\Impl\PAccountService.cs" />
+    <Compile Include="Property\IPAccountService.cs" />
     <Compile Include="Users\Extensions\IAddressService.cs" />
     <Compile Include="Users\Extensions\Impl\AddressService.cs" />
     <Compile Include="Users\IAddressService.cs" />

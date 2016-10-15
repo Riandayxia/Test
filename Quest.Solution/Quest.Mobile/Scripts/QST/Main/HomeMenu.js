@@ -23,46 +23,46 @@ Ext.define('QST.Main.HomeMenu', {
             {
                 items: [{
                     text: '在线缴费',
-                    iconCls: 'htgl',
+                    iconCls: 'wyf',
                     handler: function (but) {
-                        util.redirectTo("QST.Property.Payment.Layout", "", { parentUrl: "QST.Main.Layout" });
+                        util.redirectTo("QST.Property.PAccount.Layout", "", { parentUrl: "QST.Main.Layout" });
                     }
                 }, {
-                    text: '社区资讯',
-                    iconCls: 'organize orange',
-                    handler: function (but) {
-                        util.redirectTo("QST.Property.Community.Layout", "", { parentUrl: "QST.Main.Layout" });
-                    }
-                }, {
-                    text: '家政服务',
-                    iconCls: 'list roseRed'
-                }, {
-                    text: '便民服务',
-                    iconCls: 'refresh lightBlue',
-                    handler: function (but) {
-                        util.redirectTo("QST.Property.Convenience.Layout", "", { parentUrl: "QST.Main.Layout" });
-                    }
-                }]
-            },
-            {
-                items: [{
-                    text: '投诉建议',
-                    iconCls: 'search green',
+                    text: '社区商城',
+                    iconCls: 'mall',
                     handler: function (but) {
                         util.redirectTo("QST.Property.Complaints.Edit", "", { parentUrl: "QST.Main.Layout" });
                     }
                 }, {
+                    text: '家政服务',
+                    iconCls: 'housekeeping'
+                },{
+                    text: '社区活动',
+                    iconCls: 'information',
+                    handler: function (but) {
+                        util.redirectTo("QST.Property.Community.Layout", "", { parentUrl: "QST.Main.Layout" });
+                    }
+                }]
+            },
+            {
+                items: [ {
                     text: '报事报修',
-                    iconCls: 'settings blue',
+                    iconCls: 'service',
                     handler: function (but) {
                         util.redirectTo("QST.Property.NewsPaper.Edit", "", { parentUrl: "QST.Main.Layout" });
                     }
                 }, {
+                    text: '便民服务',
+                    iconCls: 'convenience',
+                    handler: function (but) {
+                        util.redirectTo("QST.Property.Convenience.Layout", "", { parentUrl: "QST.Main.Layout" });
+                    }
+                }, {
                     text: '在线营业厅',
-                    iconCls: 'star yellow',
+                    iconCls: 'business',
                 }, {
                     text: '在线看直播',
-                    iconCls: 'trash paleYellow',
+                    iconCls: 'live',
                 }]
             },
         ],
