@@ -24,6 +24,12 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>12.0</OldToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -122,8 +128,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="AppStart\AuthManage_AR.cs" />
-	 <Compile Include="AppStart\BusinessManageCenter\MerchantManage_AR.cs" />
+    <Compile Include="AppStart\AuthManage_AR.cs" />
+    <Compile Include="AppStart\BusinessManageCenter\MerchantManage_AR.cs" />
     <Compile Include="AppStart\BusinessManageCenter_AR.cs" />
     <Compile Include="AppStart\PropertyManageCenter_AR.cs" />
     <Compile Include="AppStart\Property_AR.cs" />
@@ -188,7 +194,7 @@
     <Compile Include="Controllers\PropertyManageCenter\WorkOrderManageController.cs" />
     <Compile Include="Controllers\PropertyManageCenter\OwnerManageController.cs" />
     <Compile Include="Controllers\PropertyManageCenter\PropertyManageController.cs" />
-	<Compile Include="Controllers\Property\Auto\CommunityController.cs" />
+    <Compile Include="Controllers\Property\Auto\CommunityController.cs" />
     <Compile Include="Controllers\Property\CommunityController.cs" />
     <Compile Include="Controllers\Ueditor\Config.cs" />
     <Compile Include="Controllers\Ueditor\ConfigHandler.cs" />

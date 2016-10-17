@@ -11,3 +11,16 @@ D:\Code\Quest.APP\Quest.Solution\Quest.Core.Data\bin\Debug\Newtonsoft.Json.xml
 D:\Code\Quest.APP\Quest.Solution\Quest.Core.Data\obj\Debug\Quest.Core.Data.csprojResolveAssemblyReference.cache
 D:\Code\Quest.APP\Quest.Solution\Quest.Core.Data\obj\Debug\Quest.Core.Data.dll
 D:\Code\Quest.APP\Quest.Solution\Quest.Core.Data\obj\Debug\Quest.Core.Data.pdb
+Y:\Working\Quest\Codes\ZHGZF_APP\Quest.Solution\Quest.Core.Data\bin\Debug\Quest.Core.Data.dll
+Y:\Working\Quest\Codes\ZHGZF_APP\Quest.Solution\Quest.Core.Data\bin\Debug\Quest.Core.Data.pdb
+Y:\Working\Quest\Codes\ZHGZF_APP\Quest.Solution\Quest.Core.Data\bin\Debug\EntityFramework.dll
+Y:\Working\Quest\Codes\ZHGZF_APP\Quest.Solution\Quest.Core.Data\bin\Debug\EntityFramework.SqlServer.dll
+Y:\Working\Quest\Codes\ZHGZF_APP\Quest.Solution\Quest.Core.Data\bin\Debug\Quest.Framework.dll
+Y:\Working\Quest\Codes\ZHGZF_APP\Quest.Solution\Quest.Core.Data\bin\Debug\Newtonsoft.Json.dll
+Y:\Working\Quest\Codes\ZHGZF_APP\Quest.Solution\Quest.Core.Data\bin\Debug\Quest.Framework.pdb
+Y:\Working\Quest\Codes\ZHGZF_APP\Quest.Solution\Quest.Core.Data\bin\Debug\EntityFramework.xml
+Y:\Working\Quest\Codes\ZHGZF_APP\Quest.Solution\Quest.Core.Data\bin\Debug\EntityFramework.SqlServer.xml
+Y:\Working\Quest\Codes\ZHGZF_APP\Quest.Solution\Quest.Core.Data\bin\Debug\Newtonsoft.Json.xml
+Y:\Working\Quest\Codes\ZHGZF_APP\Quest.Solution\Quest.Core.Data\obj\Debug\Quest.Core.Data.csprojResolveAssemblyReference.cache
+Y:\Working\Quest\Codes\ZHGZF_APP\Quest.Solution\Quest.Core.Data\obj\Debug\Quest.Core.Data.dll
+Y:\Working\Quest\Codes\ZHGZF_APP\Quest.Solution\Quest.Core.Data\obj\Debug\Quest.Core.Data.pdb

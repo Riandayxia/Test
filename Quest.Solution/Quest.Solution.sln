@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Infrastructure", "1.Infrastructure", "{7449AC32-54A6-4F74-9783-2DDFC32D32FA}"
 EndProject
@@ -22,31 +22,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quest.Mobile", "Quest.Mobile\Quest.Mobile.csproj", "{9AAE60B4-37DE-40C1-BFA1-D118B2BA7BC9}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 6
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Quest.Core.Data\\Quest.Core.Data.csproj
-		SccProjectTopLevelParentUniqueName1 = Quest.Solution.sln
-		SccProjectName1 = Quest.Core.Data
-		SccLocalPath1 = Quest.Core.Data
-		SccProjectUniqueName2 = Quest.Core.Models\\Quest.Core.Models.csproj
-		SccProjectTopLevelParentUniqueName2 = Quest.Solution.sln
-		SccProjectName2 = Quest.Core.Models
-		SccLocalPath2 = Quest.Core.Models
-		SccProjectUniqueName3 = Quest.Core\\Quest.Core.csproj
-		SccProjectTopLevelParentUniqueName3 = Quest.Solution.sln
-		SccProjectName3 = Quest.Core
-		SccLocalPath3 = Quest.Core
-		SccProjectUniqueName4 = Quest.Framework\\Quest.Framework.csproj
-		SccProjectTopLevelParentUniqueName4 = Quest.Solution.sln
-		SccProjectName4 = Quest.Framework
-		SccLocalPath4 = Quest.Framework
-		SccProjectUniqueName5 = Quest.WebSite\\Quest.WebSite.csproj
-		SccProjectTopLevelParentUniqueName5 = Quest.Solution.sln
-		SccProjectName5 = Quest.WebSite
-		SccLocalPath5 = Quest.WebSite
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
